@@ -93,27 +93,23 @@ $(function(){initNavTree('moving__average_8cpp_source.html','',''); });
   <div class="headertitle"><div class="title">moving_average.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="moving__average_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * @file moving_average.cpp</span></div>
-<div class="line"><span class="lineno">    3</span><span class="comment"> * @brief Smoothing using simple/weighted moving average(implementation)</span></div>
-<div class="line"><span class="lineno">    4</span><span class="comment"> * @author Izadori</span></div>
-<div class="line"><span class="lineno">    5</span><span class="comment"> */</span></div>
+<a href="moving__average_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="moving__average_8h.html" title="Smoothing using simple/weighted moving average.">&quot;moving_average.h&quot;</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="moving__average_8h.html">moving_average.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace</span> sablib {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>sablib {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Implementation of MovingAverage() function, std::vector&lt;double&gt; version</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">   14</a></span><span class="keyword">const</span> <a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">std</a>::<a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">vector</a>&lt;<span class="keywordtype">double</span>&gt; <a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">MovingAverage</a>(<span class="keyword">const</span> <a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">std</a>::<a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">vector</a>&lt;<span class="keywordtype">double</span>&gt; &amp; <a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">y</a>, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">n</a>)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">   14</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">MovingAverage</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n)</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Eigen::VectorXd yy = Eigen::VectorXd::Map(y.data(), y.size());</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    Eigen::VectorXd result = MovingAverage(yy, n);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    Eigen::VectorXd result = <a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">MovingAverage</a>(yy, n);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::vector&lt;<span class="keywordtype">double</span>&gt; result_y(result.size());</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::vector&lt;double&gt; result_y(result.size());</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    Eigen::VectorXd::Map(result_y.data(), result_y.size()) = result;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">return</span> result_y;</div>
@@ -124,14 +120,14 @@ $(function(){initNavTree('moving__average_8cpp_source.html','',''); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// Implementation of WeightedMovingAverage() function, std::vector&lt;double&gt; version</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">   29</a></span><span class="keyword">const</span> <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">std</a>::<a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">vector</a>&lt;<span class="keywordtype">double</span>&gt; <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">WeightedMovingAverage</a>(<span class="keyword">const</span> <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">std</a>::<a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">vector</a>&lt;<span class="keywordtype">double</span>&gt; &amp; <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">y</a>, <span class="keyword">const</span> <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">std</a>::<a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">vector</a>&lt;<span class="keywordtype">double</span>&gt; &amp; <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">w</a>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">   29</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">WeightedMovingAverage</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> std::vector&lt;double&gt; &amp; w)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    Eigen::VectorXd yy = Eigen::VectorXd::Map(y.data(), y.size());</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    Eigen::VectorXd ww = Eigen::VectorXd::Map(w.data(), w.size());</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    Eigen::VectorXd result = WeightedMovingAverage(yy, ww);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    Eigen::VectorXd result = <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">WeightedMovingAverage</a>(yy, ww);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    std::vector&lt;<span class="keywordtype">double</span>&gt; result_y(result.size());</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    std::vector&lt;double&gt; result_y(result.size());</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    Eigen::VectorXd::Map(result_y.data(), result_y.size()) = result;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> result_y;</div>
@@ -141,13 +137,14 @@ $(function(){initNavTree('moving__average_8cpp_source.html','',''); });
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}; <span class="comment">// namespace sablib</span></div>
 <div class="ttc" id="amoving__average_8cpp_html_ab6ca749353a234b563a603e0f2236ebe"><div class="ttname"><a href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">sablib::WeightedMovingAverage</a></div><div class="ttdeci">const std::vector&lt; double &gt; WeightedMovingAverage(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w)</div><div class="ttdoc">Calculates the weighted moving average of the input signal (std::vector&lt;double&gt; version).</div><div class="ttdef"><b>Definition</b> <a href="#l00029">moving_average.cpp:29</a></div></div>
 <div class="ttc" id="amoving__average_8cpp_html_add602b00e5536fb02c55775cd31a3b09"><div class="ttname"><a href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">sablib::MovingAverage</a></div><div class="ttdeci">const std::vector&lt; double &gt; MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Calculates the simple moving average of the input signal (std::vector&lt;double&gt; version).</div><div class="ttdef"><b>Definition</b> <a href="#l00014">moving_average.cpp:14</a></div></div>
+<div class="ttc" id="amoving__average_8h_html"><div class="ttname"><a href="moving__average_8h.html">moving_average.h</a></div><div class="ttdoc">Smoothing using simple/weighted moving average.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_873953ca3d1354cdbf1c5c22e2e30d14.html">sablib</a></li><li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="moving__average_8cpp.html">moving_average.cpp</a></li>
+    <li class="navelem"><b>sablib</b></li><li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="moving__average_8cpp.html">moving_average.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

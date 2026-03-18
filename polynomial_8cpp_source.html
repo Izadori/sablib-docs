@@ -93,27 +93,23 @@ $(function(){initNavTree('polynomial_8cpp_source.html','',''); });
   <div class="headertitle"><div class="title">polynomial.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="polynomial_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * @file polynomial.cpp</span></div>
-<div class="line"><span class="lineno">    3</span><span class="comment"> * @brief Baseline estimation with polynomial line(implementation)</span></div>
-<div class="line"><span class="lineno">    4</span><span class="comment"> * @author Izadori</span></div>
-<div class="line"><span class="lineno">    5</span><span class="comment"> */</span></div>
+<a href="polynomial_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="polynomial_8h.html" title="Baseline estimation with polynomial line.">&quot;polynomial.h&quot;</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="polynomial_8h.html">polynomial.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace</span> sablib {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>sablib {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Implementation of BaselineLinear() function</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">   14</a></span><a class="code hl_function" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">std</a>::<a class="code hl_function" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">vector</a>&lt;<span class="keywordtype">double</span>&gt; <a class="code hl_function" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">BaselineLinear</a>(<a class="code hl_function" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">std</a>::<a class="code hl_function" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">vector</a>&lt;<span class="keywordtype">double</span>&gt; &amp; <a class="code hl_function" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">y</a>, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">index1</a>, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">index2</a>)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">   14</a></span>std::vector&lt;double&gt; <a class="code hl_function" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">BaselineLinear</a>(std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index1, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index2)</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">if</span>(index1 &gt;= index2 || y.size() &lt;= index1 || y.size() &lt;= index2) {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;BaselineLinear(): illegal indices&quot;</span>);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::vector&lt;<span class="keywordtype">double</span>&gt; result = y;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::vector&lt;double&gt; result = y;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">double</span> m = (y[index2] - y[index1]) / (index2 - index1);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">auto</span> f = [&amp;](<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x) {</div>
@@ -132,8 +128,8 @@ $(function(){initNavTree('polynomial_8cpp_source.html','',''); });
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// Implementation of BaselinePolynomial() function</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">   37</a></span><a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">std</a>::<a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">vector</a>&lt;<span class="keywordtype">double</span>&gt; <a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">BaselinePolynomial</a>(</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">std</a>::<a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">vector</a>&lt;<span class="keywordtype">double</span>&gt; &amp; <a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">y</a>, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">polyorder</a>, <span class="keyword">const</span> <a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">std</a>::<a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">vector</a>&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&gt; &amp; <a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">indices</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">   37</a></span>std::vector&lt;double&gt; <a class="code hl_function" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">BaselinePolynomial</a>(</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> polyorder, <span class="keyword">const</span> std::vector&lt;unsigned int&gt; &amp; indices</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>)</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">if</span>(polyorder &gt;= indices.size()) {</div>
@@ -141,7 +137,7 @@ $(function(){initNavTree('polynomial_8cpp_source.html','',''); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">double</span> max_index = y.size() - 1;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    std::vector&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&gt; sorted_indices = indices;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    std::vector&lt;unsigned int&gt; sorted_indices = indices;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    Eigen::VectorXd xx(indices.size()), yy(indices.size());</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::sort(sorted_indices.begin(), sorted_indices.end());</div>
@@ -151,9 +147,9 @@ $(function(){initNavTree('polynomial_8cpp_source.html','',''); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        yy(i) = y[sorted_indices[i]];</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    Eigen::VectorXd coefficients = PolyFit(xx, yy, polyorder);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    Eigen::VectorXd coefficients = <a class="code hl_function" href="polyfit_8h.html#a67b09b178fc82401568bacaebf8bcdb1">PolyFit</a>(xx, yy, polyorder);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::vector&lt;<span class="keywordtype">double</span>&gt; result = y;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::vector&lt;double&gt; result = y;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = sorted_indices[0]; i &lt; sorted_indices.back(); i++) {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">double</span> x = i / max_index;</div>
@@ -173,15 +169,17 @@ $(function(){initNavTree('polynomial_8cpp_source.html','',''); });
 </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="ttc" id="apolyfit_8h_html_a67b09b178fc82401568bacaebf8bcdb1"><div class="ttname"><a href="polyfit_8h.html#a67b09b178fc82401568bacaebf8bcdb1">sablib::PolyFit</a></div><div class="ttdeci">const Derived::PlainObject PolyFit(const Eigen::MatrixBase&lt; Derived &gt; &amp;x, const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int polyorder)</div><div class="ttdoc">Fits a polynomial of a specified order to the given data points.</div><div class="ttdef"><b>Definition</b> <a href="polyfit_8h_source.html#l00029">polyfit.h:29</a></div></div>
 <div class="ttc" id="apolynomial_8cpp_html_a11aad697a81d46a336eca5ab6eb05900"><div class="ttname"><a href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">sablib::BaselineLinear</a></div><div class="ttdeci">std::vector&lt; double &gt; BaselineLinear(std::vector&lt; double &gt; &amp;y, const unsigned int index1, const unsigned int index2)</div><div class="ttdoc">Performs baseline estimation with a linear line between two points.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">polynomial.cpp:14</a></div></div>
 <div class="ttc" id="apolynomial_8cpp_html_a14a6e2b7e2ef37203ca65e6435faa624"><div class="ttname"><a href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">sablib::BaselinePolynomial</a></div><div class="ttdeci">std::vector&lt; double &gt; BaselinePolynomial(std::vector&lt; double &gt; &amp;y, const unsigned int polyorder, const std::vector&lt; unsigned int &gt; &amp;indices)</div><div class="ttdoc">Performs baseline estimation by fitting a polynomial to specified points.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">polynomial.cpp:37</a></div></div>
+<div class="ttc" id="apolynomial_8h_html"><div class="ttname"><a href="polynomial_8h.html">polynomial.h</a></div><div class="ttdoc">Baseline estimation with polynomial line.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_873953ca3d1354cdbf1c5c22e2e30d14.html">sablib</a></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="polynomial_8cpp.html">polynomial.cpp</a></li>
+    <li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="polynomial_8cpp.html">polynomial.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

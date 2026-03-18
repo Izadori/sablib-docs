@@ -93,30 +93,19 @@ $(function(){initNavTree('expand_8h_source.html','',''); });
   <div class="headertitle"><div class="title">expand.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="expand_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * @file expand.h</span></div>
-<div class="line"><span class="lineno">    3</span><span class="comment"> * @brief Expands and Trim the boundaries of the data</span></div>
-<div class="line"><span class="lineno">    4</span><span class="comment"> * @author Izadori</span></div>
-<div class="line"><span class="lineno">    5</span><span class="comment"> */</span></div>
+<a href="expand_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">__SABLIB_EXPAND_H__</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">__SABLIB_EXPAND_H__</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef __SABLIB_EXPAND_H__</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define __SABLIB_EXPAND_H__</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdexcept</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">Eigen</span><span class="preprocessor">/</span><span class="preprocessor">Eigen</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;Eigen/Eigen&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace</span> sablib {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/**</span></div>
-<div class="line"><span class="lineno">   16</span><span class="comment"> * @brief Expands the boundaries of a vector by padding with the first and last elements.</span></div>
-<div class="line"><span class="lineno">   17</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   18</span><span class="comment"> * @param y The input vector to be expanded.</span></div>
-<div class="line"><span class="lineno">   19</span><span class="comment"> * @param n The number of elements to pad at each end.</span></div>
-<div class="line"><span class="lineno">   20</span><span class="comment"> * @return The expanded vector with padded boundaries.</span></div>
-<div class="line"><span class="lineno">   21</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>sablib {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
 <div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="expand_8h.html#a6a8c53622acd39e60eef033607eacd94">   23</a></span><span class="keyword">const</span> <span class="keyword">typename</span> Derived::<a class="code hl_function" href="expand_8h.html#a6a8c53622acd39e60eef033607eacd94">PlainObject</a> <a class="code hl_function" href="expand_8h.html#a6a8c53622acd39e60eef033607eacd94">ExpandBoundaries</a>(<span class="keyword">const</span> Eigen::MatrixBase&lt;Derived&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="expand_8h.html#a6a8c53622acd39e60eef033607eacd94">   23</a></span><span class="keyword">const</span> <span class="keyword">typename</span> Derived::PlainObject <a class="code hl_function" href="expand_8h.html#a6a8c53622acd39e60eef033607eacd94">ExpandBoundaries</a>(<span class="keyword">const</span> Eigen::MatrixBase&lt;Derived&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// Although parameters are received as MatrixBase&lt;Derived&gt;, only vector classes are allowed.</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">// Others will be rejected at compile time.</span></div>
@@ -138,18 +127,10 @@ $(function(){initNavTree('expand_8h_source.html','',''); });
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">/**</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment"> * @brief Trims the specified number of elements from both ends of a vector.</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   48</span><span class="comment"> * @param y The input vector to be trimmed.</span></div>
-<div class="line"><span class="lineno">   49</span><span class="comment"> * @param n The number of elements to remove from each end.</span></div>
-<div class="line"><span class="lineno">   50</span><span class="comment"> * @return The trimmed vector.</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment"> * @exception std::invalid_argument Thrown if n is larger than half the length of y.</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
 <div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="expand_8h.html#afa3240f67e1aa5e2ce300ae91b8f3c91">   54</a></span><span class="keyword">const</span> <span class="keyword">typename</span> Derived::<a class="code hl_function" href="expand_8h.html#afa3240f67e1aa5e2ce300ae91b8f3c91">PlainObject</a> <a class="code hl_function" href="expand_8h.html#afa3240f67e1aa5e2ce300ae91b8f3c91">TrimBoundaries</a>(<span class="keyword">const</span> Eigen::MatrixBase&lt;Derived&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="expand_8h.html#afa3240f67e1aa5e2ce300ae91b8f3c91">   54</a></span><span class="keyword">const</span> <span class="keyword">typename</span> Derived::PlainObject <a class="code hl_function" href="expand_8h.html#afa3240f67e1aa5e2ce300ae91b8f3c91">TrimBoundaries</a>(<span class="keyword">const</span> Eigen::MatrixBase&lt;Derived&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n)</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Although parameters are received as MatrixBase&lt;Derived&gt;, only vector classes are allowed.</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// Others will be rejected at compile time.</span></div>
@@ -170,21 +151,16 @@ $(function(){initNavTree('expand_8h_source.html','',''); });
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}; <span class="comment">// namespace sablib</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// __SABLIB_EXPAND_H__</span></div>
-<div class="ttc" id="aexpand_8h_html_a6a8c53622acd39e60eef033607eacd94"><div class="ttname"><a href="expand_8h.html#a6a8c53622acd39e60eef033607eacd94">sablib::ExpandBoundaries</a></div><div class="ttdeci">const Derived::PlainObject ExpandBoundaries(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Expands the boundaries of a vector by padding with the first and last elements.</div><div class="ttdef"><b>Definition</b> expand.h:23</div></div>
-<div class="ttc" id="aexpand_8h_html_afa3240f67e1aa5e2ce300ae91b8f3c91"><div class="ttname"><a href="expand_8h.html#afa3240f67e1aa5e2ce300ae91b8f3c91">sablib::TrimBoundaries</a></div><div class="ttdeci">const Derived::PlainObject TrimBoundaries(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Trims the specified number of elements from both ends of a vector.</div><div class="ttdef"><b>Definition</b> expand.h:54</div></div>
-<div class="ttc" id="amoving__average_8cpp_html_ab6ca749353a234b563a603e0f2236ebe"><div class="ttname"><a href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">sablib::WeightedMovingAverage</a></div><div class="ttdeci">const std::vector&lt; double &gt; WeightedMovingAverage(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w)</div><div class="ttdoc">Calculates the weighted moving average of the input signal (std::vector&lt;double&gt; version).</div><div class="ttdef"><b>Definition</b> moving_average.cpp:29</div></div>
-<div class="ttc" id="amoving__average_8cpp_html_add602b00e5536fb02c55775cd31a3b09"><div class="ttname"><a href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">sablib::MovingAverage</a></div><div class="ttdeci">const std::vector&lt; double &gt; MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Calculates the simple moving average of the input signal (std::vector&lt;double&gt; version).</div><div class="ttdef"><b>Definition</b> moving_average.cpp:14</div></div>
-<div class="ttc" id="amoving__average_8h_html_a71a425c7e2f014e6d648502b7f86e112"><div class="ttname"><a href="moving__average_8h.html#a71a425c7e2f014e6d648502b7f86e112">sablib::WeightedMovingAverage</a></div><div class="ttdeci">const Derived::PlainObject WeightedMovingAverage(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const Eigen::MatrixBase&lt; Derived &gt; &amp;w)</div><div class="ttdoc">Calculates the weighted moving average of the input signal.</div><div class="ttdef"><b>Definition</b> moving_average.h:34</div></div>
-<div class="ttc" id="amoving__average_8h_html_afbc027fac0a8bd40a3994d02b6275770"><div class="ttname"><a href="moving__average_8h.html#afbc027fac0a8bd40a3994d02b6275770">sablib::MovingAverage</a></div><div class="ttdeci">const Derived::PlainObject MovingAverage(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Calculates the simple moving average of the input signal.</div><div class="ttdef"><b>Definition</b> moving_average.h:80</div></div>
-<div class="ttc" id="asma_8cpp_html_af91f1a1f388db47c3b772349d3e3726b"><div class="ttname"><a href="sma_8cpp.html#af91f1a1f388db47c3b772349d3e3726b">sablib::BaselineSMA</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineSMA(std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int loop)</div><div class="ttdoc">Performs background estimation using a simple moving average.</div><div class="ttdef"><b>Definition</b> sma.cpp:14</div></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_EXPAND_H__</span></div>
+<div class="ttc" id="aexpand_8h_html_a6a8c53622acd39e60eef033607eacd94"><div class="ttname"><a href="expand_8h.html#a6a8c53622acd39e60eef033607eacd94">sablib::ExpandBoundaries</a></div><div class="ttdeci">const Derived::PlainObject ExpandBoundaries(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Expands the boundaries of a vector by padding with the first and last elements.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">expand.h:23</a></div></div>
+<div class="ttc" id="aexpand_8h_html_afa3240f67e1aa5e2ce300ae91b8f3c91"><div class="ttname"><a href="expand_8h.html#afa3240f67e1aa5e2ce300ae91b8f3c91">sablib::TrimBoundaries</a></div><div class="ttdeci">const Derived::PlainObject TrimBoundaries(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Trims the specified number of elements from both ends of a vector.</div><div class="ttdef"><b>Definition</b> <a href="#l00054">expand.h:54</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_873953ca3d1354cdbf1c5c22e2e30d14.html">sablib</a></li><li class="navelem"><b>misc</b></li><li class="navelem"><a href="expand_8h.html">expand.h</a></li>
+    <li class="navelem"><b>sablib</b></li><li class="navelem"><b>misc</b></li><li class="navelem"><a href="expand_8h.html">expand.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

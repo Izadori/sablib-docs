@@ -99,79 +99,8 @@ Directories</h2></td></tr>
 <tr class="memitem:baseline" id="r_baseline"><td class="memItemLeft"><span class="iconfolder"><div class="folder-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="dir_090be70c6b92fc8e09cc5dfd57a77e77.html">baseline</a></td></tr>
 <tr class="memitem:misc" id="r_misc"><td class="memItemLeft"><span class="iconfolder"><div class="folder-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="dir_db33d3b36fc59b1a53c9321d4192766a.html">misc</a></td></tr>
 <tr class="memitem:smoothing" id="r_smoothing"><td class="memItemLeft"><span class="iconfolder"><div class="folder-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="dir_686e407d6baa78fc2d35cc036204a8a8.html">smoothing</a></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:sablib_2Eh" id="r_sablib_2Eh"><td class="memItemLeft"><a href="sablib_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><a class="el" href="sablib_8h.html">sablib.h</a></td></tr>
-<tr class="memdesc:sablib_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header file of sablib, a C++ library for signal smoothing and baseline estimation. <br /></td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
-sablib</h1>
-<p>A C++ library for signal smoothing and baseline estimation, powered by Eigen.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
-Features</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-Baseline Estimation</h2>
-<ul>
-<li><b>Linear/Polynomial</b>: Robust linear or polynomial baseline fitting to anchor points.</li>
-<li><b>Spline</b>: Cubic Spline interpolation-based baseline estimation.</li>
-<li><b>SMA</b>: Iterative Simple Moving Average for baseline estimation.</li>
-<li><b>AsLS</b>: Asymmetric Least Squares.</li>
-<li><b>airPLS</b>: Adaptive Iteratively Reweighted Penalized Least Squares.</li>
-<li><b>arPLS</b>: Asymmetrically Reweighted Penalized Least Squares.</li>
-<li><b>BEADS</b>: Baseline Estimation And Denoising using Sparsity.</li>
-</ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
-Smoothing</h2>
-<ul>
-<li><b>Moving Average</b>: Standard simple moving average filter.</li>
-<li><b>Weighted Moving Average</b>: Configurable weighted moving average filter.</li>
-<li><b>Savitzky-Golay</b>: Savitzky-Golay filter for simultaneous smoothing and differentiation.</li>
-<li><b>Whittaker</b>: Whittaker smoother based on Penalized Least Squares.</li>
-<li><b>P-Spline</b>: Penalized B-Spline smoothing.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-Requirements</h1>
-<ul>
-<li><b>C++ Standard</b>: C++17 or later.</li>
-<li><b>Dependencies</b>: <a href="https://eigen.tuxfamily.org/">Eigen</a> 3.4.0 or later.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-Installation &amp; Build</h1>
-<p><span class="tt">sablib</span> is designed to be built as a static library using CMake.</p>
-<div class="fragment"><div class="line">mkdir build</div>
-<div class="line">cd build</div>
-<div class="line">cmake ..</div>
-<div class="line">cmake --build .</div>
-</div><!-- fragment --><p>If Eigen3 is not found, please try <span class="tt">cmake .. -DCMAKE_PREFIX_PATH="path/to/Eigen3"</span>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
-Usage</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
-Integrating with CMake</h2>
-<p>You can easily integrate <span class="tt">sablib</span> into your project by adding it as a subdirectory:</p>
-<div class="fragment"><div class="line"># In your CMakeLists.txt</div>
-<div class="line">add_subdirectory(sablib)</div>
-<div class="line">target_link_libraries(your_project_target PUBLIC sablib)</div>
-</div><!-- fragment --><p>Ensure Eigen3 is configured in your project (e.g., via <span class="tt">find_package(Eigen3 REQUIRED)</span>).</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
-Header Inclusion</h2>
-<p>Include the main header to access all library features:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="sablib_8h.html">sablib/sablib.h</a>&quot;</span></div>
-<div class="ttc" id="asablib_8h_html"><div class="ttname"><a href="sablib_8h.html">sablib.h</a></div><div class="ttdoc">Header file of sablib, a C++ library for signal smoothing and baseline estimation.</div></div>
-</div><!-- fragment --><p>Alternatively, you can include specific algorithm headers to minimize dependencies:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="pspline_8h.html">sablib/smoothing/pspline.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="arpls_8h.html">sablib/baseline/arpls.h</a>&quot;</span></div>
-<div class="ttc" id="aarpls_8h_html"><div class="ttname"><a href="arpls_8h.html">arpls.h</a></div><div class="ttdoc">Baseline estimation using asymmetrically reweighted Penalized Least Squares(arPLS).</div></div>
-<div class="ttc" id="apspline_8h_html"><div class="ttname"><a href="pspline_8h.html">pspline.h</a></div><div class="ttdoc">Smoothing using penalized Spline(P-Spline).</div></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
-Documentation</h1>
-<p>API documentation can be generated using Doxygen.</p>
-<div class="fragment"><div class="line">doxygen Doxyfile</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
-License</h1>
-<p>This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. </p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -184,7 +113,7 @@ License</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_873953ca3d1354cdbf1c5c22e2e30d14.html">sablib</a></li>
+    <li class="navelem"><b>sablib</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

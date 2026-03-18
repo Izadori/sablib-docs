@@ -93,30 +93,26 @@ $(function(){initNavTree('airpls_8cpp_source.html','',''); });
   <div class="headertitle"><div class="title">airpls.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="airpls_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * @file airpls.cpp</span></div>
-<div class="line"><span class="lineno">    3</span><span class="comment"> * @brief Baseline estimation using adaptive iteratively reweighted Penalized Least Squares(airPLS)(implementation)</span></div>
-<div class="line"><span class="lineno">    4</span><span class="comment"> * @author Izadori</span></div>
-<div class="line"><span class="lineno">    5</span><span class="comment"> */</span></div>
+<a href="airpls_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">cmath</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="airpls_8h.html" title="Baseline estimation using adaptive iteratively reweighted Penalized Least Squares(airPLS).">&quot;airpls.h&quot;</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="airpls_8h.html">airpls.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace</span> sablib {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>sablib {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Implementation of BaselineAirPLS() function</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">   16</a></span><span class="keyword">const</span> <a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">std</a>::<a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">vector</a>&lt;<span class="keywordtype">double</span>&gt; <a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">BaselineAirPLS</a>(</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">std</a>::<a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">vector</a>&lt;<span class="keywordtype">double</span>&gt; &amp; <a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">y</a>, <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">lambda</a>, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">s</a>,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">loop</a>, <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">eps</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">   16</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">BaselineAirPLS</a>(</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">double</span> lambda, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loop, <span class="keyword">const</span> <span class="keywordtype">double</span> eps</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>)</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    size_t m = y.size();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">size_t</span> m = y.size();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    Eigen::VectorXd yy, w, z, d;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    Eigen::SparseMatrix&lt;<span class="keywordtype">double</span>&gt; I, D, lambdaDTD;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    Eigen::SparseMatrix&lt;double&gt; I, D, lambdaDTD;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">double</span> y_abs_sum, d_sum_abs;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    yy = Eigen::VectorXd::Map(y.data(), m);</div>
@@ -126,11 +122,11 @@ $(function(){initNavTree('airpls_8cpp_source.html','',''); });
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    I.resize(m, m);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    I.setIdentity();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    D = Diff(I, s);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    D = <a class="code hl_function" href="diff_8h.html#aa678c8e91bd73334fcd50bd5b497c968">Diff</a>(I, s);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    lambdaDTD = lambda * (D.transpose() * D);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; loop; i++) {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        z = Whittaker(yy, w, lambdaDTD);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        z = <a class="code hl_function" href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">Whittaker</a>(yy, w, lambdaDTD);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        d = (yy.array() &gt;= z.array()).select(0, yy - z);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        d_sum_abs = std::fabs(d.sum());</div>
@@ -143,7 +139,7 @@ $(function(){initNavTree('airpls_8cpp_source.html','',''); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        w(0) = w(w.size() - 1) = std::exp((loop * d.maxCoeff() / d_sum_abs));</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::vector&lt;<span class="keywordtype">double</span>&gt; result(z.size());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::vector&lt;double&gt; result(z.size());</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    Eigen::VectorXd::Map(result.data(), result.size()) = z;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
@@ -153,13 +149,16 @@ $(function(){initNavTree('airpls_8cpp_source.html','',''); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}; <span class="comment">// namespace sablib</span></div>
 <div class="ttc" id="aairpls_8cpp_html_a3709b9cb27a97fd0876078aea89cfd00"><div class="ttname"><a href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00">sablib::BaselineAirPLS</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineAirPLS(std::vector&lt; double &gt; &amp;y, const double lambda, const unsigned int s, const unsigned int loop, const double eps)</div><div class="ttdoc">Performs baseline estimation using adaptive iteratively reweighted Penalized Least Squares(airPLS).</div><div class="ttdef"><b>Definition</b> <a href="#l00016">airpls.cpp:16</a></div></div>
+<div class="ttc" id="aairpls_8h_html"><div class="ttname"><a href="airpls_8h.html">airpls.h</a></div><div class="ttdoc">Baseline estimation using adaptive iteratively reweighted Penalized Least Squares(airPLS).</div></div>
+<div class="ttc" id="adiff_8h_html_aa678c8e91bd73334fcd50bd5b497c968"><div class="ttname"><a href="diff_8h.html#aa678c8e91bd73334fcd50bd5b497c968">sablib::Diff</a></div><div class="ttdeci">const Derived::PlainObject Diff(const Eigen::MatrixBase&lt; Derived &gt; &amp;m0, const int n=1, const Dir dir=Dir::RowWise)</div><div class="ttdoc">Calculates the n-th discrete difference along the given axis.</div><div class="ttdef"><b>Definition</b> <a href="diff_8h_source.html#l00032">diff.h:32</a></div></div>
+<div class="ttc" id="awhittaker_8cpp_html_abbae899cda008775ee16595faafa5208"><div class="ttname"><a href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">sablib::Whittaker</a></div><div class="ttdeci">const std::vector&lt; double &gt; Whittaker(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w, const double lambda, const unsigned int s)</div><div class="ttdoc">Performs Whittaker smoothing (std::vector&lt;double&gt; version, with weights).</div><div class="ttdef"><b>Definition</b> <a href="whittaker_8cpp_source.html#l00014">whittaker.cpp:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_873953ca3d1354cdbf1c5c22e2e30d14.html">sablib</a></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="airpls_8cpp.html">airpls.cpp</a></li>
+    <li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="airpls_8cpp.html">airpls.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

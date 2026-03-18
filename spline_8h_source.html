@@ -93,41 +93,31 @@ $(function(){initNavTree('spline_8h_source.html','',''); });
   <div class="headertitle"><div class="title">spline.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="spline_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * @file spline.h</span></div>
-<div class="line"><span class="lineno">    3</span><span class="comment"> * @brief Baseline estimation from cubic spline</span></div>
-<div class="line"><span class="lineno">    4</span><span class="comment"> * @author Izadori</span></div>
-<div class="line"><span class="lineno">    5</span><span class="comment"> */</span></div>
+<a href="spline_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">__SABLIB_SPLINE_H__</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">__SABLIB_SPLINE_H__</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef __SABLIB_SPLINE_H__</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define __SABLIB_SPLINE_H__</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">vector</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../misc/cubic_spline.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="cubic__spline_8h.html">../misc/cubic_spline.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace</span> sablib {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/**</span></div>
-<div class="line"><span class="lineno">   17</span><span class="comment"> * @brief Performs baseline estimation using cubic spline interpolation.</span></div>
-<div class="line"><span class="lineno">   18</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   19</span><span class="comment"> * @param y The input data for baseline estimation.</span></div>
-<div class="line"><span class="lineno">   20</span><span class="comment"> * @param indices The indices of the points to be used as knots for the cubic spline.</span></div>
-<div class="line"><span class="lineno">   21</span><span class="comment"> * @return The estimated baseline.</span></div>
-<div class="line"><span class="lineno">   22</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">const</span> <a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">std</a>::<a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">vector</a>&lt;<span class="keywordtype">double</span>&gt; <a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">BaselineSpline</a>(<span class="keyword">const</span> <a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">std</a>::<a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">vector</a>&lt;<span class="keywordtype">double</span>&gt; &amp; <a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">y</a>, <span class="keyword">const</span> <a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">std</a>::<a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">vector</a>&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&gt; &amp; <a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">indices</a>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span>sablib {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">BaselineSpline</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> std::vector&lt;unsigned int&gt; &amp; indices);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}; <span class="comment">// namespace sablib</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// __SABLIB_SPLINE_H__</span></div>
-<div class="ttc" id="aspline_8cpp_html_a978ab1e22abc9b9157e6bf6b2a5d0a5e"><div class="ttname"><a href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">sablib::BaselineSpline</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineSpline(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; unsigned int &gt; &amp;indices)</div><div class="ttdoc">Performs baseline estimation using cubic spline interpolation.</div><div class="ttdef"><b>Definition</b> spline.cpp:14</div></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_SPLINE_H__</span></div>
+<div class="ttc" id="acubic__spline_8h_html"><div class="ttname"><a href="cubic__spline_8h.html">cubic_spline.h</a></div><div class="ttdoc">Performs cubic spline parameter calculation and interpolation.</div></div>
+<div class="ttc" id="aspline_8cpp_html_a978ab1e22abc9b9157e6bf6b2a5d0a5e"><div class="ttname"><a href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">sablib::BaselineSpline</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineSpline(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; unsigned int &gt; &amp;indices)</div><div class="ttdoc">Performs baseline estimation using cubic spline interpolation.</div><div class="ttdef"><b>Definition</b> <a href="spline_8cpp_source.html#l00014">spline.cpp:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_873953ca3d1354cdbf1c5c22e2e30d14.html">sablib</a></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="spline_8h.html">spline.h</a></li>
+    <li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="spline_8h.html">spline.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

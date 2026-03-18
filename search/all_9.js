@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['l1_5fv1_0',['L1_v1',['../beads_8h.html#aaa339033c3a975d37fc6e342adeee334af148d8498eacebd59706d67006c5319b',1,'sablib']]],
-  ['l1_5fv2_1',['L1_v2',['../beads_8h.html#aaa339033c3a975d37fc6e342adeee334ac26c30edb634d206dfbecc01225ce4d8',1,'sablib']]],
-  ['library_2',['sablib - smoothing and baseline library',['../index.html',1,'']]],
-  ['license_3',['License',['../dir_873953ca3d1354cdbf1c5c22e2e30d14.html#autotoc_md10',1,'']]]
+  ['moving_5faverage_2ecpp_0',['moving_average.cpp',['../moving__average_8cpp.html',1,'']]],
+  ['moving_5faverage_2eh_1',['moving_average.h',['../moving__average_8h.html',1,'']]],
+  ['movingaverage_2',['MovingAverage',['../moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09',1,'sablib::MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)'],['../moving__average_8h.html#afbc027fac0a8bd40a3994d02b6275770',1,'sablib::MovingAverage(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)']]]
 ];

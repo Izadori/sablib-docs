@@ -93,90 +93,44 @@ $(function(){initNavTree('cubic__spline_8h_source.html','',''); });
   <div class="headertitle"><div class="title">cubic_spline.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="cubic__spline_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * @file cubic_spline.h</span></div>
-<div class="line"><span class="lineno">    3</span><span class="comment"> * @brief Performs cubic spline parameter calculation and interpolation.</span></div>
-<div class="line"><span class="lineno">    4</span><span class="comment"> * @author Izadori</span></div>
-<div class="line"><span class="lineno">    5</span><span class="comment"> */</span></div>
+<a href="cubic__spline_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">__SABLIB_CUBIC_SPLINE_H__</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">__SABLIB_CUBIC_SPLINE_H__</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef __SABLIB_CUBIC_SPLINE_H__</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define __SABLIB_CUBIC_SPLINE_H__</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdexcept</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">type_traits</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">vector</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">Eigen</span><span class="preprocessor">/</span><span class="preprocessor">Eigen</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;Eigen/Eigen&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace</span> sablib {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/**</span></div>
-<div class="line"><span class="lineno">   18</span><span class="comment"> * @brief A class for cubic spline interpolation.</span></div>
-<div class="line"><span class="lineno">   19</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   20</span><span class="comment"> * @tparam Scalar The scalar type for the spline (e.g., double, float).</span></div>
-<div class="line"><span class="lineno">   21</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>sablib {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html">   23</a></span><span class="keyword">class</span> CubicSpline final</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html">   23</a></span><span class="keyword">class </span><a class="code hl_function" href="classsablib_1_1_cubic_spline.html#a6830eb25c7150c958df62d5fdf4f34c3">CubicSpline</a> final</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">static_assert</span>(std::is_floating_point_v&lt;Scalar&gt;, <span class="stringliteral">&quot;Scalar must be a floating-point type.&quot;</span>);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">/**</span></div>
-<div class="line"><span class="lineno">   29</span><span class="comment">     * @brief Default constructor.</span></div>
-<div class="line"><span class="lineno">   30</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html#a6830eb25c7150c958df62d5fdf4f34c3">   31</a></span>    <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#a6830eb25c7150c958df62d5fdf4f34c3">CubicSpline</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">/**</span></div>
-<div class="line"><span class="lineno">   34</span><span class="comment">     * @brief Constructor that fits a cubic spline to the given data points.</span></div>
-<div class="line"><span class="lineno">   35</span><span class="comment">     *</span></div>
-<div class="line"><span class="lineno">   36</span><span class="comment">     * @param x The x-coordinates of the data points.</span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">     * @param y The y-coordinates of the data points.</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#a1b915b11fd95f2321b280128dd5c378d">CubicSpline</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; y);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">/**</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">     * @brief Fits a cubic spline to the given data points.</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">     *</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">     * @param x The x-coordinates of the data points.</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">     * @param y The y-coordinates of the data points.</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">     * @exception std::invalid_argument Thrown if x and y sizes differ, if size &lt; 2, or if x is not strictly increasing.</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#a6830eb25c7150c958df62d5fdf4f34c3">CubicSpline</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; y);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#a4734cfab620c62f4af32bb76572da1f8">Fit</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; y);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">/**</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">     * @brief Interpolates the value at a given x-coordinate.</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">     *</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">     * @param x The x-coordinate to interpolate.</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">     * @return The interpolated value at x.</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    Scalar <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9">Interpolate</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">/**</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">     * @brief Interpolates the value at a given x-coordinate.</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">     *</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">     * @param x The x-coordinate to interpolate.</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">     * @return The interpolated value at x.</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
 <div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html#aae47b991a4480c803a4e27409e086a35">   64</a></span>    Scalar <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#aae47b991a4480c803a4e27409e086a35">operator</a>()(<span class="keyword">const</span> <span class="keywordtype">double</span> x) <span class="keyword">const</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> Interpolate(x);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html#aae47b991a4480c803a4e27409e086a35">   64</a></span>    Scalar <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#aae47b991a4480c803a4e27409e086a35">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9">Interpolate</a>(x);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    Eigen::VectorX&lt;Scalar&gt; a, b, c, d;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    Eigen::VectorX&lt;Scalar&gt; sp_x, sp_y;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">/**</span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">     * @brief Solves a tridiagonal system of equations using Thomas&#39; algorithm (TDMA).</span></div>
-<div class="line"><span class="lineno">   75</span><span class="comment">     *</span></div>
-<div class="line"><span class="lineno">   76</span><span class="comment">     * @param lower The lower diagonal (size n). lower[0] is ignored.</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">     * @param diag The main diagonal (size n).</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">     * @param upper The upper diagonal (size n). upper[n-1] is ignored.</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">     * @param rhs The right-hand side vector (size n).</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">     * @return The solution vector.</span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    Eigen::VectorX&lt;Scalar&gt; SolveTridiagonal(</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt;&amp; lower, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt;&amp; diag,</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt;&amp; upper, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt;&amp; rhs</div>
@@ -189,9 +143,9 @@ $(function(){initNavTree('cubic__spline_8h_source.html','',''); });
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">//</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html#a1b915b11fd95f2321b280128dd5c378d">   92</a></span><span class="keyword">inline</span> CubicSpline&lt;Scalar&gt;::<a class="code hl_function" href="classsablib_1_1_cubic_spline.html#a1b915b11fd95f2321b280128dd5c378d">CubicSpline</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt;&amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt;&amp; y)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html#a1b915b11fd95f2321b280128dd5c378d">   92</a></span><span class="keyword">inline</span> <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#a6830eb25c7150c958df62d5fdf4f34c3">CubicSpline&lt;Scalar&gt;::CubicSpline</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt;&amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt;&amp; y)</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>{</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    Fit(x, y);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#a4734cfab620c62f4af32bb76572da1f8">Fit</a>(x, y);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
 </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
@@ -200,7 +154,7 @@ $(function(){initNavTree('cubic__spline_8h_source.html','',''); });
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">//</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html#a4734cfab620c62f4af32bb76572da1f8">  101</a></span><span class="keywordtype">void</span> CubicSpline&lt;Scalar&gt;::<a class="code hl_function" href="classsablib_1_1_cubic_spline.html#a4734cfab620c62f4af32bb76572da1f8">Fit</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; y)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html#a4734cfab620c62f4af32bb76572da1f8">  101</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#a4734cfab620c62f4af32bb76572da1f8">CubicSpline&lt;Scalar&gt;::Fit</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; y)</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>{</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">if</span> (x.size() != y.size()) {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;CubicSpline::Fit(): x and y must have the same size.&quot;</span>);</div>
@@ -289,8 +243,8 @@ $(function(){initNavTree('cubic__spline_8h_source.html','',''); });
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">//</span></div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9">  188</a></span>Scalar CubicSpline&lt;Scalar&gt;::<a class="code hl_function" href="classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9">Interpolate</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x) <span class="keyword">const</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>{</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9">  188</a></span>Scalar <a class="code hl_function" href="classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9">CubicSpline&lt;Scalar&gt;::Interpolate</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordtype">int</span> n = sp_x.size() - 1;</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordtype">int</span> i = n - 1;</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
@@ -309,20 +263,18 @@ $(function(){initNavTree('cubic__spline_8h_source.html','',''); });
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>}; <span class="comment">// namespace sablib</span></div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// __SABLIB_CUBIC_SPLINE_H__</span></div>
-<div class="ttc" id="aclasssablib_1_1_cubic_spline_html_a1b915b11fd95f2321b280128dd5c378d"><div class="ttname"><a href="classsablib_1_1_cubic_spline.html#a1b915b11fd95f2321b280128dd5c378d">sablib::CubicSpline::CubicSpline</a></div><div class="ttdeci">CubicSpline(const Eigen::VectorX&lt; Scalar &gt; &amp;x, const Eigen::VectorX&lt; Scalar &gt; &amp;y)</div><div class="ttdoc">Constructor that fits a cubic spline to the given data points.</div><div class="ttdef"><b>Definition</b> cubic_spline.h:92</div></div>
-<div class="ttc" id="aclasssablib_1_1_cubic_spline_html_a4734cfab620c62f4af32bb76572da1f8"><div class="ttname"><a href="classsablib_1_1_cubic_spline.html#a4734cfab620c62f4af32bb76572da1f8">sablib::CubicSpline::Fit</a></div><div class="ttdeci">void Fit(const Eigen::VectorX&lt; Scalar &gt; &amp;x, const Eigen::VectorX&lt; Scalar &gt; &amp;y)</div><div class="ttdoc">Fits a cubic spline to the given data points.</div><div class="ttdef"><b>Definition</b> cubic_spline.h:101</div></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_CUBIC_SPLINE_H__</span></div>
+<div class="ttc" id="aclasssablib_1_1_cubic_spline_html_a4734cfab620c62f4af32bb76572da1f8"><div class="ttname"><a href="classsablib_1_1_cubic_spline.html#a4734cfab620c62f4af32bb76572da1f8">sablib::CubicSpline::Fit</a></div><div class="ttdeci">void Fit(const Eigen::VectorX&lt; Scalar &gt; &amp;x, const Eigen::VectorX&lt; Scalar &gt; &amp;y)</div><div class="ttdoc">Fits a cubic spline to the given data points.</div><div class="ttdef"><b>Definition</b> <a href="#l00101">cubic_spline.h:101</a></div></div>
 <div class="ttc" id="aclasssablib_1_1_cubic_spline_html_a6830eb25c7150c958df62d5fdf4f34c3"><div class="ttname"><a href="classsablib_1_1_cubic_spline.html#a6830eb25c7150c958df62d5fdf4f34c3">sablib::CubicSpline::CubicSpline</a></div><div class="ttdeci">CubicSpline()=default</div><div class="ttdoc">Default constructor.</div></div>
-<div class="ttc" id="aclasssablib_1_1_cubic_spline_html_aae47b991a4480c803a4e27409e086a35"><div class="ttname"><a href="classsablib_1_1_cubic_spline.html#aae47b991a4480c803a4e27409e086a35">sablib::CubicSpline::operator()</a></div><div class="ttdeci">Scalar operator()(const double x) const</div><div class="ttdoc">Interpolates the value at a given x-coordinate.</div><div class="ttdef"><b>Definition</b> cubic_spline.h:64</div></div>
-<div class="ttc" id="aclasssablib_1_1_cubic_spline_html_ac5a12a2f35eff1ed3b023cb3cd9e5ad9"><div class="ttname"><a href="classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9">sablib::CubicSpline::Interpolate</a></div><div class="ttdeci">Scalar Interpolate(const double x) const</div><div class="ttdoc">Interpolates the value at a given x-coordinate.</div><div class="ttdef"><b>Definition</b> cubic_spline.h:188</div></div>
-<div class="ttc" id="aspline_8cpp_html_a978ab1e22abc9b9157e6bf6b2a5d0a5e"><div class="ttname"><a href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">sablib::BaselineSpline</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineSpline(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; unsigned int &gt; &amp;indices)</div><div class="ttdoc">Performs baseline estimation using cubic spline interpolation.</div><div class="ttdef"><b>Definition</b> spline.cpp:14</div></div>
+<div class="ttc" id="aclasssablib_1_1_cubic_spline_html_aae47b991a4480c803a4e27409e086a35"><div class="ttname"><a href="classsablib_1_1_cubic_spline.html#aae47b991a4480c803a4e27409e086a35">sablib::CubicSpline::operator()</a></div><div class="ttdeci">Scalar operator()(const double x) const</div><div class="ttdoc">Interpolates the value at a given x-coordinate.</div><div class="ttdef"><b>Definition</b> <a href="#l00064">cubic_spline.h:64</a></div></div>
+<div class="ttc" id="aclasssablib_1_1_cubic_spline_html_ac5a12a2f35eff1ed3b023cb3cd9e5ad9"><div class="ttname"><a href="classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9">sablib::CubicSpline::Interpolate</a></div><div class="ttdeci">Scalar Interpolate(const double x) const</div><div class="ttdoc">Interpolates the value at a given x-coordinate.</div><div class="ttdef"><b>Definition</b> <a href="#l00188">cubic_spline.h:188</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_873953ca3d1354cdbf1c5c22e2e30d14.html">sablib</a></li><li class="navelem"><b>misc</b></li><li class="navelem"><a href="cubic__spline_8h.html">cubic_spline.h</a></li>
+    <li class="navelem"><b>sablib</b></li><li class="navelem"><b>misc</b></li><li class="navelem"><a href="cubic__spline_8h.html">cubic_spline.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>
