@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "sablib", "index.html", [
+    [ "sablib - smoothing and baseline library", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
