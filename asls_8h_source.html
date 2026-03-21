@@ -98,18 +98,20 @@ $(function(){initNavTree('asls_8h_source.html','',''); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __SABLIB_ASLS_H__</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __SABLIB_ASLS_H__</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="whittaker_8h.html">../smoothing/whittaker.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>sablib {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="asls_8cpp.html#a7ef9369d0ad59ba84981811895e3cad0">BaselineAsLS</a>(</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">double</span> lambda, <span class="keyword">const</span> <span class="keywordtype">double</span> p, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s = 2,</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loop = 10, <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1e-3</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}; <span class="comment">// namespace sablib</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_ASLS_H__</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="whittaker_8h.html">../smoothing/whittaker.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>sablib {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="asls_8cpp.html#a7ef9369d0ad59ba84981811895e3cad0">BaselineAsLS</a>(</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">double</span> lambda, <span class="keyword">const</span> <span class="keywordtype">double</span> p, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s = 2,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loop = 10, <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1e-3</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_ASLS_H__</span></div>
 <div class="ttc" id="aasls_8cpp_html_a7ef9369d0ad59ba84981811895e3cad0"><div class="ttname"><a href="asls_8cpp.html#a7ef9369d0ad59ba84981811895e3cad0">sablib::BaselineAsLS</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineAsLS(std::vector&lt; double &gt; &amp;y, const double lambda, const double p, const unsigned int s, const unsigned int loop, const double eps)</div><div class="ttdoc">Performs baseline estimation using Asymmetric Least Squares Smoothing (AsLS).</div><div class="ttdef"><b>Definition</b> <a href="asls_8cpp_source.html#l00014">asls.cpp:14</a></div></div>
 <div class="ttc" id="awhittaker_8h_html"><div class="ttname"><a href="whittaker_8h.html">whittaker.h</a></div><div class="ttdoc">Smoothing using Whittaker smoother.</div></div>
 </div><!-- fragment --></div><!-- contents -->

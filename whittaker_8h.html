@@ -96,7 +96,8 @@ $(function(){initNavTree('whittaker_8h.html','',''); });
 
 <p>Smoothing using Whittaker smoother.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="diff_8h_source.html">../misc/diff.h</a>&quot;</code><br />
 </div>
 <p><a href="whittaker_8h_source.html">Go to the source code of this file.</a></p>
@@ -158,7 +159,7 @@ template&lt;typename Derived&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The smoothed data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="whittaker_8h_source.html#l00056">56</a> of file <a class="el" href="whittaker_8h_source.html">whittaker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="whittaker_8h_source.html#l00058">58</a> of file <a class="el" href="whittaker_8h_source.html">whittaker.h</a>.</p>
 
 </div>
 </div>
@@ -197,7 +198,7 @@ template&lt;typename Derived&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The smoothed data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="whittaker_8cpp_source.html#l00042">42</a> of file <a class="el" href="whittaker_8cpp_source.html">whittaker.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="whittaker_8cpp_source.html#l00058">58</a> of file <a class="el" href="whittaker_8cpp_source.html">whittaker.cpp</a>.</p>
 
 </div>
 </div>
@@ -241,6 +242,12 @@ template&lt;typename Derived&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The smoothed data. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters wrong. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="whittaker_8cpp_source.html#l00014">14</a> of file <a class="el" href="whittaker_8cpp_source.html">whittaker.cpp</a>.</p>
 

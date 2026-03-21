@@ -98,7 +98,6 @@ $(function(){initNavTree('beads_8cpp.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
-<code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;Eigen/Eigen&gt;</code><br />
 <code>#include &quot;<a class="el" href="convolve_8h_source.html">../misc/convolve.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="diff_8h_source.html">../misc/diff.h</a>&quot;</code><br />
@@ -211,8 +210,14 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A tuple containing (baseline, denoised signal). </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00071">71</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00070">70</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
 
 </div>
 </div>

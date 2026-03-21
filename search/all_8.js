@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['l1_5fv1_0',['L1_v1',['../beads_8h.html#aaa339033c3a975d37fc6e342adeee334af148d8498eacebd59706d67006c5319b',1,'sablib']]],
-  ['l1_5fv2_1',['L1_v2',['../beads_8h.html#aaa339033c3a975d37fc6e342adeee334ac26c30edb634d206dfbecc01225ce4d8',1,'sablib']]],
-  ['library_2',['sablib - smoothing and baseline library',['../index.html',1,'']]]
+  ['fit_0',['Fit',['../classsablib_1_1_b_spline.html#a914f8a96c03b608b3a93cfb5ba55db1f',1,'sablib::BSpline::Fit()'],['../classsablib_1_1_cubic_spline.html#a4734cfab620c62f4af32bb76572da1f8',1,'sablib::CubicSpline::Fit()']]],
+  ['full_1',['Full',['../convolve_8h.html#aecfce576d85f82a26ac84490ae24c846abbd47109890259c0127154db1af26c75',1,'sablib']]]
 ];

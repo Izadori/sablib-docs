@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['polyfit_0',['PolyFit',['../polyfit_8h.html#a67b09b178fc82401568bacaebf8bcdb1',1,'sablib']]],
-  ['polyfit_2eh_1',['polyfit.h',['../polyfit_8h.html',1,'']]],
-  ['polynomial_2ecpp_2',['polynomial.cpp',['../polynomial_8cpp.html',1,'']]],
-  ['polynomial_2eh_3',['polynomial.h',['../polynomial_8h.html',1,'']]],
-  ['pspline_4',['PSpline',['../pspline_8cpp.html#a54eee647109a99323562dfdd552477c7',1,'sablib']]],
-  ['pspline_2ecpp_5',['pspline.cpp',['../pspline_8cpp.html',1,'']]],
-  ['pspline_2eh_6',['pspline.h',['../pspline_8h.html',1,'']]]
+  ['l1_5fv1_0',['L1_v1',['../beads_8h.html#aaa339033c3a975d37fc6e342adeee334af148d8498eacebd59706d67006c5319b',1,'sablib']]],
+  ['l1_5fv2_1',['L1_v2',['../beads_8h.html#aaa339033c3a975d37fc6e342adeee334ac26c30edb634d206dfbecc01225ce4d8',1,'sablib']]],
+  ['library_2',['sablib - smoothing and baseline library',['../index.html',1,'']]]
 ];

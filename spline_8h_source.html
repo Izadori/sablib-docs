@@ -98,17 +98,18 @@ $(function(){initNavTree('spline_8h_source.html','',''); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef __SABLIB_SPLINE_H__</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define __SABLIB_SPLINE_H__</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="cubic__spline_8h.html">../misc/cubic_spline.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span>sablib {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">BaselineSpline</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> std::vector&lt;unsigned int&gt; &amp; indices);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="cubic__spline_8h.html">../misc/cubic_spline.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>sablib {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">BaselineSpline</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> std::vector&lt;unsigned int&gt; &amp; indices);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_SPLINE_H__</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_SPLINE_H__</span></div>
 <div class="ttc" id="acubic__spline_8h_html"><div class="ttname"><a href="cubic__spline_8h.html">cubic_spline.h</a></div><div class="ttdoc">Performs cubic spline parameter calculation and interpolation.</div></div>
 <div class="ttc" id="aspline_8cpp_html_a978ab1e22abc9b9157e6bf6b2a5d0a5e"><div class="ttname"><a href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e">sablib::BaselineSpline</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineSpline(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; unsigned int &gt; &amp;indices)</div><div class="ttdoc">Performs baseline estimation using cubic spline interpolation.</div><div class="ttdef"><b>Definition</b> <a href="spline_8cpp_source.html#l00014">spline.cpp:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

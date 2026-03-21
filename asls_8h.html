@@ -96,7 +96,8 @@ $(function(){initNavTree('asls_8h.html','',''); });
 
 <p>Baseline estimation using Asymmetric Least Squares Smoothing(AsLS).  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="whittaker_8h_source.html">../smoothing/whittaker.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &quot;<a class="el" href="whittaker_8h_source.html">../smoothing/whittaker.h</a>&quot;</code><br />
 </div>
 <p><a href="asls_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -167,6 +168,12 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="asls_8cpp_source.html#l00014">14</a> of file <a class="el" href="asls_8cpp_source.html">asls.cpp</a>.</p>
 
