@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['changelog_0',['Changelog',['../md_src_2changelog.html',1,'']]],
+  ['changelog_0',['Changelog',['../md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html',1,'']]],
   ['coefficients_1',['Coefficients',['../classsablib_1_1_b_spline.html#a9c9afca74c55974573f54afd27f47ed0',1,'sablib::BSpline']]],
   ['columnwise_2',['ColumnWise',['../diff_8h.html#a2d7c9a75f61446a03661f5906ad6ccb9a15bd9d21302dd7cb4540afcfbbdec97d',1,'sablib']]],
   ['convolve_3',['Convolve',['../convolve_8h.html#ae5982b97bd82519140c164f12c44e789',1,'sablib']]],

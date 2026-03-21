@@ -26,9 +26,9 @@ var NAVTREE =
 [
   [ "sablib", "index.html", [
     [ "sablib - smoothing and baseline library", "index.html", "index" ],
-    [ "Changelog", "md_src_2changelog.html", [
-      [ "version 0.1.1 (2026/03/22)", "md_src_2changelog.html#autotoc_md1", null ],
-      [ "version 0.1.0 (2026/03/18)", "md_src_2changelog.html#autotoc_md2", null ]
+    [ "Changelog", "md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html", [
+      [ "version 0.1.1 (2026/03/22)", "md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html#autotoc_md1", null ],
+      [ "version 0.1.0 (2026/03/18)", "md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html#autotoc_md2", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
