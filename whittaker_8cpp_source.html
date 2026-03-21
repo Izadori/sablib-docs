@@ -108,46 +108,62 @@ $(function(){initNavTree('whittaker_8cpp_source.html','',''); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> lambda, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    Eigen::VectorXd yy = Eigen::VectorXd::Map(y.data(), y.size());</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    Eigen::VectorXd ww = Eigen::VectorXd::Map(w.data(), w.size());</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    Eigen::VectorXd z;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    Eigen::SparseMatrix&lt;double&gt; I, D, lambdaDTD;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">size_t</span> m = y.size();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    I.resize(m, m);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    I.setIdentity();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    D = <a class="code hl_function" href="diff_8h.html#aa678c8e91bd73334fcd50bd5b497c968">Diff</a>(I, s);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    lambdaDTD = lambda * (D.transpose() * D);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">if</span>(y.size() == 0) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Whittaker(): length of y is zero.&quot;</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">if</span>(y.size() != w.size()) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Whittaker(): the sizes of y and w do not match.&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span>(lambda &lt;= 0) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Whittaker(): non-positive lambda value is given.&quot;</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    z = <a class="code hl_function" href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">Whittaker</a>(yy, ww, lambdaDTD);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::vector&lt;double&gt; result(z.size());</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    Eigen::VectorXd::Map(result.data(), result.size()) = z;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
-</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">//</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// Implementation of Whittaker() function, std::vector&lt;double&gt; version</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">//</span></div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="whittaker_8cpp.html#ad2871c522bd7f380b66aaea420e727fd">   42</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">Whittaker</a>(</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">double</span> lambda, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    std::vector&lt;double&gt; w(y.size());</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; w.size(); i++) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        w[i] = 1;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">if</span>(s &gt; 3 || s == 0) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Whittaker(): s must be 1, 2, or 3.&quot;</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    Eigen::VectorXd yy = Eigen::VectorXd::Map(y.data(), y.size());</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    Eigen::VectorXd ww = Eigen::VectorXd::Map(w.data(), w.size());</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    Eigen::VectorXd z;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    Eigen::SparseMatrix&lt;double&gt; I, D, lambdaDTD;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">size_t</span> m = y.size();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    I.resize(m, m);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    I.setIdentity();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    D = <a class="code hl_function" href="diff_8h.html#aa678c8e91bd73334fcd50bd5b497c968">Diff</a>(I, s);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    lambdaDTD = lambda * (D.transpose() * D);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    z = <a class="code hl_function" href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">Whittaker</a>(yy, ww, lambdaDTD);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::vector&lt;double&gt; result(z.size());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    Eigen::VectorXd::Map(result.data(), result.size()) = z;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">Whittaker</a>(y, w, lambda, s);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
 </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">//</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// Implementation of Whittaker() function, std::vector&lt;double&gt; version</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">//</span></div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="whittaker_8cpp.html#ad2871c522bd7f380b66aaea420e727fd">   58</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">Whittaker</a>(</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">double</span> lambda, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::vector&lt;double&gt; w(y.size());</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; w.size(); i++) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        w[i] = 1;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">Whittaker</a>(y, w, lambda, s);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}; <span class="comment">// namespace sablib</span></div>
 <div class="ttc" id="adiff_8h_html_aa678c8e91bd73334fcd50bd5b497c968"><div class="ttname"><a href="diff_8h.html#aa678c8e91bd73334fcd50bd5b497c968">sablib::Diff</a></div><div class="ttdeci">const Derived::PlainObject Diff(const Eigen::MatrixBase&lt; Derived &gt; &amp;m0, const int n=1, const Dir dir=Dir::RowWise)</div><div class="ttdoc">Calculates the n-th discrete difference along the given axis.</div><div class="ttdef"><b>Definition</b> <a href="diff_8h_source.html#l00032">diff.h:32</a></div></div>
 <div class="ttc" id="awhittaker_8cpp_html_abbae899cda008775ee16595faafa5208"><div class="ttname"><a href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">sablib::Whittaker</a></div><div class="ttdeci">const std::vector&lt; double &gt; Whittaker(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w, const double lambda, const unsigned int s)</div><div class="ttdoc">Performs Whittaker smoothing (std::vector&lt;double&gt; version, with weights).</div><div class="ttdef"><b>Definition</b> <a href="#l00014">whittaker.cpp:14</a></div></div>
 <div class="ttc" id="awhittaker_8h_html"><div class="ttname"><a href="whittaker_8h.html">whittaker.h</a></div><div class="ttdoc">Smoothing using Whittaker smoother.</div></div>

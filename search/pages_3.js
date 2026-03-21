@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['introduction_0',['Introduction',['../index.html#autotoc_md0',1,'']]]
+  ['algorithms_0',['Algorithms',['../index.html#autotoc_md4',1,'']]],
+  ['and_20baseline_20library_1',['sablib - smoothing and baseline library',['../index.html',1,'']]]
 ];

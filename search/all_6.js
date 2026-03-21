@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['interpolate_0',['Interpolate',['../classsablib_1_1_b_spline.html#af12dce00d07fca93f8dd637c5cd9dde3',1,'sablib::BSpline::Interpolate(const Scalar x, const Eigen::VectorX&lt; Scalar &gt; &amp;coefficients) const'],['../classsablib_1_1_b_spline.html#acea095077c432c4f2a539f2ecbbafecd',1,'sablib::BSpline::Interpolate(const Scalar x) const'],['../classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9',1,'sablib::CubicSpline::Interpolate()']]],
-  ['introduction_1',['Introduction',['../index.html#autotoc_md0',1,'']]]
+  ['designmatrix_0',['DesignMatrix',['../classsablib_1_1_b_spline.html#a0c0276581df250801097401908615d24',1,'sablib::BSpline']]],
+  ['diff_1',['Diff',['../diff_8h.html#aa678c8e91bd73334fcd50bd5b497c968',1,'sablib::Diff(const Eigen::MatrixBase&lt; Derived &gt; &amp;m0, const int n=1, const Dir dir=Dir::RowWise)'],['../diff_8h.html#a37ac5692f88a694f298d8872e9f91a9f',1,'sablib::Diff(const Eigen::SparseMatrixBase&lt; Derived &gt; &amp;m0, const int n=1, const Dir dir=Dir::RowWise)']]],
+  ['diff_2eh_2',['diff.h',['../diff_8h.html',1,'']]],
+  ['dir_3',['Dir',['../diff_8h.html#a2d7c9a75f61446a03661f5906ad6ccb9',1,'sablib']]]
 ];

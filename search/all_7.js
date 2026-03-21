@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['knots_0',['Knots',['../classsablib_1_1_b_spline.html#afd4d4820458fccb243111ee28593c316',1,'sablib::BSpline']]]
+  ['estimation_0',['Baseline Estimation',['../index.html#autotoc_md6',1,'']]],
+  ['expand_2eh_1',['expand.h',['../expand_8h.html',1,'']]],
+  ['expandboundaries_2',['ExpandBoundaries',['../expand_8h.html#a6a8c53622acd39e60eef033607eacd94',1,'sablib']]]
 ];

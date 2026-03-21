@@ -97,7 +97,6 @@ $(function(){initNavTree('savitzky__golay_8cpp.html','',''); });
 <p>Smoothing using Savitzky-Golay filter(implementation).  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;cassert&gt;</code><br />
 <code>#include &quot;<a class="el" href="convolve_8h_source.html">../misc/convolve.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="savitzky__golay_8h_source.html">savitzky_golay.h</a>&quot;</code><br />
 </div>
@@ -162,8 +161,14 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The filtered (smoothed or differentiated) data. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the length of y is zero. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="savitzky__golay_8cpp_source.html#l00055">55</a> of file <a class="el" href="savitzky__golay_8cpp_source.html">savitzky_golay.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="savitzky__golay_8cpp_source.html#l00072">72</a> of file <a class="el" href="savitzky__golay_8cpp_source.html">savitzky_golay.cpp</a>.</p>
 
 </div>
 </div>
@@ -207,8 +212,14 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The calculated filter coefficients. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="savitzky__golay_8cpp_source.html#l00019">19</a> of file <a class="el" href="savitzky__golay_8cpp_source.html">savitzky_golay.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="savitzky__golay_8cpp_source.html#l00018">18</a> of file <a class="el" href="savitzky__golay_8cpp_source.html">savitzky_golay.cpp</a>.</p>
 
 </div>
 </div>

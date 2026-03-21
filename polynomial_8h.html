@@ -98,7 +98,6 @@ $(function(){initNavTree('polynomial_8h.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;Eigen/Eigen&gt;</code><br />
 <code>#include &quot;<a class="el" href="polyfit_8h_source.html">../misc/polyfit.h</a>&quot;</code><br />
 </div>
 <p><a href="polynomial_8h_source.html">Go to the source code of this file.</a></p>
@@ -150,8 +149,14 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The estimated linear baseline. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="polynomial_8cpp_source.html#l00014">14</a> of file <a class="el" href="polynomial_8cpp_source.html">polynomial.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="polynomial_8cpp_source.html#l00016">16</a> of file <a class="el" href="polynomial_8cpp_source.html">polynomial.cpp</a>.</p>
 
 </div>
 </div>
@@ -189,8 +194,14 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The estimated polynomial baseline. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="polynomial_8cpp_source.html#l00037">37</a> of file <a class="el" href="polynomial_8cpp_source.html">polynomial.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="polynomial_8cpp_source.html#l00043">43</a> of file <a class="el" href="polynomial_8cpp_source.html">polynomial.cpp</a>.</p>
 
 </div>
 </div>

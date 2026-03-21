@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['requirements_0',['Requirements',['../dir_873953ca3d1354cdbf1c5c22e2e30d14.html#autotoc_md4',1,'']]]
+  ['sablib_20smoothing_20and_20baseline_20library_0',['sablib - smoothing and baseline library',['../index.html',1,'']]],
+  ['smoothing_1',['Smoothing',['../index.html#autotoc_md5',1,'']]],
+  ['smoothing_20and_20baseline_20library_2',['sablib - smoothing and baseline library',['../index.html',1,'']]]
 ];

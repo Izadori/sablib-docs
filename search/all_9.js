@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['moving_5faverage_2ecpp_0',['moving_average.cpp',['../moving__average_8cpp.html',1,'']]],
-  ['moving_5faverage_2eh_1',['moving_average.h',['../moving__average_8h.html',1,'']]],
-  ['movingaverage_2',['MovingAverage',['../moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09',1,'sablib::MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)'],['../moving__average_8h.html#afbc027fac0a8bd40a3994d02b6275770',1,'sablib::MovingAverage(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)']]]
+  ['interpolate_0',['Interpolate',['../classsablib_1_1_b_spline.html#af12dce00d07fca93f8dd637c5cd9dde3',1,'sablib::BSpline::Interpolate(const Scalar x, const Eigen::VectorX&lt; Scalar &gt; &amp;coefficients) const'],['../classsablib_1_1_b_spline.html#acea095077c432c4f2a539f2ecbbafecd',1,'sablib::BSpline::Interpolate(const Scalar x) const'],['../classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9',1,'sablib::CubicSpline::Interpolate()']]],
+  ['introduction_1',['Introduction',['../index.html#autotoc_md3',1,'']]]
 ];
