@@ -1,8 +1,8 @@
 var index =
 [
-    [ "Introduction", "index.html#autotoc_md3", null ],
-    [ "Algorithms", "index.html#autotoc_md4", [
-      [ "Smoothing", "index.html#autotoc_md5", null ],
-      [ "Baseline Estimation", "index.html#autotoc_md6", null ]
+    [ "Introduction", "index.html#autotoc_md13", null ],
+    [ "Algorithms", "index.html#autotoc_md14", [
+      [ "Smoothing", "index.html#autotoc_md15", null ],
+      [ "Baseline Estimation", "index.html#autotoc_md16", null ]
     ] ]
 ];

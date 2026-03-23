@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['version_200_201_200_202026_2003_2018_0',['version 0.1.0 (2026/03/18)',['../md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html#autotoc_md2',1,'']]],
-  ['version_200_201_201_202026_2003_2022_1',['version 0.1.1 (2026/03/22)',['../md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html#autotoc_md1',1,'']]]
+  ['g_20mingw_20linux_0',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md11',1,'']]],
+  ['getting_20started_1',['Getting Started',['../getting_started.html',1,'Getting Started'],['../getting_started.html#autotoc_md3',1,'Getting Started']]]
 ];

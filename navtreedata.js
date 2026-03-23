@@ -25,10 +25,35 @@
 var NAVTREE =
 [
   [ "sablib", "index.html", [
-    [ "sablib - smoothing and baseline library", "index.html", "index" ],
-    [ "Changelog", "md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html", [
-      [ "version 0.1.1 (2026/03/22)", "md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html#autotoc_md1", null ],
-      [ "version 0.1.0 (2026/03/18)", "md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html#autotoc_md2", null ]
+    [ "sablib - A C++ Library for Smoothing and Baseline Estimation", "index.html#autotoc_md13", null ],
+    [ "Introduction", "introduction.html", [
+      [ "Introduction", "introduction.html#autotoc_md14", [
+        [ "Algorithms", "introduction.html#autotoc_md15", [
+          [ "Smoothing", "introduction.html#autotoc_md16", null ],
+          [ "Baseline Estimation", "introduction.html#autotoc_md17", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "Getting Started", "getting_started.html", [
+      [ "Getting Started", "getting_started.html#autotoc_md3", [
+        [ "1. Prerequisites", "getting_started.html#autotoc_md4", null ],
+        [ "2. Cloning the Repository", "getting_started.html#autotoc_md5", null ],
+        [ "3. Building the Library", "getting_started.html#autotoc_md6", null ],
+        [ "4. Usage Example", "getting_started.html#autotoc_md7", [
+          [ "Sample Program: <span class=\"tt\">main.cpp</span>", "getting_started.html#autotoc_md8", null ],
+          [ "Building your project with CMake", "getting_started.html#autotoc_md9", null ],
+          [ "Manual Compilation (Command Line)", "getting_started.html#autotoc_md10", [
+            [ "Using g++ (MinGW / Linux)", "getting_started.html#autotoc_md11", null ],
+            [ "Using cl.exe (MSVC)", "getting_started.html#autotoc_md12", null ]
+          ] ]
+        ] ]
+      ] ]
+    ] ],
+    [ "Changelog", "changelog.html", [
+      [ "Changelog", "changelog.html#autotoc_md0", [
+        [ "version 0.1.1 (2026/03/22)", "changelog.html#autotoc_md1", null ],
+        [ "version 0.1.0 (2026/03/18)", "changelog.html#autotoc_md2", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

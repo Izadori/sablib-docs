@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['valid_0',['Valid',['../convolve_8h.html#aecfce576d85f82a26ac84490ae24c846a3ac705f2acd51a4613f9188c05c91d0d',1,'sablib']]],
-  ['version_200_201_200_202026_2003_2018_1',['version 0.1.0 (2026/03/18)',['../md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html#autotoc_md2',1,'']]],
-  ['version_200_201_201_202026_2003_2022_2',['version 0.1.1 (2026/03/22)',['../md__d_1_2source_2sablib_2sablib-docs-src_2src_2changelog.html#autotoc_md1',1,'']]]
+  ['repository_0',['2. Cloning the Repository',['../getting_started.html#autotoc_md5',1,'']]],
+  ['rowwise_1',['RowWise',['../diff_8h.html#a2d7c9a75f61446a03661f5906ad6ccb9ae7968e8fd57987542f4a09aafaf672c7',1,'sablib']]]
 ];

@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['interpolate_0',['Interpolate',['../classsablib_1_1_b_spline.html#af12dce00d07fca93f8dd637c5cd9dde3',1,'sablib::BSpline::Interpolate(const Scalar x, const Eigen::VectorX&lt; Scalar &gt; &amp;coefficients) const'],['../classsablib_1_1_b_spline.html#acea095077c432c4f2a539f2ecbbafecd',1,'sablib::BSpline::Interpolate(const Scalar x) const'],['../classsablib_1_1_cubic_spline.html#ac5a12a2f35eff1ed3b023cb3cd9e5ad9',1,'sablib::CubicSpline::Interpolate()']]],
-  ['introduction_1',['Introduction',['../index.html#autotoc_md3',1,'']]]
+  ['estimation_0',['Estimation',['../introduction.html#autotoc_md17',1,'Baseline Estimation'],['../index.html#autotoc_md13',1,'sablib - A C++ Library for Smoothing and Baseline Estimation']]],
+  ['example_1',['4. Usage Example',['../getting_started.html#autotoc_md7',1,'']]],
+  ['exe_20msvc_2',['Using cl.exe (MSVC)',['../getting_started.html#autotoc_md12',1,'']]],
+  ['expand_2eh_3',['expand.h',['../expand_8h.html',1,'']]],
+  ['expandboundaries_4',['ExpandBoundaries',['../expand_8h.html#a6a8c53622acd39e60eef033607eacd94',1,'sablib']]]
 ];
