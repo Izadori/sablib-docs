@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_28_29_0',['operator()',['../classsablib_1_1_cubic_spline.html#aae47b991a4480c803a4e27409e086a35',1,'sablib::CubicSpline']]]
+  ['knots_0',['Knots',['../classsablib_1_1_b_spline.html#afd4d4820458fccb243111ee28593c316',1,'sablib::BSpline']]]
 ];
