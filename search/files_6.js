@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['polyfit_2eh_0',['polyfit.h',['../polyfit_8h.html',1,'']]],
-  ['polynomial_2ecpp_1',['polynomial.cpp',['../polynomial_8cpp.html',1,'']]],
-  ['polynomial_2eh_2',['polynomial.h',['../polynomial_8h.html',1,'']]],
-  ['pspline_2ecpp_3',['pspline.cpp',['../pspline_8cpp.html',1,'']]],
-  ['pspline_2eh_4',['pspline.h',['../pspline_8h.html',1,'']]]
+  ['modpoly_2ecpp_0',['modpoly.cpp',['../modpoly_8cpp.html',1,'']]],
+  ['modpoly_2eh_1',['modpoly.h',['../modpoly_8h.html',1,'']]],
+  ['moving_5faverage_2ecpp_2',['moving_average.cpp',['../moving__average_8cpp.html',1,'']]],
+  ['moving_5faverage_2eh_3',['moving_average.h',['../moving__average_8h.html',1,'']]]
 ];

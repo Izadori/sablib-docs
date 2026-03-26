@@ -95,7 +95,7 @@ $(function(){initNavTree('polynomial_8cpp_source.html','',''); });
 <div class="contents">
 <a href="polynomial_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Eigen/Eigen&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="polyfit_8h.html">../misc/polyfit.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="polynomial_8h.html">polynomial.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
@@ -161,7 +161,7 @@ $(function(){initNavTree('polynomial_8cpp_source.html','',''); });
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        yy(i) = y[sorted_indices[i]];</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    Eigen::VectorXd coefficients = <a class="code hl_function" href="polyfit_8h.html#a67b09b178fc82401568bacaebf8bcdb1">PolyFit</a>(xx, yy, polyorder);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    Eigen::VectorXd coefficients = <a class="code hl_function" href="polyfit_8h.html#ab5b3b87767b0f294fbeba98a763ced07">PolyFit</a>(xx, yy, polyorder);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    std::vector&lt;double&gt; result = y;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
@@ -183,7 +183,8 @@ $(function(){initNavTree('polynomial_8cpp_source.html','',''); });
 </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}; <span class="comment">// namespace sablib</span></div>
-<div class="ttc" id="apolyfit_8h_html_a67b09b178fc82401568bacaebf8bcdb1"><div class="ttname"><a href="polyfit_8h.html#a67b09b178fc82401568bacaebf8bcdb1">sablib::PolyFit</a></div><div class="ttdeci">const Derived::PlainObject PolyFit(const Eigen::MatrixBase&lt; Derived &gt; &amp;x, const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int polyorder)</div><div class="ttdoc">Fits a polynomial of a specified order to the given data points.</div><div class="ttdef"><b>Definition</b> <a href="polyfit_8h_source.html#l00029">polyfit.h:29</a></div></div>
+<div class="ttc" id="apolyfit_8h_html"><div class="ttname"><a href="polyfit_8h.html">polyfit.h</a></div><div class="ttdoc">Polynomial fitting using the least squares method (Gauss-Newton for linear models) and evaluating pol...</div></div>
+<div class="ttc" id="apolyfit_8h_html_ab5b3b87767b0f294fbeba98a763ced07"><div class="ttname"><a href="polyfit_8h.html#ab5b3b87767b0f294fbeba98a763ced07">sablib::PolyFit</a></div><div class="ttdeci">const Derived::PlainObject PolyFit(const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt; &amp;V, const Eigen::MatrixBase&lt; Derived &gt; &amp;y)</div><div class="ttdoc">Solves the polynomial least squares fitting problem using a pre-calculated Vandermonde matrix.</div><div class="ttdef"><b>Definition</b> <a href="polyfit_8h_source.html#l00066">polyfit.h:66</a></div></div>
 <div class="ttc" id="apolynomial_8cpp_html_a11aad697a81d46a336eca5ab6eb05900"><div class="ttname"><a href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">sablib::BaselineLinear</a></div><div class="ttdeci">std::vector&lt; double &gt; BaselineLinear(std::vector&lt; double &gt; &amp;y, const unsigned int index1, const unsigned int index2)</div><div class="ttdoc">Performs baseline estimation with a linear line between two points.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">polynomial.cpp:16</a></div></div>
 <div class="ttc" id="apolynomial_8cpp_html_a14a6e2b7e2ef37203ca65e6435faa624"><div class="ttname"><a href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">sablib::BaselinePolynomial</a></div><div class="ttdeci">std::vector&lt; double &gt; BaselinePolynomial(std::vector&lt; double &gt; &amp;y, const unsigned int polyorder, const std::vector&lt; unsigned int &gt; &amp;indices)</div><div class="ttdoc">Performs baseline estimation by fitting a polynomial to specified points.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">polynomial.cpp:43</a></div></div>
 <div class="ttc" id="apolynomial_8h_html"><div class="ttname"><a href="polynomial_8h.html">polynomial.h</a></div><div class="ttdoc">Baseline estimation with polynomial line.</div></div>

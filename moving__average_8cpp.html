@@ -96,7 +96,8 @@ $(function(){initNavTree('moving__average_8cpp.html','',''); });
 
 <p>Smoothing using simple/weighted moving average(implementation).  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="moving__average_8h_source.html">moving_average.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<code>#include &quot;<a class="el" href="moving__average_8h_source.html">moving_average.h</a>&quot;</code><br />
 </div>
 <p><a href="moving__average_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -106,13 +107,71 @@ Functions</h2></td></tr>
 <tr class="memdesc:add602b00e5536fb02c55775cd31a3b09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the simple moving average of the input signal (std::vector&lt;double&gt; version).  <br /></td></tr>
 <tr class="memitem:ab6ca749353a234b563a603e0f2236ebe" id="r_ab6ca749353a234b563a603e0f2236ebe"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab6ca749353a234b563a603e0f2236ebe">sablib::WeightedMovingAverage</a> (const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w)</td></tr>
 <tr class="memdesc:ab6ca749353a234b563a603e0f2236ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the weighted moving average of the input signal (std::vector&lt;double&gt; version).  <br /></td></tr>
+<tr class="memitem:a10a2483f46cb7625264a7985cb86b12a" id="r_a10a2483f46cb7625264a7985cb86b12a"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a10a2483f46cb7625264a7985cb86b12a">sablib::GaussianKernel</a> (const unsigned int n, const double sigma)</td></tr>
+<tr class="memdesc:a10a2483f46cb7625264a7985cb86b12a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a Gaussian kernel.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Smoothing using simple/weighted moving average(implementation). </p>
 <dl class="section author"><dt>Author</dt><dd>Izadori </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="moving__average_8cpp_source.html">moving_average.cpp</a>.</p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a525335710b53cb064ca56b936120431e" name="a525335710b53cb064ca56b936120431e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525335710b53cb064ca56b936120431e">&#9670;&#160;</a></span>_USE_MATH_DEFINES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _USE_MATH_DEFINES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="moving__average_8cpp_source.html#l00006">6</a> of file <a class="el" href="moving__average_8cpp_source.html">moving_average.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a10a2483f46cb7625264a7985cb86b12a" name="a10a2483f46cb7625264a7985cb86b12a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10a2483f46cb7625264a7985cb86b12a">&#9670;&#160;</a></span>GaussianKernel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; double &gt; sablib::GaussianKernel </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>sigma</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates a Gaussian kernel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Half-width of the Gaussian window (total size is <span class="tt">2 * n + 1</span>). </td></tr>
+    <tr><td class="paramname">sigma</td><td>The standard deviation of the Gaussian distribution. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector containing the Gaussian kernel coefficients. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If n is zero or sigma is non-positive. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="moving__average_8cpp_source.html#l00046">46</a> of file <a class="el" href="moving__average_8cpp_source.html">moving_average.cpp</a>.</p>
+
+</div>
+</div>
 <a id="add602b00e5536fb02c55775cd31a3b09" name="add602b00e5536fb02c55775cd31a3b09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add602b00e5536fb02c55775cd31a3b09">&#9670;&#160;</a></span>MovingAverage()</h2>
 
@@ -142,7 +201,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The data after applying the moving average. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="moving__average_8cpp_source.html#l00014">14</a> of file <a class="el" href="moving__average_8cpp_source.html">moving_average.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moving__average_8cpp_source.html#l00015">15</a> of file <a class="el" href="moving__average_8cpp_source.html">moving_average.cpp</a>.</p>
 
 </div>
 </div>
@@ -175,7 +234,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The data after applying the moving average. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="moving__average_8cpp_source.html#l00029">29</a> of file <a class="el" href="moving__average_8cpp_source.html">moving_average.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moving__average_8cpp_source.html#l00030">30</a> of file <a class="el" href="moving__average_8cpp_source.html">moving_average.cpp</a>.</p>
 
 </div>
 </div>
