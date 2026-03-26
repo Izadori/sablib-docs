@@ -4,5 +4,5 @@ var searchData=
   ['whittaker_1',['Whittaker',['../whittaker_8cpp.html#abbae899cda008775ee16595faafa5208',1,'sablib::Whittaker(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w, const double lambda, const unsigned int s=2)'],['../whittaker_8cpp.html#ad2871c522bd7f380b66aaea420e727fd',1,'sablib::Whittaker(const std::vector&lt; double &gt; &amp;y, const double lambda, const unsigned int s=2)'],['../whittaker_8h.html#adcb179aa3ae7e715386f4b238c7c6fae',1,'sablib::Whittaker(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const Eigen::MatrixBase&lt; Derived &gt; &amp;w, const Eigen::SparseMatrix&lt; typename Derived::PlainObject::Scalar &gt; &amp;lambdaDTD)']]],
   ['whittaker_2ecpp_2',['whittaker.cpp',['../whittaker_8cpp.html',1,'']]],
   ['whittaker_2eh_3',['whittaker.h',['../whittaker_8h.html',1,'']]],
-  ['with_20cmake_4',['Building your project with CMake',['../getting_started.html#autotoc_md9',1,'']]]
+  ['with_20cmake_4',['Building your project with CMake',['../getting_started.html#autotoc_md10',1,'']]]
 ];

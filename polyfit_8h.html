@@ -94,7 +94,7 @@ $(function(){initNavTree('polyfit_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Polynomial fitting using the least squares method (Gauss-Newton for linear models).  
+<p>Polynomial fitting using the least squares method (Gauss-Newton for linear models) and evaluating polynomial function.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;Eigen/Eigen&gt;</code><br />
@@ -103,18 +103,33 @@ $(function(){initNavTree('polyfit_8h.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aebd70efd6604483a9a1e835230c84ea6" id="r_aebd70efd6604483a9a1e835230c84ea6"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:aebd70efd6604483a9a1e835230c84ea6 template"><td class="memItemLeft">const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aebd70efd6604483a9a1e835230c84ea6">sablib::Vandermonde</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;x, const unsigned int polyorder)</td></tr>
+<tr class="memdesc:aebd70efd6604483a9a1e835230c84ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a Vandermonde matrix for a given vector and polynomial order.  <br /></td></tr>
+<tr class="memitem:ab5b3b87767b0f294fbeba98a763ced07" id="r_ab5b3b87767b0f294fbeba98a763ced07"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:ab5b3b87767b0f294fbeba98a763ced07 template"><td class="memItemLeft">const Derived::PlainObject&#160;</td><td class="memItemRight"><a class="el" href="#ab5b3b87767b0f294fbeba98a763ced07">sablib::PolyFit</a> (const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt; &amp;V, const Eigen::MatrixBase&lt; Derived &gt; &amp;y)</td></tr>
+<tr class="memdesc:ab5b3b87767b0f294fbeba98a763ced07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the polynomial least squares fitting problem using a pre-calculated Vandermonde matrix.  <br /></td></tr>
 <tr class="memitem:a67b09b178fc82401568bacaebf8bcdb1" id="r_a67b09b178fc82401568bacaebf8bcdb1"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
 <tr class="memitem:a67b09b178fc82401568bacaebf8bcdb1 template"><td class="memItemLeft">const Derived::PlainObject&#160;</td><td class="memItemRight"><a class="el" href="#a67b09b178fc82401568bacaebf8bcdb1">sablib::PolyFit</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;x, const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int polyorder)</td></tr>
 <tr class="memdesc:a67b09b178fc82401568bacaebf8bcdb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fits a polynomial of a specified order to the given data points.  <br /></td></tr>
+<tr class="memitem:acc9e36f184cd6713a8cb6364e9e6ae8f" id="r_acc9e36f184cd6713a8cb6364e9e6ae8f"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:acc9e36f184cd6713a8cb6364e9e6ae8f template"><td class="memItemLeft">const Derived::PlainObject&#160;</td><td class="memItemRight"><a class="el" href="#acc9e36f184cd6713a8cb6364e9e6ae8f">sablib::PolyVal</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;coeff, const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt; &amp;V)</td></tr>
+<tr class="memdesc:acc9e36f184cd6713a8cb6364e9e6ae8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the polynomial at specified points using a pre-calculated Vandermonde matrix.  <br /></td></tr>
+<tr class="memitem:aea9152ff299409c8f5892d6228337a4a" id="r_aea9152ff299409c8f5892d6228337a4a"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:aea9152ff299409c8f5892d6228337a4a template"><td class="memItemLeft">const Derived::PlainObject&#160;</td><td class="memItemRight"><a class="el" href="#aea9152ff299409c8f5892d6228337a4a">sablib::PolyVal</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;coeff, const Eigen::MatrixBase&lt; Derived &gt; &amp;x)</td></tr>
+<tr class="memdesc:aea9152ff299409c8f5892d6228337a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the polynomial at specified x-coordinates.  <br /></td></tr>
+<tr class="memitem:a1aa07c2218df86fa81d09bdf0302f81a" id="r_a1aa07c2218df86fa81d09bdf0302f81a"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:a1aa07c2218df86fa81d09bdf0302f81a template"><td class="memItemLeft">const Derived::PlainObject::Scalar&#160;</td><td class="memItemRight"><a class="el" href="#a1aa07c2218df86fa81d09bdf0302f81a">sablib::PolyVal</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;coeff, const typename Derived::PlainObject::Scalar x)</td></tr>
+<tr class="memdesc:a1aa07c2218df86fa81d09bdf0302f81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the polynomial at single specified x-coordinate.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Polynomial fitting using the least squares method (Gauss-Newton for linear models). </p>
+<div class="textblock"><p>Polynomial fitting using the least squares method (Gauss-Newton for linear models) and evaluating polynomial function. </p>
 <dl class="section author"><dt>Author</dt><dd>Izadori </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="polyfit_8h_source.html">polyfit.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a67b09b178fc82401568bacaebf8bcdb1" name="a67b09b178fc82401568bacaebf8bcdb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67b09b178fc82401568bacaebf8bcdb1">&#9670;&#160;</a></span>PolyFit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a67b09b178fc82401568bacaebf8bcdb1">&#9670;&#160;</a></span>PolyFit() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,12 +156,6 @@ template&lt;typename Derived&gt; </div>
 
 <p>Fits a polynomial of a specified order to the given data points. </p>
 <p>This function uses the normal equations, which is the Gauss-Newton method applied to a linear model.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Derived</td><td>The derived type of the Eigen object. </td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The x-coordinates of the data points. </td></tr>
@@ -158,12 +167,211 @@ template&lt;typename Derived&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>The coefficients of the fitted polynomial (from lowest to highest order). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>Thrown if x and y sizes differ or if polyorder is too high. </td></tr>
+    <tr><td class="paramname">std::invalid_argument</td><td>If x and y sizes differ or if polyorder is too high for the number of points. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="polyfit_8h_source.html#l00029">29</a> of file <a class="el" href="polyfit_8h_source.html">polyfit.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="polyfit_8h_source.html#l00095">95</a> of file <a class="el" href="polyfit_8h_source.html">polyfit.h</a>.</p>
+
+</div>
+</div>
+<a id="ab5b3b87767b0f294fbeba98a763ced07" name="ab5b3b87767b0f294fbeba98a763ced07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b3b87767b0f294fbeba98a763ced07">&#9670;&#160;</a></span>PolyFit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Derived::PlainObject sablib::PolyFit </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solves the polynomial least squares fitting problem using a pre-calculated Vandermonde matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V</td><td>The Vandermonde matrix. </td></tr>
+    <tr><td class="paramname">y</td><td>The target vector of data points. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The coefficients of the fitted polynomial. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the number of rows in V does not match the size of y. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="polyfit_8h_source.html#l00066">66</a> of file <a class="el" href="polyfit_8h_source.html">polyfit.h</a>.</p>
+
+</div>
+</div>
+<a id="aea9152ff299409c8f5892d6228337a4a" name="aea9152ff299409c8f5892d6228337a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea9152ff299409c8f5892d6228337a4a">&#9670;&#160;</a></span>PolyVal() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Derived::PlainObject sablib::PolyVal </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>coeff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the polynomial at specified x-coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coeff</td><td>The coefficients of the polynomial. </td></tr>
+    <tr><td class="paramname">x</td><td>The x-coordinates where the polynomial will be evaluated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The evaluated values. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="polyfit_8h_source.html#l00151">151</a> of file <a class="el" href="polyfit_8h_source.html">polyfit.h</a>.</p>
+
+</div>
+</div>
+<a id="acc9e36f184cd6713a8cb6364e9e6ae8f" name="acc9e36f184cd6713a8cb6364e9e6ae8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc9e36f184cd6713a8cb6364e9e6ae8f">&#9670;&#160;</a></span>PolyVal() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Derived::PlainObject sablib::PolyVal </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>coeff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the polynomial at specified points using a pre-calculated Vandermonde matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coeff</td><td>The coefficients of the polynomial. </td></tr>
+    <tr><td class="paramname">V</td><td>The Vandermonde matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The evaluated values. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the length of coeff is zero or the number of columns in V does not match the size of coeff. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="polyfit_8h_source.html#l00122">122</a> of file <a class="el" href="polyfit_8h_source.html">polyfit.h</a>.</p>
+
+</div>
+</div>
+<a id="a1aa07c2218df86fa81d09bdf0302f81a" name="a1aa07c2218df86fa81d09bdf0302f81a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa07c2218df86fa81d09bdf0302f81a">&#9670;&#160;</a></span>PolyVal() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Derived::PlainObject::Scalar sablib::PolyVal </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>coeff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename Derived::PlainObject::Scalar</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the polynomial at single specified x-coordinate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coeff</td><td>The coefficients of the polynomial. </td></tr>
+    <tr><td class="paramname">x</td><td>The x-coordinate where the polynomial will be evaluated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The evaluated value. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the length of coeff is zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="polyfit_8h_source.html#l00170">170</a> of file <a class="el" href="polyfit_8h_source.html">polyfit.h</a>.</p>
+
+</div>
+</div>
+<a id="aebd70efd6604483a9a1e835230c84ea6" name="aebd70efd6604483a9a1e835230c84ea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd70efd6604483a9a1e835230c84ea6">&#9670;&#160;</a></span>Vandermonde()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt; sablib::Vandermonde </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>polyorder</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates a Vandermonde matrix for a given vector and polynomial order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The input vector of data points. </td></tr>
+    <tr><td class="paramname">polyorder</td><td>The order of the polynomial (columns in the matrix will be polyorder + 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The generated Vandermonde matrix. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the length of x is zero or polyorder is zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="polyfit_8h_source.html#l00025">25</a> of file <a class="el" href="polyfit_8h_source.html">polyfit.h</a>.</p>
 
 </div>
 </div>

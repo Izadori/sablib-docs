@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['library_0',['3. Building the Library',['../getting_started.html#autotoc_md6',1,'']]],
-  ['library_20for_20smoothing_20and_20baseline_20estimation_1',['sablib - A C++ Library for Smoothing and Baseline Estimation',['../index.html#autotoc_md13',1,'']]],
-  ['line_2',['Manual Compilation (Command Line)',['../getting_started.html#autotoc_md10',1,'']]],
-  ['linux_3',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md11',1,'']]]
+  ['library_0',['3. Building the Library',['../getting_started.html#autotoc_md7',1,'']]],
+  ['library_20for_20smoothing_20and_20baseline_20estimation_1',['sablib - A C++ Library for Smoothing and Baseline Estimation',['../index.html#autotoc_md14',1,'']]],
+  ['line_2',['Manual Compilation (Command Line)',['../getting_started.html#autotoc_md11',1,'']]],
+  ['linux_3',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md12',1,'']]]
 ];
