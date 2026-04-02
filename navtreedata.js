@@ -25,35 +25,36 @@
 var NAVTREE =
 [
   [ "sablib", "index.html", [
-    [ "sablib - A C++ Library for Smoothing and Baseline Estimation", "index.html#autotoc_md14", null ],
+    [ "sablib - A C++ Library for Smoothing and Baseline Estimation", "index.html#autotoc_md15", null ],
     [ "Introduction", "introduction.html", [
-      [ "Introduction", "introduction.html#autotoc_md15", [
-        [ "Algorithms", "introduction.html#autotoc_md16", [
-          [ "Smoothing", "introduction.html#autotoc_md17", null ],
-          [ "Baseline Estimation", "introduction.html#autotoc_md18", null ]
+      [ "Introduction", "introduction.html#autotoc_md16", [
+        [ "Algorithms", "introduction.html#autotoc_md17", [
+          [ "Smoothing", "introduction.html#autotoc_md18", null ],
+          [ "Baseline Estimation", "introduction.html#autotoc_md19", null ]
         ] ]
       ] ]
     ] ],
     [ "Getting Started", "getting_started.html", [
-      [ "Getting Started", "getting_started.html#autotoc_md4", [
-        [ "1. Prerequisites", "getting_started.html#autotoc_md5", null ],
-        [ "2. Cloning the Repository", "getting_started.html#autotoc_md6", null ],
-        [ "3. Building the Library", "getting_started.html#autotoc_md7", null ],
-        [ "4. Usage Example", "getting_started.html#autotoc_md8", [
-          [ "Sample Program: <span class=\"tt\">main.cpp</span>", "getting_started.html#autotoc_md9", null ],
-          [ "Building your project with CMake", "getting_started.html#autotoc_md10", null ],
-          [ "Manual Compilation (Command Line)", "getting_started.html#autotoc_md11", [
-            [ "Using g++ (MinGW / Linux)", "getting_started.html#autotoc_md12", null ],
-            [ "Using cl.exe (MSVC)", "getting_started.html#autotoc_md13", null ]
+      [ "Getting Started", "getting_started.html#autotoc_md5", [
+        [ "1. Prerequisites", "getting_started.html#autotoc_md6", null ],
+        [ "2. Cloning the Repository", "getting_started.html#autotoc_md7", null ],
+        [ "3. Building the Library", "getting_started.html#autotoc_md8", null ],
+        [ "4. Usage Example", "getting_started.html#autotoc_md9", [
+          [ "Sample Program: <span class=\"tt\">main.cpp</span>", "getting_started.html#autotoc_md10", null ],
+          [ "Building your project with CMake", "getting_started.html#autotoc_md11", null ],
+          [ "Manual Compilation (Command Line)", "getting_started.html#autotoc_md12", [
+            [ "Using g++ (MinGW / Linux)", "getting_started.html#autotoc_md13", null ],
+            [ "Using cl.exe (MSVC)", "getting_started.html#autotoc_md14", null ]
           ] ]
         ] ]
       ] ]
     ] ],
     [ "Changelog", "changelog.html", [
       [ "Changelog", "changelog.html#autotoc_md0", [
-        [ "version 0.2.0 (2026/03/26)", "changelog.html#autotoc_md1", null ],
-        [ "version 0.1.1 (2026/03/22)", "changelog.html#autotoc_md2", null ],
-        [ "version 0.1.0 (2026/03/18)", "changelog.html#autotoc_md3", null ]
+        [ "version 0.3.0 (2026/04/02)", "changelog.html#autotoc_md1", null ],
+        [ "version 0.2.0 (2026/03/26)", "changelog.html#autotoc_md2", null ],
+        [ "version 0.1.1 (2026/03/22)", "changelog.html#autotoc_md3", null ],
+        [ "version 0.1.0 (2026/03/18)", "changelog.html#autotoc_md4", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [

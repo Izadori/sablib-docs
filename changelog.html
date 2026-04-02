@@ -96,6 +96,25 @@ $(function(){initNavTree('changelog.html','',''); });
 <div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
 Changelog</h1>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+version 0.3.0 (2026/04/02)</h2>
+<ol type="1">
+<li>Add new functions<ol type="a">
+<li><a class="el" href="moving__median_8cpp.html#a0eb0c0f58caf3d684ed18102f989e103" title="Performs moving median smoothing.">sablib::MovingMedian()</a></li>
+<li><a class="el" href="backcor_8cpp.html#a307da6964994932e337c3224a13f13bd" title="Performs baseline estimation using iterative polynomial fitting with a non-quadratic cost function (B...">sablib::BaselineBackcor()</a></li>
+<li><a class="el" href="goldindec_8cpp.html#a3bae0ce402797d9db792366432e8003c" title="Performs baseline estimation using the Goldindec algorithm.">sablib::BaselineGoldindec()</a></li>
+<li><a class="el" href="snip_8cpp.html#a6e74c4e4e4e90202864d4f8dd1165ead" title="Performs baseline estimation using the Statistics-sensitive Non-linear Iterative Peak-clipping (SNIP)...">sablib::BaselineSnip()</a></li>
+<li><a class="el" href="psalsa_8cpp.html#ad9927b2f74f8e6e606a3ddab290365bc" title="Performs baseline estimation using Peaked Signal’s Asymmetric Least Squares Algorithm (psalsa).">sablib::BaselinePsalsa()</a></li>
+</ol>
+</li>
+<li>Add preprocess/postprocess functions for BEADS algorithm<ol type="a">
+<li><a class="el" href="beads_8cpp.html#ac0d2e9189827778dcd0071659be8639a" title="Expands the signal boundaries by padding with a tapered sequence.">sablib::BeadsExpandBoundaries()</a></li>
+<li><a class="el" href="beads_8cpp.html#a97f519aa47e56590f22f421ee8b5726a" title="Trims the expanded signal boundaries.">sablib::BeadsTrimBoundaries()</a></li>
+</ol>
+</li>
+<li>Modify <a class="el" href="imodpoly_8cpp.html#aeeb763a603d15b777dced7b0d5f9b6b5" title="Estimates the baseline using the Improved Modified Polynomial (IModPoly) method.">sablib::BaselineIModPoly()</a> to return correct baseline</li>
+<li>Modify some files</li>
+</ol>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 version 0.2.0 (2026/03/26)</h2>
 <ol type="1">
 <li>Add new functions<ol type="a">
@@ -107,13 +126,13 @@ version 0.2.0 (2026/03/26)</h2>
 <li>Explicitly stated the original license for BEADS</li>
 <li>Code optimization</li>
 </ol>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 version 0.1.1 (2026/03/22)</h2>
 <ol type="1">
 <li>Improve error handlings</li>
 <li>Modify <a class="el" href="spdiags_8h.html" title="Python&#39;s SciPy-like spdiags() function.">misc/spdiags.h</a></li>
 </ol>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
 version 0.1.0 (2026/03/18)</h2>
 <ol type="1">
 <li>Initial release on GitHub </li>

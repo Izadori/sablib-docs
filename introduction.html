@@ -93,13 +93,13 @@ $(function(){initNavTree('introduction.html','',''); });
   <div class="headertitle"><div class="title">Introduction </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
 Introduction</h1>
 <p>sablib is a C++ library for smoothing and baseline estimation. It provides multiple methods that can be chosen based on your specific needs. Since it is written in C++, it is designed to operate relatively fast. It can be used for the analysis of experimental data such as chromatograms and spectroscopic spectra.</p>
 <p>sablib is still a work in progress. More algorithms will be added gradually in the future.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
 Algorithms</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
 Smoothing</h3>
 <ul>
 <li><a class="el" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09" title="Calculates the simple moving average of the input signal (std::vector&lt;double&gt; version).">sablib::MovingAverage()</a>: Simple moving average</li>
@@ -107,22 +107,27 @@ Smoothing</h3>
 <li><a class="el" href="moving__average_8cpp.html#a10a2483f46cb7625264a7985cb86b12a" title="Generates a Gaussian kernel.">sablib::GaussianKernel()</a> / <a class="el" href="moving__average_8h.html#afd8aa345d51b7733b95b5e6c79316c87" title="Performs Gaussian smoothing on the input signal.">sablib::GaussianFilter()</a>: Gaussian filter</li>
 </ul>
 </li>
+<li><a class="el" href="moving__median_8cpp.html#a0eb0c0f58caf3d684ed18102f989e103" title="Performs moving median smoothing.">sablib::MovingMedian()</a>: Moving median</li>
 <li><a class="el" href="savitzky__golay_8cpp.html#a5334c934ec8679150a1329b4b30daf83" title="Performs smoothing (and differentiation) using a Savitzky-Golay filter.">sablib::SavitzkyGolay()</a>: Savitzky-Golay</li>
 <li><a class="el" href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208" title="Performs Whittaker smoothing (std::vector&lt;double&gt; version, with weights).">sablib::Whittaker()</a>: Whittaker Smoother</li>
 <li><a class="el" href="pspline_8cpp.html#a54eee647109a99323562dfdd552477c7" title="Smoothes the input data using P-Splines (Penalized B-Splines).">sablib::PSpline()</a>: Penalized Spline(P-Spline)</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 Baseline Estimation</h3>
 <ul>
 <li><a class="el" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900" title="Performs baseline estimation with a linear line between two points.">sablib::BaselineLinear()</a>: Linear line between two points</li>
 <li><a class="el" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624" title="Performs baseline estimation by fitting a polynomial to specified points.">sablib::BaselinePolynomial()</a>: Polynomial line</li>
 <li><a class="el" href="spline_8cpp.html#a978ab1e22abc9b9157e6bf6b2a5d0a5e" title="Performs baseline estimation using cubic spline interpolation.">sablib::BaselineSpline()</a>: Cubic spline</li>
 <li><a class="el" href="sma_8cpp.html#af91f1a1f388db47c3b772349d3e3726b" title="Performs background estimation using a simple moving average.">sablib::BaselineSMA()</a>: Simple moving average</li>
+<li><a class="el" href="snip_8cpp.html#a6e74c4e4e4e90202864d4f8dd1165ead" title="Performs baseline estimation using the Statistics-sensitive Non-linear Iterative Peak-clipping (SNIP)...">sablib::BaselineSnip()</a>: SNIP</li>
 <li><a class="el" href="modpoly_8cpp.html#a82b6d23d02ff0eb4237cac457b09db61" title="Estimates the baseline using the Modified Polynomial (ModPoly) method.">sablib::BaselineModPoly()</a>: ModPoly</li>
 <li><a class="el" href="imodpoly_8cpp.html#aeeb763a603d15b777dced7b0d5f9b6b5" title="Estimates the baseline using the Improved Modified Polynomial (IModPoly) method.">sablib::BaselineIModPoly()</a>: IModPoly</li>
+<li><a class="el" href="backcor_8cpp.html#a307da6964994932e337c3224a13f13bd" title="Performs baseline estimation using iterative polynomial fitting with a non-quadratic cost function (B...">sablib::BaselineBackcor()</a>: Backcor</li>
+<li><a class="el" href="goldindec_8cpp.html#a3bae0ce402797d9db792366432e8003c" title="Performs baseline estimation using the Goldindec algorithm.">sablib::BaselineGoldindec()</a>: Goldindec</li>
 <li><a class="el" href="asls_8cpp.html#a7ef9369d0ad59ba84981811895e3cad0" title="Performs baseline estimation using Asymmetric Least Squares Smoothing (AsLS).">sablib::BaselineAsLS()</a>: AsLS</li>
 <li><a class="el" href="airpls_8cpp.html#a3709b9cb27a97fd0876078aea89cfd00" title="Performs baseline estimation using adaptive iteratively reweighted Penalized Least Squares(airPLS).">sablib::BaselineAirPLS()</a>: airPLS</li>
 <li><a class="el" href="arpls_8cpp.html#a51c0fea60c56a6ff3e0f820c69864ecb" title="Performs baseline estimation using asymmetrically reweighted Penalized Least Squares(arPLS).">sablib::BaselineArPLS()</a>: arPLS</li>
+<li><a class="el" href="psalsa_8cpp.html#ad9927b2f74f8e6e606a3ddab290365bc" title="Performs baseline estimation using Peaked Signal’s Asymmetric Least Squares Algorithm (psalsa).">sablib::BaselinePsalsa()</a>: psalsa</li>
 <li><a class="el" href="beads_8cpp.html#a8cb3ccebdff176e5e9bb2e143f3188d9" title="Performs baseline estimation and denoising using Sparsity (BEADS).">sablib::BaselineBeads()</a>: BEADS </li>
 </ul>
 </div></div><!-- contents -->

@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['main_20cpp_0',['Sample Program: &lt;span class=&quot;tt&quot;&gt;main.cpp&lt;/span&gt;',['../getting_started.html#autotoc_md9',1,'']]],
-  ['manual_20compilation_20command_20line_1',['Manual Compilation (Command Line)',['../getting_started.html#autotoc_md11',1,'']]],
-  ['mingw_20linux_2',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md12',1,'']]],
-  ['modpoly_2ecpp_3',['modpoly.cpp',['../modpoly_8cpp.html',1,'']]],
-  ['modpoly_2eh_4',['modpoly.h',['../modpoly_8h.html',1,'']]],
-  ['moving_5faverage_2ecpp_5',['moving_average.cpp',['../moving__average_8cpp.html',1,'']]],
-  ['moving_5faverage_2eh_6',['moving_average.h',['../moving__average_8h.html',1,'']]],
-  ['movingaverage_7',['MovingAverage',['../moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09',1,'sablib::MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)'],['../moving__average_8h.html#afbc027fac0a8bd40a3994d02b6275770',1,'sablib::MovingAverage(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)']]],
-  ['msvc_8',['Using cl.exe (MSVC)',['../getting_started.html#autotoc_md13',1,'']]]
+  ['l1_5fv1_0',['L1_v1',['../beads_8h.html#aaa339033c3a975d37fc6e342adeee334af148d8498eacebd59706d67006c5319b',1,'sablib']]],
+  ['l1_5fv2_1',['L1_v2',['../beads_8h.html#aaa339033c3a975d37fc6e342adeee334ac26c30edb634d206dfbecc01225ce4d8',1,'sablib']]],
+  ['library_2',['3. Building the Library',['../getting_started.html#autotoc_md8',1,'']]],
+  ['library_20for_20smoothing_20and_20baseline_20estimation_3',['sablib - A C++ Library for Smoothing and Baseline Estimation',['../index.html#autotoc_md15',1,'']]],
+  ['line_4',['Manual Compilation (Command Line)',['../getting_started.html#autotoc_md12',1,'']]],
+  ['linux_5',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md13',1,'']]],
+  ['ll_6',['LL',['../snip_8h.html#a86882b004aa1fcf538f0d5fc5f28007aa67824ecf84f5816f07b74fa956bdbcd2',1,'sablib']]],
+  ['lls_7',['LLS',['../snip_8h.html#a86882b004aa1fcf538f0d5fc5f28007aa090084d1ca90cec9865c7ecf79cca12d',1,'sablib']]]
 ];

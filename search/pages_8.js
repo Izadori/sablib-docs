@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['estimation_0',['Estimation',['../introduction.html#autotoc_md18',1,'Baseline Estimation'],['../index.html#autotoc_md14',1,'sablib - A C++ Library for Smoothing and Baseline Estimation']]],
-  ['example_1',['4. Usage Example',['../getting_started.html#autotoc_md8',1,'']]],
-  ['exe_20msvc_2',['Using cl.exe (MSVC)',['../getting_started.html#autotoc_md13',1,'']]]
+  ['estimation_0',['Estimation',['../introduction.html#autotoc_md19',1,'Baseline Estimation'],['../index.html#autotoc_md15',1,'sablib - A C++ Library for Smoothing and Baseline Estimation']]],
+  ['example_1',['4. Usage Example',['../getting_started.html#autotoc_md9',1,'']]],
+  ['exe_20msvc_2',['Using cl.exe (MSVC)',['../getting_started.html#autotoc_md14',1,'']]]
 ];

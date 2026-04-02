@@ -125,36 +125,30 @@ $(function(){initNavTree('modpoly_8cpp_source.html','',''); });
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;BaselineModPoly(): non-positive eps value is given.&quot;</span>);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">double</span> max_index = y.size() - 1;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    Eigen::VectorXd yy = Eigen::VectorXd::Map(y.data(), y.size());</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    Eigen::VectorXd xx(y.size());</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; y.size(); i++) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        xx(i) = i / max_index;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    Eigen::MatrixXd V = <a class="code hl_function" href="polyfit_8h.html#aebd70efd6604483a9a1e835230c84ea6">Vandermonde</a>(xx, polyorder);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    Eigen::LDLT&lt;Eigen::MatrixXd&gt; ldltV = (V.transpose() * V).ldlt();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    Eigen::VectorXd y_old = yy;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; loop; i++) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        Eigen::VectorXd y_new = <a class="code hl_function" href="polyfit_8h.html#acc9e36f184cd6713a8cb6364e9e6ae8f">PolyVal</a>(ldltV.solve(V.transpose() * y_old), V);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">if</span>((y_new - y_old).norm() / y_old.norm() &lt; eps) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    Eigen::VectorXd yy = Eigen::VectorXd::Map(y.data(), y.size());</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    Eigen::VectorXd x = Eigen::VectorXd::LinSpaced(y.size(), 0, 1);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    Eigen::MatrixXd V = <a class="code hl_function" href="polyfit_8h.html#aebd70efd6604483a9a1e835230c84ea6">Vandermonde</a>(x, polyorder);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    Eigen::LDLT&lt;Eigen::MatrixXd&gt; ldltV = (V.transpose() * V).ldlt();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    Eigen::VectorXd y_old = yy;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; loop; i++) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        Eigen::VectorXd y_new = <a class="code hl_function" href="polyfit_8h.html#acc9e36f184cd6713a8cb6364e9e6ae8f">PolyVal</a>(ldltV.solve(V.transpose() * y_old), V);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span>((y_new - y_old).norm() / y_old.norm() &lt; eps) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        y_old = (y_new.array() &gt; y_old.array()).select(y_old, y_new);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::vector&lt;double&gt; result(y.size());</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    Eigen::VectorXd::Map(result.data(), result.size()) = y_old;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        y_old = (y_new.array() &gt; y_old.array()).select(y_old, y_new);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::vector&lt;double&gt; result(y.size());</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    Eigen::VectorXd::Map(result.data(), result.size()) = y_old;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
 </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}; <span class="comment">// namespace sablib</span></div>
 <div class="ttc" id="amodpoly_8cpp_html_a82b6d23d02ff0eb4237cac457b09db61"><div class="ttname"><a href="modpoly_8cpp.html#a82b6d23d02ff0eb4237cac457b09db61">sablib::BaselineModPoly</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineModPoly(const std::vector&lt; double &gt; &amp;y, const unsigned int polyorder, const unsigned int loop, const double eps)</div><div class="ttdoc">Estimates the baseline using the Modified Polynomial (ModPoly) method.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">modpoly.cpp:16</a></div></div>
 <div class="ttc" id="amodpoly_8h_html"><div class="ttname"><a href="modpoly_8h.html">modpoly.h</a></div><div class="ttdoc">Baseline estimation using Modified Polynomial(ModPoly) method.</div></div>
 <div class="ttc" id="apolyfit_8h_html"><div class="ttname"><a href="polyfit_8h.html">polyfit.h</a></div><div class="ttdoc">Polynomial fitting using the least squares method (Gauss-Newton for linear models) and evaluating pol...</div></div>

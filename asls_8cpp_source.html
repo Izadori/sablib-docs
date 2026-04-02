@@ -154,23 +154,22 @@ $(function(){initNavTree('asls_8cpp_source.html','',''); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        z = <a class="code hl_function" href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">Whittaker</a>(yy, w, lambdaDTD);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        w = (yy.array() &gt; z.array()).select(pv, npv);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span>(((w.array() - w_old.array()).abs() &lt; eps).all())</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        w_old = w;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    std::vector&lt;double&gt; result(z.size());</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    Eigen::VectorXd::Map(result.data(), result.size()) = z;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span>(((w.array() - w_old.array()).abs() &lt; eps).all()) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        w_old = w;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    std::vector&lt;double&gt; result(z.size());</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    Eigen::VectorXd::Map(result.data(), result.size()) = z;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
 </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}; <span class="comment">// namespace sablib</span></div>
 <div class="ttc" id="aasls_8cpp_html_a7ef9369d0ad59ba84981811895e3cad0"><div class="ttname"><a href="asls_8cpp.html#a7ef9369d0ad59ba84981811895e3cad0">sablib::BaselineAsLS</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineAsLS(std::vector&lt; double &gt; &amp;y, const double lambda, const double p, const unsigned int s, const unsigned int loop, const double eps)</div><div class="ttdoc">Performs baseline estimation using Asymmetric Least Squares Smoothing (AsLS).</div><div class="ttdef"><b>Definition</b> <a href="#l00016">asls.cpp:16</a></div></div>
 <div class="ttc" id="aasls_8h_html"><div class="ttname"><a href="asls_8h.html">asls.h</a></div><div class="ttdoc">Baseline estimation using Asymmetric Least Squares Smoothing(AsLS).</div></div>
 <div class="ttc" id="adiff_8h_html_aa678c8e91bd73334fcd50bd5b497c968"><div class="ttname"><a href="diff_8h.html#aa678c8e91bd73334fcd50bd5b497c968">sablib::Diff</a></div><div class="ttdeci">const Derived::PlainObject Diff(const Eigen::MatrixBase&lt; Derived &gt; &amp;m0, const int n=1, const Dir dir=Dir::RowWise)</div><div class="ttdoc">Calculates the n-th discrete difference along the given axis.</div><div class="ttdef"><b>Definition</b> <a href="diff_8h_source.html#l00032">diff.h:32</a></div></div>
