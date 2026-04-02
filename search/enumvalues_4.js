@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['same_0',['Same',['../convolve_8h.html#aecfce576d85f82a26ac84490ae24c846ac90a13d8ec8fe53c6bb33fe10af6f2fe',1,'sablib']]]
+  ['indec_0',['Indec',['../backcor_8h.html#accc9b29475416586b0638a396218eca1a884bc0bde929ebcc90438168cd12c11d',1,'sablib']]]
 ];

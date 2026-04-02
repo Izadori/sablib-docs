@@ -118,10 +118,16 @@ $(function(){initNavTree('beads_8h_source.html','',''); });
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> lambda0, <span class="keyword">const</span> <span class="keywordtype">double</span> lambda1, <span class="keyword">const</span> <span class="keywordtype">double</span> lambda2, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loop = 30,</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1e-3, <span class="keyword">const</span> BeadsPenalty penalty = BeadsPenalty::L1_v2</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}; <span class="comment">// namespace sablib</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif </span><span class="comment">// _SABLIB_BEADS_H__</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">const</span> std::vector&lt;double&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>BeadsExpandBoundaries(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = 400);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">const</span> std::vector&lt;double&gt;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>BeadsTrimBoundaries(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = 400);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">// _SABLIB_BEADS_H__</span></div>
 <div class="ttc" id="abeads_8h_html_aaa339033c3a975d37fc6e342adeee334"><div class="ttname"><a href="beads_8h.html#aaa339033c3a975d37fc6e342adeee334">sablib::BeadsPenalty</a></div><div class="ttdeci">BeadsPenalty</div><div class="ttdoc">Penalty types for the BEADS algorithm.(see Table 1 in Duval&#39;s paper).</div><div class="ttdef"><b>Definition</b> <a href="#l00024">beads.h:25</a></div></div>
 <div class="ttc" id="abeads_8h_html_aaa339033c3a975d37fc6e342adeee334ac26c30edb634d206dfbecc01225ce4d8"><div class="ttname"><a href="beads_8h.html#aaa339033c3a975d37fc6e342adeee334ac26c30edb634d206dfbecc01225ce4d8">sablib::BeadsPenalty::L1_v2</a></div><div class="ttdeci">@ L1_v2</div><div class="ttdef"><b>Definition</b> <a href="#l00027">beads.h:27</a></div></div>
 <div class="ttc" id="abeads_8h_html_aaa339033c3a975d37fc6e342adeee334af148d8498eacebd59706d67006c5319b"><div class="ttname"><a href="beads_8h.html#aaa339033c3a975d37fc6e342adeee334af148d8498eacebd59706d67006c5319b">sablib::BeadsPenalty::L1_v1</a></div><div class="ttdeci">@ L1_v1</div><div class="ttdef"><b>Definition</b> <a href="#l00026">beads.h:26</a></div></div>

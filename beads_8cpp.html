@@ -96,7 +96,8 @@ $(function(){initNavTree('beads_8cpp.html','',''); });
 
 <p>Baseline estimation and subtraction using Baseline Estimation And Denoising using Sparsity(BEADS)(implementation).  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
 <code>#include &quot;<a class="el" href="convolve_8h_source.html">../misc/convolve.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="diff_8h_source.html">../misc/diff.h</a>&quot;</code><br />
@@ -109,6 +110,10 @@ $(function(){initNavTree('beads_8cpp.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:a8cb3ccebdff176e5e9bb2e143f3188d9" id="r_a8cb3ccebdff176e5e9bb2e143f3188d9"><td class="memItemLeft">const std::tuple&lt; std::vector&lt; double &gt;, std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8cb3ccebdff176e5e9bb2e143f3188d9">sablib::BaselineBeads</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int s, const double frequency, const double r, const double lambda0, const double lambda1, const double lambda2, const unsigned int loop=30, const double eps=1e-3, const <a class="el" href="beads_8h.html#aaa339033c3a975d37fc6e342adeee334">BeadsPenalty</a> penalty=<a class="el" href="beads_8h.html#aaa339033c3a975d37fc6e342adeee334ac26c30edb634d206dfbecc01225ce4d8">BeadsPenalty::L1_v2</a>)</td></tr>
 <tr class="memdesc:a8cb3ccebdff176e5e9bb2e143f3188d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation and denoising using Sparsity (BEADS).  <br /></td></tr>
+<tr class="memitem:ac0d2e9189827778dcd0071659be8639a" id="r_ac0d2e9189827778dcd0071659be8639a"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac0d2e9189827778dcd0071659be8639a">sablib::BeadsExpandBoundaries</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int n=400)</td></tr>
+<tr class="memdesc:ac0d2e9189827778dcd0071659be8639a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands the signal boundaries by padding with a tapered sequence.  <br /></td></tr>
+<tr class="memitem:a97f519aa47e56590f22f421ee8b5726a" id="r_a97f519aa47e56590f22f421ee8b5726a"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a97f519aa47e56590f22f421ee8b5726a">sablib::BeadsTrimBoundaries</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int n=400)</td></tr>
+<tr class="memdesc:a97f519aa47e56590f22f421ee8b5726a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trims the expanded signal boundaries.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Baseline estimation and subtraction using Baseline Estimation And Denoising using Sparsity(BEADS)(implementation). </p>
@@ -217,7 +222,85 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00100">100</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00101">101</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac0d2e9189827778dcd0071659be8639a" name="ac0d2e9189827778dcd0071659be8639a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d2e9189827778dcd0071659be8639a">&#9670;&#160;</a></span>BeadsExpandBoundaries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; double &gt; sablib::BeadsExpandBoundaries </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>n</em></span><span class="paramdefsep"> = </span><span class="paramdefval">400</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expands the signal boundaries by padding with a tapered sequence. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>The input data vector. </td></tr>
+    <tr><td class="paramname">n</td><td>The number of elements to add at each end. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A expanded vector. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>The length of y is zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00257">257</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a97f519aa47e56590f22f421ee8b5726a" name="a97f519aa47e56590f22f421ee8b5726a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f519aa47e56590f22f421ee8b5726a">&#9670;&#160;</a></span>BeadsTrimBoundaries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; double &gt; sablib::BeadsTrimBoundaries </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>n</em></span><span class="paramdefsep"> = </span><span class="paramdefval">400</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trims the expanded signal boundaries. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>The input data vector (expanded signal). </td></tr>
+    <tr><td class="paramname">n</td><td>The number of elements to trim from each end. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A trimmed vector. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>The length of y is zero or less than `2 * n`. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00282">282</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
 
 </div>
 </div>

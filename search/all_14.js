@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['the_20library_0',['3. Building the Library',['../getting_started.html#autotoc_md7',1,'']]],
-  ['the_20repository_1',['2. Cloning the Repository',['../getting_started.html#autotoc_md6',1,'']]],
-  ['trimboundaries_2',['TrimBoundaries',['../expand_8h.html#afa3240f67e1aa5e2ce300ae91b8f3c91',1,'sablib']]]
+  ['repository_0',['2. Cloning the Repository',['../getting_started.html#autotoc_md7',1,'']]],
+  ['rowwise_1',['RowWise',['../diff_8h.html#a2d7c9a75f61446a03661f5906ad6ccb9ae7968e8fd57987542f4a09aafaf672c7',1,'sablib']]]
 ];

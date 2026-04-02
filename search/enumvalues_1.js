@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['full_0',['Full',['../convolve_8h.html#aecfce576d85f82a26ac84490ae24c846abbd47109890259c0127154db1af26c75',1,'sablib']]]
+  ['columnwise_0',['ColumnWise',['../diff_8h.html#a2d7c9a75f61446a03661f5906ad6ccb9a15bd9d21302dd7cb4540afcfbbdec97d',1,'sablib']]]
 ];
