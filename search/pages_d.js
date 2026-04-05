@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['main_20cpp_0',['Sample Program: &lt;span class=&quot;tt&quot;&gt;main.cpp&lt;/span&gt;',['../getting_started.html#autotoc_md10',1,'']]],
-  ['manual_20compilation_20command_20line_1',['Manual Compilation (Command Line)',['../getting_started.html#autotoc_md12',1,'']]],
-  ['mingw_20linux_2',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md13',1,'']]],
-  ['msvc_3',['Using cl.exe (MSVC)',['../getting_started.html#autotoc_md14',1,'']]]
+  ['option_20a_3a_20using_20vcpkg_0',['Option A: Using vcpkg',['../getting_started.html#autotoc_md9',1,'']]],
+  ['option_20b_3a_20using_20conan_1',['Option B: Using Conan',['../getting_started.html#autotoc_md10',1,'']]],
+  ['option_20c_3a_20cloning_20and_20building_20manually_2',['Option C: Cloning and Building Manually',['../getting_started.html#autotoc_md11',1,'']]]
 ];

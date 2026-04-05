@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['the_20library_0',['3. Building the Library',['../getting_started.html#autotoc_md8',1,'']]],
-  ['the_20repository_1',['2. Cloning the Repository',['../getting_started.html#autotoc_md7',1,'']]],
-  ['tquad_2',['TQuad',['../backcor_8h.html#accc9b29475416586b0638a396218eca1aebb3a0d3cf6426e9216e3f4c253d94b7',1,'sablib']]],
-  ['trimboundaries_3',['TrimBoundaries',['../expand_8h.html#afa3240f67e1aa5e2ce300ae91b8f3c91',1,'sablib']]]
+  ['usage_20example_0',['3. Usage Example',['../getting_started.html#autotoc_md12',1,'']]],
+  ['using_20cl_20exe_20msvc_1',['Using cl.exe (MSVC)',['../getting_started.html#autotoc_md20',1,'']]],
+  ['using_20conan_2',['Option B: Using Conan',['../getting_started.html#autotoc_md10',1,'']]],
+  ['using_20g_20mingw_20linux_3',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md19',1,'']]],
+  ['using_20vcpkg_4',['Option A: Using vcpkg',['../getting_started.html#autotoc_md9',1,'']]]
 ];

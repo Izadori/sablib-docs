@@ -93,9 +93,9 @@ $(function(){initNavTree('getting_started.html','',''); });
   <div class="headertitle"><div class="title">Getting Started </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Getting Started</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 1. Prerequisites</h2>
 <p>Before using <span class="tt">sablib</span>, ensure that you have the following installed:</p>
 <ul>
@@ -103,13 +103,29 @@ Getting Started</h1>
 <li><b>CMake</b>: Version 3.10 or later.</li>
 <li><b>Eigen 3</b>: Version 3.4.0 or later.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
-2. Cloning the Repository</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+2. Installation</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Option A: Using vcpkg</h3>
+<p><span class="tt">sablib</span> provides a vcpkg port. First, clone this repository:</p>
+<div class="fragment"><div class="line">git clone https://github.com/Izadori/sablib.git</div>
+</div><!-- fragment --><p>Then install with the <span class="tt">--overlay-ports</span> option:</p>
+<div class="fragment"><div class="line">vcpkg install sablib --overlay-ports=&lt;path/to/sablib&gt;/vcpkg/ports</div>
+</div><!-- fragment --><p>That's it! Eigen3 is automatically installed as a dependency.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Option B: Using Conan</h3>
+<p><span class="tt">sablib</span> provides a Conan recipe. First, clone this repository:</p>
+<div class="fragment"><div class="line">git clone https://github.com/Izadori/sablib.git</div>
+</div><!-- fragment --><p>Then install and build:</p>
+<div class="fragment"><div class="line">cd sablib</div>
+<div class="line">conan install conan/sablib --output-folder=conan/build --build=missing</div>
+<div class="line">conan build conan/sablib --output-folder=conan/build</div>
+</div><!-- fragment --><p>That's it! Eigen3 is automatically installed as a dependency.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+Option C: Cloning and Building Manually</h3>
 <p>To clone the <span class="tt">sablib</span> repository from GitHub, use the following command:</p>
 <div class="fragment"><div class="line">git clone https://github.com/Izadori/sablib.git</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
-3. Building the Library</h2>
-<p><span class="tt">sablib</span> is built as a static library using CMake. Follow these steps to build the project:</p>
+</div><!-- fragment --><p><span class="tt">sablib</span> is built as a static library using CMake. Follow these steps to build the project:</p>
 <div class="fragment"><div class="line">cd sablib</div>
 <div class="line">mkdir build</div>
 <div class="line">cd build</div>
@@ -119,10 +135,10 @@ Getting Started</h1>
 <div class="fragment"><div class="line">cmake .. -DCMAKE_PREFIX_PATH=&quot;path/to/Eigen3&quot;</div>
 <div class="line">cmake --build .</div>
 </div><!-- fragment --><p>After a successful build, the library file (e.g., <span class="tt">libsablib.a</span> or <span class="tt">sablib.lib</span>) will be created in the <span class="tt">build</span> directory.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
-4. Usage Example</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+3. Usage Example</h2>
 <p>Here is a simple example showing how to use the Whittaker smoother in your own C++ program.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
 Sample Program: <span class="tt">main.cpp</span></h3>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
@@ -165,9 +181,41 @@ Sample Program: <span class="tt">main.cpp</span></h3>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="awhittaker_8cpp_html_abbae899cda008775ee16595faafa5208"><div class="ttname"><a href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">sablib::Whittaker</a></div><div class="ttdeci">const std::vector&lt; double &gt; Whittaker(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w, const double lambda, const unsigned int s)</div><div class="ttdoc">Performs Whittaker smoothing (std::vector&lt;double&gt; version, with weights).</div><div class="ttdef"><b>Definition</b> <a href="whittaker_8cpp_source.html#l00014">whittaker.cpp:14</a></div></div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
 Building your project with CMake</h3>
-<p>To build your project and link against <span class="tt">sablib</span>, use a <span class="tt">CMakeLists.txt</span> like this:</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+Via vcpkg</h4>
+<p>If you installed <span class="tt">sablib</span> via vcpkg, integrate it with the vcpkg toolchain file and use <span class="tt">find_package</span>:</p>
+<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.10)</div>
+<div class="line">project(my_sablib_project CXX)</div>
+<div class="line"> </div>
+<div class="line">set(CMAKE_CXX_STANDARD 17)</div>
+<div class="line"> </div>
+<div class="line">find_package(sablib CONFIG REQUIRED)</div>
+<div class="line"> </div>
+<div class="line">add_executable(my_app main.cpp)</div>
+<div class="line">target_link_libraries(my_app PRIVATE sablib::sablib)</div>
+</div><!-- fragment --><p>Build with the vcpkg toolchain:</p>
+<div class="fragment"><div class="line">cmake .. -DCMAKE_TOOLCHAIN_FILE=/path/to/vcpkg/scripts/buildsystems/vcpkg.cmake</div>
+<div class="line">cmake --build .</div>
+</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+Via Conan</h4>
+<p>If you installed <span class="tt">sablib</span> via Conan, integrate it with the Conan toolchain file and use <span class="tt">find_package</span>:</p>
+<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.10)</div>
+<div class="line">project(my_sablib_project CXX)</div>
+<div class="line"> </div>
+<div class="line">set(CMAKE_CXX_STANDARD 17)</div>
+<div class="line"> </div>
+<div class="line">find_package(sablib CONFIG REQUIRED)</div>
+<div class="line"> </div>
+<div class="line">add_executable(my_app main.cpp)</div>
+<div class="line">target_link_libraries(my_app PRIVATE sablib::sablib)</div>
+</div><!-- fragment --><p>Build with the Conan toolchain:</p>
+<div class="fragment"><div class="line">cmake .. -DCMAKE_TOOLCHAIN_FILE=conan/build/conan_toolchain.cmake</div>
+<div class="line">cmake --build .</div>
+</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+Manually</h4>
+<p>To build your project and link against a manually built <span class="tt">sablib</span>, use a <span class="tt">CMakeLists.txt</span> like this:</p>
 <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.10)</div>
 <div class="line">project(my_sablib_project CXX)</div>
 <div class="line"> </div>
@@ -189,17 +237,17 @@ Building your project with CMake</h3>
 <div class="line"># Assuming libsablib.a is in the build folder</div>
 <div class="line">find_library(SABLIB_LIB NAMES sablib libsablib PATHS &quot;${SABLIB_DIR}/build&quot;)</div>
 <div class="line">target_link_libraries(my_app PRIVATE ${SABLIB_LIB} Eigen3::Eigen)</div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
 Manual Compilation (Command Line)</h3>
 <p>If you prefer not to use CMake, you can compile directly using your preferred compiler. Ensure you have the paths to <span class="tt">sablib</span> and <span class="tt">Eigen3</span> headers correctly specified.</p>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 Using g++ (MinGW / Linux)</h4>
 <div class="fragment"><div class="line">g++ main.cpp -std=c++17 \</div>
 <div class="line">    -I/path/to/sablib \</div>
 <div class="line">    -I/path/to/eigen3 \</div>
 <div class="line">    -L/path/to/sablib/build \</div>
 <div class="line">    -lsablib -o my_app</div>
-</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
 Using cl.exe (MSVC)</h4>
 <p>Open a Developer Command Prompt for Visual Studio and run:</p>
 <div class="fragment"><div class="line">cl /EHsc /std:c++17 main.cpp ^</div>
