@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['g_20mingw_20linux_0',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md13',1,'']]],
-  ['getting_20started_1',['Getting Started',['../getting_started.html',1,'Getting Started'],['../getting_started.html#autotoc_md5',1,'Getting Started']]]
+  ['installation_0',['2. Installation',['../getting_started.html#autotoc_md8',1,'']]],
+  ['introduction_1',['Introduction',['../introduction.html',1,'Introduction'],['../introduction.html#autotoc_md22',1,'Introduction']]]
 ];

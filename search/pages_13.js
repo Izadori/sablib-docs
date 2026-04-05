@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['version_200_201_200_202026_2003_2018_0',['version 0.1.0 (2026/03/18)',['../changelog.html#autotoc_md4',1,'']]],
-  ['version_200_201_201_202026_2003_2022_1',['version 0.1.1 (2026/03/22)',['../changelog.html#autotoc_md3',1,'']]],
-  ['version_200_202_200_202026_2003_2026_2',['version 0.2.0 (2026/03/26)',['../changelog.html#autotoc_md2',1,'']]],
-  ['version_200_203_200_202026_2004_2002_3',['version 0.3.0 (2026/04/02)',['../changelog.html#autotoc_md1',1,'']]]
+  ['your_20project_20with_20cmake_0',['Building your project with CMake',['../getting_started.html#autotoc_md14',1,'']]]
 ];

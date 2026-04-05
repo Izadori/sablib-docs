@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['for_20smoothing_20and_20baseline_20estimation_0',['sablib - A C++ Library for Smoothing and Baseline Estimation',['../index.html#autotoc_md15',1,'']]]
+  ['g_20mingw_20linux_0',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md19',1,'']]],
+  ['getting_20started_1',['Getting Started',['../getting_started.html',1,'Getting Started'],['../getting_started.html#autotoc_md6',1,'Getting Started']]]
 ];
