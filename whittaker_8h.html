@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/smoothing/whittaker.h File Reference</title>
+<title>sablib: smoothing/whittaker.h File Reference</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -98,16 +98,17 @@ $(function(){initNavTree('whittaker_8h.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;sablib_export.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="diff_8h_source.html">../misc/diff.h</a>&quot;</code><br />
 </div>
 <p><a href="whittaker_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abbae899cda008775ee16595faafa5208" id="r_abbae899cda008775ee16595faafa5208"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="whittaker_8cpp.html#abbae899cda008775ee16595faafa5208">sablib::Whittaker</a> (const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w, const double lambda, const unsigned int s=2)</td></tr>
-<tr class="memdesc:abbae899cda008775ee16595faafa5208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs Whittaker smoothing (std::vector&lt;double&gt; version, with weights).  <br /></td></tr>
-<tr class="memitem:ad2871c522bd7f380b66aaea420e727fd" id="r_ad2871c522bd7f380b66aaea420e727fd"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="whittaker_8cpp.html#ad2871c522bd7f380b66aaea420e727fd">sablib::Whittaker</a> (const std::vector&lt; double &gt; &amp;y, const double lambda, const unsigned int s=2)</td></tr>
-<tr class="memdesc:ad2871c522bd7f380b66aaea420e727fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs Whittaker smoothing (std::vector&lt;double&gt; version, without weights).  <br /></td></tr>
+<tr class="memitem:aed1d98eb42c051be3ccdca1a9b965d60" id="r_aed1d98eb42c051be3ccdca1a9b965d60"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="whittaker_8cpp.html#aed1d98eb42c051be3ccdca1a9b965d60">sablib::Whittaker</a> (const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w, const double lambda, const unsigned int s=2)</td></tr>
+<tr class="memdesc:aed1d98eb42c051be3ccdca1a9b965d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs Whittaker smoothing (std::vector&lt;double&gt; version, with weights).  <br /></td></tr>
+<tr class="memitem:a5cd52422e931bdd42fad99569e50ae14" id="r_a5cd52422e931bdd42fad99569e50ae14"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="whittaker_8cpp.html#a5cd52422e931bdd42fad99569e50ae14">sablib::Whittaker</a> (const std::vector&lt; double &gt; &amp;y, const double lambda, const unsigned int s=2)</td></tr>
+<tr class="memdesc:a5cd52422e931bdd42fad99569e50ae14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs Whittaker smoothing (std::vector&lt;double&gt; version, without weights).  <br /></td></tr>
 <tr class="memitem:adcb179aa3ae7e715386f4b238c7c6fae" id="r_adcb179aa3ae7e715386f4b238c7c6fae"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
 <tr class="memitem:adcb179aa3ae7e715386f4b238c7c6fae template"><td class="memItemLeft">const Derived::PlainObject&#160;</td><td class="memItemRight"><a class="el" href="#adcb179aa3ae7e715386f4b238c7c6fae">sablib::Whittaker</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const Eigen::MatrixBase&lt; Derived &gt; &amp;w, const Eigen::SparseMatrix&lt; typename Derived::PlainObject::Scalar &gt; &amp;lambdaDTD)</td></tr>
 <tr class="memdesc:adcb179aa3ae7e715386f4b238c7c6fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs Whittaker smoothing.  <br /></td></tr>
@@ -159,18 +160,18 @@ template&lt;typename Derived&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The smoothed data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="whittaker_8h_source.html#l00058">58</a> of file <a class="el" href="whittaker_8h_source.html">whittaker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="whittaker_8h_source.html#l00059">59</a> of file <a class="el" href="whittaker_8h_source.html">whittaker.h</a>.</p>
 
 </div>
 </div>
-<a id="ad2871c522bd7f380b66aaea420e727fd" name="ad2871c522bd7f380b66aaea420e727fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2871c522bd7f380b66aaea420e727fd">&#9670;&#160;</a></span>Whittaker() <span class="overload">[2/3]</span></h2>
+<a id="a5cd52422e931bdd42fad99569e50ae14" name="a5cd52422e931bdd42fad99569e50ae14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd52422e931bdd42fad99569e50ae14">&#9670;&#160;</a></span>Whittaker() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::Whittaker </td>
+          <td class="memname">SABLIB_EXPORT const std::vector&lt; double &gt; sablib::Whittaker </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
@@ -202,14 +203,14 @@ template&lt;typename Derived&gt; </div>
 
 </div>
 </div>
-<a id="abbae899cda008775ee16595faafa5208" name="abbae899cda008775ee16595faafa5208"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbae899cda008775ee16595faafa5208">&#9670;&#160;</a></span>Whittaker() <span class="overload">[3/3]</span></h2>
+<a id="aed1d98eb42c051be3ccdca1a9b965d60" name="aed1d98eb42c051be3ccdca1a9b965d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed1d98eb42c051be3ccdca1a9b965d60">&#9670;&#160;</a></span>Whittaker() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::Whittaker </td>
+          <td class="memname">SABLIB_EXPORT const std::vector&lt; double &gt; sablib::Whittaker </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
@@ -266,7 +267,7 @@ template&lt;typename Derived&gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="whittaker_8h.html">whittaker.h</a></li>
+    <li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="whittaker_8h.html">whittaker.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

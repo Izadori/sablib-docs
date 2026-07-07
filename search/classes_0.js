@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['bspline_0',['BSpline',['../classsablib_1_1_b_spline.html',1,'sablib']]]
+  ['_5fstsablibbaselinedata_0',['_stSablibBaselineData',['../struct__stSablibBaselineData.html',1,'']]],
+  ['_5fstsablibdata_1',['_stSablibData',['../struct__stSablibData.html',1,'']]]
 ];

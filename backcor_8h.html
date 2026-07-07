@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/backcor.h File Reference</title>
+<title>sablib: baseline/backcor.h File Reference</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -97,7 +97,8 @@ $(function(){initNavTree('backcor_8h.html','',''); });
 <p>Baseline estimation using iterative polynomial fitting with a non-quadratic cost function(Backcor algorithm).  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="result__type_8h_source.html">result_type.h</a>&quot;</code><br />
+<code>#include &quot;sablib_export.h&quot;</code><br />
 </div>
 <p><a href="backcor_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -117,8 +118,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a307da6964994932e337c3224a13f13bd" id="r_a307da6964994932e337c3224a13f13bd"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="backcor_8cpp.html#a307da6964994932e337c3224a13f13bd">sablib::BaselineBackcor</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int polyorder, const <a class="el" href="#accc9b29475416586b0638a396218eca1">BackcorFunc</a> func=<a class="el" href="#accc9b29475416586b0638a396218eca1a530adc08cfc9618c1635f43b17b8fe0e">BackcorFunc::ATQuad</a>, const double s=1, const double alpha=0.99 *0.5, const unsigned int loop=50, const double eps=1.0e-3)</td></tr>
-<tr class="memdesc:a307da6964994932e337c3224a13f13bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using iterative polynomial fitting with a non-quadratic cost function (Backcor).  <br /></td></tr>
+<tr class="memitem:a7b133b4ad2a4618268309f6b1a323bf7" id="r_a7b133b4ad2a4618268309f6b1a323bf7"><td class="memItemLeft">const <a class="el" href="structsablib_1_1BaselineResult.html">BaselineResult</a>&#160;</td><td class="memItemRight"><a class="el" href="backcor_8cpp.html#a7b133b4ad2a4618268309f6b1a323bf7">sablib::BaselineBackcor</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int polyorder, const <a class="el" href="#accc9b29475416586b0638a396218eca1">BackcorFunc</a> func=<a class="el" href="#accc9b29475416586b0638a396218eca1a530adc08cfc9618c1635f43b17b8fe0e">BackcorFunc::ATQuad</a>, const double s=1, const double alpha=0.99 *0.5, const unsigned int loop=50, const double eps=1.0e-3)</td></tr>
+<tr class="memdesc:a7b133b4ad2a4618268309f6b1a323bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using iterative polynomial fitting with a non-quadratic cost function (Backcor).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Baseline estimation using iterative polynomial fitting with a non-quadratic cost function(Backcor algorithm). </p>
@@ -167,19 +168,19 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="backcor_8h_source.html#l00025">25</a> of file <a class="el" href="backcor_8h_source.html">backcor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backcor_8h_source.html#l00027">27</a> of file <a class="el" href="backcor_8h_source.html">backcor.h</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a307da6964994932e337c3224a13f13bd" name="a307da6964994932e337c3224a13f13bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a307da6964994932e337c3224a13f13bd">&#9670;&#160;</a></span>BaselineBackcor()</h2>
+<a id="a7b133b4ad2a4618268309f6b1a323bf7" name="a7b133b4ad2a4618268309f6b1a323bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b133b4ad2a4618268309f6b1a323bf7">&#9670;&#160;</a></span>BaselineBackcor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::BaselineBackcor </td>
+          <td class="memname">SABLIB_EXPORT const BaselineResult sablib::BaselineBackcor </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
@@ -230,7 +231,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A vector of the same size as y containing the estimated baseline. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
@@ -239,6 +240,8 @@ Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="backcor_8cpp_source.html#l00020">20</a> of file <a class="el" href="backcor_8cpp_source.html">backcor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="result__type_8h_source.html#l00020">sablib::BaselineResult::baseline</a>, and <a class="el" href="result__type_8h_source.html#l00021">sablib::BaselineResult::corrected</a>.</p>
 
 </div>
 </div>
@@ -255,7 +258,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="backcor_8h.html">backcor.h</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="backcor_8h.html">backcor.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

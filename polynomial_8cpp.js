@@ -1,5 +1,5 @@
 var polynomial_8cpp =
 [
-    [ "sablib::BaselineLinear", "polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900", null ],
-    [ "sablib::BaselinePolynomial", "polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624", null ]
+    [ "sablib::BaselineLinear", "polynomial_8cpp.html#a1fd48a0e070a48bb9d6c81bba6ab9eb0", null ],
+    [ "sablib::BaselinePolynomial", "polynomial_8cpp.html#a56b45989e607438eec87cca6336a0c15", null ]
 ];

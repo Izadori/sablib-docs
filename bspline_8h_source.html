@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/misc/bspline.h Source File</title>
+<title>sablib: misc/bspline.h Source File</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -107,7 +107,7 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html">   23</a></span><span class="keyword">class </span>BSpline final</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html">   23</a></span><span class="keyword">class </span>BSpline final</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">static_assert</span>(std::is_floating_point_v&lt;Scalar&gt;, <span class="stringliteral">&quot;Scalar must be a floating-point type.&quot;</span>);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
@@ -125,19 +125,19 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> degree, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; knots, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; coefficients</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    );</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classsablib_1_1_b_spline.html#a26ba40d1976506df1ca42bb1190e9358">BasisSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classsablib_1_1BSpline.html#a26ba40d1976506df1ca42bb1190e9358">BasisSize</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1_b_spline.html#afd4d4820458fccb243111ee28593c316">Knots</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1BSpline.html#afd4d4820458fccb243111ee28593c316">Knots</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1_b_spline.html#a9c9afca74c55974573f54afd27f47ed0">Coefficients</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1BSpline.html#a9c9afca74c55974573f54afd27f47ed0">Coefficients</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">const</span> Eigen::SparseMatrix&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1_b_spline.html#a0c0276581df250801097401908615d24">DesignMatrix</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">const</span> Eigen::SparseMatrix&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1BSpline.html#a0c0276581df250801097401908615d24">DesignMatrix</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsablib_1_1_b_spline.html#a914f8a96c03b608b3a93cfb5ba55db1f">Fit</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; y);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsablib_1_1BSpline.html#a914f8a96c03b608b3a93cfb5ba55db1f">Fit</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; y);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">const</span> Scalar <a class="code hl_function" href="classsablib_1_1_b_spline.html#af12dce00d07fca93f8dd637c5cd9dde3">Interpolate</a>(<span class="keyword">const</span> Scalar x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; coefficients) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">const</span> Scalar <a class="code hl_function" href="classsablib_1_1BSpline.html#af12dce00d07fca93f8dd637c5cd9dde3">Interpolate</a>(<span class="keyword">const</span> Scalar x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; coefficients) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">const</span> Scalar <a class="code hl_function" href="classsablib_1_1_b_spline.html#af12dce00d07fca93f8dd637c5cd9dde3">Interpolate</a>(<span class="keyword">const</span> Scalar x) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">const</span> Scalar <a class="code hl_function" href="classsablib_1_1BSpline.html#af12dce00d07fca93f8dd637c5cd9dde3">Interpolate</a>(<span class="keyword">const</span> Scalar x) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">int</span> sp_degree;                          </div>
@@ -156,7 +156,7 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">//</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html#a71ea8e93f2f71349f4c9ee10a0d8120a">  144</a></span>BSpline&lt;Scalar&gt;::BSpline(</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html#a71ea8e93f2f71349f4c9ee10a0d8120a">  144</a></span>BSpline&lt;Scalar&gt;::BSpline(</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> degree, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; knots</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>) : sp_degree(degree), sp_knots(knots), basis(knots.size() - degree - 1)</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>{</div>
@@ -168,12 +168,12 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">//</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00154" data-start="{" data-end="}">
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html#ae2bd4d8ebbceb574d6e2c4fc48ee9020">  154</a></span>BSpline&lt;Scalar&gt;::BSpline(</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html#ae2bd4d8ebbceb574d6e2c4fc48ee9020">  154</a></span>BSpline&lt;Scalar&gt;::BSpline(</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> degree, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; knots,</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; y</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>) : sp_degree(degree), sp_knots(knots), basis(knots.size() - degree - 1)</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>{</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_function" href="classsablib_1_1_b_spline.html#a914f8a96c03b608b3a93cfb5ba55db1f">Fit</a>(x, y);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_function" href="classsablib_1_1BSpline.html#a914f8a96c03b608b3a93cfb5ba55db1f">Fit</a>(x, y);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>}</div>
 </div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
@@ -182,7 +182,7 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">//</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00166" data-start="{" data-end="}">
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html#a6a462ff08fb7a67b4d42b5091bd96b0e">  166</a></span>BSpline&lt;Scalar&gt;::BSpline(</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html#a6a462ff08fb7a67b4d42b5091bd96b0e">  166</a></span>BSpline&lt;Scalar&gt;::BSpline(</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> degree, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; knots, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; coefficients</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>) : sp_degree(degree), sp_knots(knots), basis(knots.size() - degree - 1), sp_coefficients(coefficients)</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>{</div>
@@ -194,7 +194,7 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">//</span></div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html#a26ba40d1976506df1ca42bb1190e9358">  176</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classsablib_1_1_b_spline.html#a26ba40d1976506df1ca42bb1190e9358">BSpline&lt;Scalar&gt;::BasisSize</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html#a26ba40d1976506df1ca42bb1190e9358">  176</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classsablib_1_1BSpline.html#a26ba40d1976506df1ca42bb1190e9358">BSpline&lt;Scalar&gt;::BasisSize</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">return</span> basis;</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
@@ -205,7 +205,7 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment">//</span></div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html#afd4d4820458fccb243111ee28593c316">  185</a></span><span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1_b_spline.html#afd4d4820458fccb243111ee28593c316">BSpline&lt;Scalar&gt;::Knots</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html#afd4d4820458fccb243111ee28593c316">  185</a></span><span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1BSpline.html#afd4d4820458fccb243111ee28593c316">BSpline&lt;Scalar&gt;::Knots</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordflow">return</span> sp_knots;</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>}</div>
@@ -216,7 +216,7 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">//</span></div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html#a9c9afca74c55974573f54afd27f47ed0">  194</a></span><span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1_b_spline.html#a9c9afca74c55974573f54afd27f47ed0">BSpline&lt;Scalar&gt;::Coefficients</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html#a9c9afca74c55974573f54afd27f47ed0">  194</a></span><span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1BSpline.html#a9c9afca74c55974573f54afd27f47ed0">BSpline&lt;Scalar&gt;::Coefficients</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">return</span> sp_coefficients;</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>}</div>
@@ -291,7 +291,7 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="comment">//</span></div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00267" data-start="{" data-end="}">
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html#a0c0276581df250801097401908615d24">  267</a></span><span class="keyword">const</span> Eigen::SparseMatrix&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1_b_spline.html#a0c0276581df250801097401908615d24">BSpline&lt;Scalar&gt;::DesignMatrix</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html#a0c0276581df250801097401908615d24">  267</a></span><span class="keyword">const</span> Eigen::SparseMatrix&lt;Scalar&gt; <a class="code hl_function" href="classsablib_1_1BSpline.html#a0c0276581df250801097401908615d24">BSpline&lt;Scalar&gt;::DesignMatrix</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordtype">int</span> n = x.size();</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    std::vector&lt; Eigen::Triplet&lt;Scalar&gt; &gt; triplets;</div>
@@ -322,9 +322,9 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="comment">//</span></div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00296" data-start="{" data-end="}">
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html#a914f8a96c03b608b3a93cfb5ba55db1f">  296</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classsablib_1_1_b_spline.html#a914f8a96c03b608b3a93cfb5ba55db1f">BSpline&lt;Scalar&gt;::Fit</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; y)</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html#a914f8a96c03b608b3a93cfb5ba55db1f">  296</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classsablib_1_1BSpline.html#a914f8a96c03b608b3a93cfb5ba55db1f">BSpline&lt;Scalar&gt;::Fit</a>(<span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; y)</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>{</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="keyword">auto</span> B = <a class="code hl_function" href="classsablib_1_1_b_spline.html#a0c0276581df250801097401908615d24">DesignMatrix</a>(x);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="keyword">auto</span> B = <a class="code hl_function" href="classsablib_1_1BSpline.html#a0c0276581df250801097401908615d24">DesignMatrix</a>(x);</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    Eigen::SparseMatrix&lt;Scalar&gt; BTB = B.transpose() * B;</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    Eigen::SimplicialLDLT&lt; Eigen::SparseMatrix&lt;Scalar&gt; &gt; solver;</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
@@ -343,7 +343,7 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="comment">//</span></div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00315" data-start="{" data-end="}">
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html#af12dce00d07fca93f8dd637c5cd9dde3">  315</a></span><span class="keyword">const</span> Scalar <a class="code hl_function" href="classsablib_1_1_b_spline.html#af12dce00d07fca93f8dd637c5cd9dde3">BSpline&lt;Scalar&gt;::Interpolate</a>(<span class="keyword">const</span> Scalar x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; coefficients)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html#af12dce00d07fca93f8dd637c5cd9dde3">  315</a></span><span class="keyword">const</span> Scalar <a class="code hl_function" href="classsablib_1_1BSpline.html#af12dce00d07fca93f8dd637c5cd9dde3">BSpline&lt;Scalar&gt;::Interpolate</a>(<span class="keyword">const</span> Scalar x, <span class="keyword">const</span> Eigen::VectorX&lt;Scalar&gt; &amp; coefficients)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keywordtype">int</span> span = FindSpan(x);</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    Eigen::VectorX&lt;Scalar&gt; N = BasisFunctions(span, x);</div>
@@ -367,28 +367,28 @@ $(function(){initNavTree('bspline_8h_source.html','',''); });
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="comment">//</span></div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Scalar&gt;</div>
 <div class="foldopen" id="foldopen00337" data-start="{" data-end="}">
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="classsablib_1_1_b_spline.html#acea095077c432c4f2a539f2ecbbafecd">  337</a></span><span class="keyword">inline</span> <span class="keyword">const</span> Scalar <a class="code hl_function" href="classsablib_1_1_b_spline.html#af12dce00d07fca93f8dd637c5cd9dde3">BSpline&lt;Scalar&gt;::Interpolate</a>(<span class="keyword">const</span> Scalar x)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="classsablib_1_1BSpline.html#acea095077c432c4f2a539f2ecbbafecd">  337</a></span><span class="keyword">inline</span> <span class="keyword">const</span> Scalar <a class="code hl_function" href="classsablib_1_1BSpline.html#af12dce00d07fca93f8dd637c5cd9dde3">BSpline&lt;Scalar&gt;::Interpolate</a>(<span class="keyword">const</span> Scalar x)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classsablib_1_1_b_spline.html#af12dce00d07fca93f8dd637c5cd9dde3">Interpolate</a>(x, sp_coefficients);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classsablib_1_1BSpline.html#af12dce00d07fca93f8dd637c5cd9dde3">Interpolate</a>(x, sp_coefficients);</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>}</div>
 </div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>} <span class="comment">// namespace sablib</span></div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_BSPLINE_H__</span></div>
-<div class="ttc" id="aclasssablib_1_1_b_spline_html_a0c0276581df250801097401908615d24"><div class="ttname"><a href="classsablib_1_1_b_spline.html#a0c0276581df250801097401908615d24">sablib::BSpline::DesignMatrix</a></div><div class="ttdeci">const Eigen::SparseMatrix&lt; Scalar &gt; DesignMatrix(const Eigen::VectorX&lt; Scalar &gt; &amp;x) const</div><div class="ttdoc">Constructs the design matrix (collocation matrix) for a given set of x-coordinates.</div><div class="ttdef"><b>Definition</b> <a href="#l00267">bspline.h:267</a></div></div>
-<div class="ttc" id="aclasssablib_1_1_b_spline_html_a26ba40d1976506df1ca42bb1190e9358"><div class="ttname"><a href="classsablib_1_1_b_spline.html#a26ba40d1976506df1ca42bb1190e9358">sablib::BSpline::BasisSize</a></div><div class="ttdeci">int BasisSize() const</div><div class="ttdoc">Gets the number of basis functions.</div><div class="ttdef"><b>Definition</b> <a href="#l00176">bspline.h:176</a></div></div>
-<div class="ttc" id="aclasssablib_1_1_b_spline_html_a914f8a96c03b608b3a93cfb5ba55db1f"><div class="ttname"><a href="classsablib_1_1_b_spline.html#a914f8a96c03b608b3a93cfb5ba55db1f">sablib::BSpline::Fit</a></div><div class="ttdeci">void Fit(const Eigen::VectorX&lt; Scalar &gt; &amp;x, const Eigen::VectorX&lt; Scalar &gt; &amp;y)</div><div class="ttdoc">Fits the B-Spline to the given data points by calculating the coefficients.</div><div class="ttdef"><b>Definition</b> <a href="#l00296">bspline.h:296</a></div></div>
-<div class="ttc" id="aclasssablib_1_1_b_spline_html_a9c9afca74c55974573f54afd27f47ed0"><div class="ttname"><a href="classsablib_1_1_b_spline.html#a9c9afca74c55974573f54afd27f47ed0">sablib::BSpline::Coefficients</a></div><div class="ttdeci">const Eigen::VectorX&lt; Scalar &gt; Coefficients() const</div><div class="ttdoc">Returns the internal B-Spline coefficients.</div><div class="ttdef"><b>Definition</b> <a href="#l00194">bspline.h:194</a></div></div>
-<div class="ttc" id="aclasssablib_1_1_b_spline_html_af12dce00d07fca93f8dd637c5cd9dde3"><div class="ttname"><a href="classsablib_1_1_b_spline.html#af12dce00d07fca93f8dd637c5cd9dde3">sablib::BSpline::Interpolate</a></div><div class="ttdeci">const Scalar Interpolate(const Scalar x, const Eigen::VectorX&lt; Scalar &gt; &amp;coefficients) const</div><div class="ttdoc">Interpolates the value at a given x-coordinate using provided B-Spline coefficients.</div><div class="ttdef"><b>Definition</b> <a href="#l00315">bspline.h:315</a></div></div>
-<div class="ttc" id="aclasssablib_1_1_b_spline_html_afd4d4820458fccb243111ee28593c316"><div class="ttname"><a href="classsablib_1_1_b_spline.html#afd4d4820458fccb243111ee28593c316">sablib::BSpline::Knots</a></div><div class="ttdeci">const Eigen::VectorX&lt; Scalar &gt; Knots() const</div><div class="ttdoc">Returns the knot vector.</div><div class="ttdef"><b>Definition</b> <a href="#l00185">bspline.h:185</a></div></div>
+<div class="ttc" id="aclasssablib_1_1BSpline_html_a0c0276581df250801097401908615d24"><div class="ttname"><a href="classsablib_1_1BSpline.html#a0c0276581df250801097401908615d24">sablib::BSpline::DesignMatrix</a></div><div class="ttdeci">const Eigen::SparseMatrix&lt; Scalar &gt; DesignMatrix(const Eigen::VectorX&lt; Scalar &gt; &amp;x) const</div><div class="ttdoc">Constructs the design matrix (collocation matrix) for a given set of x-coordinates.</div><div class="ttdef"><b>Definition</b> <a href="#l00267">bspline.h:267</a></div></div>
+<div class="ttc" id="aclasssablib_1_1BSpline_html_a26ba40d1976506df1ca42bb1190e9358"><div class="ttname"><a href="classsablib_1_1BSpline.html#a26ba40d1976506df1ca42bb1190e9358">sablib::BSpline::BasisSize</a></div><div class="ttdeci">int BasisSize() const</div><div class="ttdoc">Gets the number of basis functions.</div><div class="ttdef"><b>Definition</b> <a href="#l00176">bspline.h:176</a></div></div>
+<div class="ttc" id="aclasssablib_1_1BSpline_html_a914f8a96c03b608b3a93cfb5ba55db1f"><div class="ttname"><a href="classsablib_1_1BSpline.html#a914f8a96c03b608b3a93cfb5ba55db1f">sablib::BSpline::Fit</a></div><div class="ttdeci">void Fit(const Eigen::VectorX&lt; Scalar &gt; &amp;x, const Eigen::VectorX&lt; Scalar &gt; &amp;y)</div><div class="ttdoc">Fits the B-Spline to the given data points by calculating the coefficients.</div><div class="ttdef"><b>Definition</b> <a href="#l00296">bspline.h:296</a></div></div>
+<div class="ttc" id="aclasssablib_1_1BSpline_html_a9c9afca74c55974573f54afd27f47ed0"><div class="ttname"><a href="classsablib_1_1BSpline.html#a9c9afca74c55974573f54afd27f47ed0">sablib::BSpline::Coefficients</a></div><div class="ttdeci">const Eigen::VectorX&lt; Scalar &gt; Coefficients() const</div><div class="ttdoc">Returns the internal B-Spline coefficients.</div><div class="ttdef"><b>Definition</b> <a href="#l00194">bspline.h:194</a></div></div>
+<div class="ttc" id="aclasssablib_1_1BSpline_html_af12dce00d07fca93f8dd637c5cd9dde3"><div class="ttname"><a href="classsablib_1_1BSpline.html#af12dce00d07fca93f8dd637c5cd9dde3">sablib::BSpline::Interpolate</a></div><div class="ttdeci">const Scalar Interpolate(const Scalar x, const Eigen::VectorX&lt; Scalar &gt; &amp;coefficients) const</div><div class="ttdoc">Interpolates the value at a given x-coordinate using provided B-Spline coefficients.</div><div class="ttdef"><b>Definition</b> <a href="#l00315">bspline.h:315</a></div></div>
+<div class="ttc" id="aclasssablib_1_1BSpline_html_afd4d4820458fccb243111ee28593c316"><div class="ttname"><a href="classsablib_1_1BSpline.html#afd4d4820458fccb243111ee28593c316">sablib::BSpline::Knots</a></div><div class="ttdeci">const Eigen::VectorX&lt; Scalar &gt; Knots() const</div><div class="ttdoc">Returns the knot vector.</div><div class="ttdef"><b>Definition</b> <a href="#l00185">bspline.h:185</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>misc</b></li><li class="navelem"><a href="bspline_8h.html">bspline.h</a></li>
+    <li class="navelem"><b>misc</b></li><li class="navelem"><a href="bspline_8h.html">bspline.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

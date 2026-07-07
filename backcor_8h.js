@@ -8,5 +8,5 @@ var backcor_8h =
       [ "Indec", "backcor_8h.html#accc9b29475416586b0638a396218eca1a884bc0bde929ebcc90438168cd12c11d", null ],
       [ "AIndec", "backcor_8h.html#accc9b29475416586b0638a396218eca1a5db4caaf48257dbd883551260a081085", null ]
     ] ],
-    [ "sablib::BaselineBackcor", "backcor_8cpp.html#a307da6964994932e337c3224a13f13bd", null ]
+    [ "sablib::BaselineBackcor", "backcor_8cpp.html#a7b133b4ad2a4618268309f6b1a323bf7", null ]
 ];

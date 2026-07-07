@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/smoothing/moving_median.h Source File</title>
+<title>sablib: smoothing/moving_median.h Source File</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -101,21 +101,23 @@ $(function(){initNavTree('moving__median_8h_source.html','',''); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>sablib {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="moving__median_8cpp.html#a0eb0c0f58caf3d684ed18102f989e103">MovingMedian</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;sablib_export.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>sablib {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>SABLIB_EXPORT <span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="moving__median_8cpp.html#ae6df4feb2dca8015ea2584b72023c241">MovingMedian</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_MOVING_MEDIAN_H__</span></div>
-<div class="ttc" id="amoving__median_8cpp_html_a0eb0c0f58caf3d684ed18102f989e103"><div class="ttname"><a href="moving__median_8cpp.html#a0eb0c0f58caf3d684ed18102f989e103">sablib::MovingMedian</a></div><div class="ttdeci">const std::vector&lt; double &gt; MovingMedian(const std::vector&lt; double &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Performs moving median smoothing.</div><div class="ttdef"><b>Definition</b> <a href="moving__median_8cpp_source.html#l00088">moving_median.cpp:88</a></div></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_MOVING_MEDIAN_H__</span></div>
+<div class="ttc" id="amoving__median_8cpp_html_ae6df4feb2dca8015ea2584b72023c241"><div class="ttname"><a href="moving__median_8cpp.html#ae6df4feb2dca8015ea2584b72023c241">sablib::MovingMedian</a></div><div class="ttdeci">const std::vector&lt; double &gt; MovingMedian(const std::vector&lt; double &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Performs moving median smoothing.</div><div class="ttdef"><b>Definition</b> <a href="moving__median_8cpp_source.html#l00088">moving_median.cpp:88</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="moving__median_8h.html">moving_median.h</a></li>
+    <li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="moving__median_8h.html">moving_median.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

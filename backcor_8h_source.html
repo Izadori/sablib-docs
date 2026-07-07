@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/backcor.h Source File</title>
+<title>sablib: baseline/backcor.h Source File</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -99,45 +99,48 @@ $(function(){initNavTree('backcor_8h_source.html','',''); });
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __SABLIB_BACKCOR_H__</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span>sablib {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1">   25</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="backcor_8h.html#accc9b29475416586b0638a396218eca1">BackcorFunc</a></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a71b7c7b0a11fc3ad70f3874318e99d18">   27</a></span>    <a class="code hl_enumvalue" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a71b7c7b0a11fc3ad70f3874318e99d18">Huber</a>,  </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1aa752f3b755bc1dc7cc284cdff3f377d1">   28</a></span>    <a class="code hl_enumvalue" href="backcor_8h.html#accc9b29475416586b0638a396218eca1aa752f3b755bc1dc7cc284cdff3f377d1">AHuber</a>, </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1aebb3a0d3cf6426e9216e3f4c253d94b7">   29</a></span>    <a class="code hl_enumvalue" href="backcor_8h.html#accc9b29475416586b0638a396218eca1aebb3a0d3cf6426e9216e3f4c253d94b7">TQuad</a>,  </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a530adc08cfc9618c1635f43b17b8fe0e">   30</a></span>    <a class="code hl_enumvalue" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a530adc08cfc9618c1635f43b17b8fe0e">ATQuad</a>, </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a884bc0bde929ebcc90438168cd12c11d">   31</a></span>    <a class="code hl_enumvalue" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a884bc0bde929ebcc90438168cd12c11d">Indec</a>,  </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a5db4caaf48257dbd883551260a081085">   32</a></span>    <a class="code hl_enumvalue" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a5db4caaf48257dbd883551260a081085">AIndec</a>  </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="result__type_8h.html">result_type.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;sablib_export.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span>sablib {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1">   27</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="backcor_8h.html#accc9b29475416586b0638a396218eca1">BackcorFunc</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a71b7c7b0a11fc3ad70f3874318e99d18">   29</a></span>    <a class="code hl_enumvalue" href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6a14fd9079cea7900467a1346481b83c75">Huber</a>,  </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1aa752f3b755bc1dc7cc284cdff3f377d1">   30</a></span>    <a class="code hl_enumvalue" href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6a0d1c8bdfaf5a826913cc4cb2a564f829">AHuber</a>, </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1aebb3a0d3cf6426e9216e3f4c253d94b7">   31</a></span>    <a class="code hl_enumvalue" href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6aa5b21fc4e2625de7ce35840bbc329e3f">TQuad</a>,  </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a530adc08cfc9618c1635f43b17b8fe0e">   32</a></span>    <a class="code hl_enumvalue" href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6a29c754adb0d797ec023a9546a29521a2">ATQuad</a>, </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a884bc0bde929ebcc90438168cd12c11d">   33</a></span>    <a class="code hl_enumvalue" href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6a981aa5f4e41d2b63edebf2605921fc98">Indec</a>,  </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="backcor_8h.html#accc9b29475416586b0638a396218eca1a5db4caaf48257dbd883551260a081085">   34</a></span>    <a class="code hl_enumvalue" href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6ae3f0ac340977ca129ccecdaf875bcc1d">AIndec</a>  </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">const</span> std::vector&lt;double&gt;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>BaselineBackcor(</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> polyorder, <span class="keyword">const</span> BackcorFunc func = BackcorFunc::ATQuad,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> s = 1, <span class="keyword">const</span> <span class="keywordtype">double</span> alpha = 0.99 * 0.5, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loop = 50, <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1.0e-3</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>SABLIB_EXPORT <span class="keyword">const</span> BaselineResult</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>BaselineBackcor(</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> polyorder, <span class="keyword">const</span> BackcorFunc func = BackcorFunc::ATQuad,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> s = 1, <span class="keyword">const</span> <span class="keywordtype">double</span> alpha = 0.99 * 0.5, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loop = 50, <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1.0e-3</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_BACKCOR_H__</span></div>
-<div class="ttc" id="abackcor_8h_html_accc9b29475416586b0638a396218eca1"><div class="ttname"><a href="backcor_8h.html#accc9b29475416586b0638a396218eca1">sablib::BackcorFunc</a></div><div class="ttdeci">BackcorFunc</div><div class="ttdoc">Cost function types for the Backcor algorithm.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">backcor.h:26</a></div></div>
-<div class="ttc" id="abackcor_8h_html_accc9b29475416586b0638a396218eca1a530adc08cfc9618c1635f43b17b8fe0e"><div class="ttname"><a href="backcor_8h.html#accc9b29475416586b0638a396218eca1a530adc08cfc9618c1635f43b17b8fe0e">sablib::BackcorFunc::ATQuad</a></div><div class="ttdeci">@ ATQuad</div><div class="ttdef"><b>Definition</b> <a href="#l00030">backcor.h:30</a></div></div>
-<div class="ttc" id="abackcor_8h_html_accc9b29475416586b0638a396218eca1a5db4caaf48257dbd883551260a081085"><div class="ttname"><a href="backcor_8h.html#accc9b29475416586b0638a396218eca1a5db4caaf48257dbd883551260a081085">sablib::BackcorFunc::AIndec</a></div><div class="ttdeci">@ AIndec</div><div class="ttdef"><b>Definition</b> <a href="#l00032">backcor.h:32</a></div></div>
-<div class="ttc" id="abackcor_8h_html_accc9b29475416586b0638a396218eca1a71b7c7b0a11fc3ad70f3874318e99d18"><div class="ttname"><a href="backcor_8h.html#accc9b29475416586b0638a396218eca1a71b7c7b0a11fc3ad70f3874318e99d18">sablib::BackcorFunc::Huber</a></div><div class="ttdeci">@ Huber</div><div class="ttdef"><b>Definition</b> <a href="#l00027">backcor.h:27</a></div></div>
-<div class="ttc" id="abackcor_8h_html_accc9b29475416586b0638a396218eca1a884bc0bde929ebcc90438168cd12c11d"><div class="ttname"><a href="backcor_8h.html#accc9b29475416586b0638a396218eca1a884bc0bde929ebcc90438168cd12c11d">sablib::BackcorFunc::Indec</a></div><div class="ttdeci">@ Indec</div><div class="ttdef"><b>Definition</b> <a href="#l00031">backcor.h:31</a></div></div>
-<div class="ttc" id="abackcor_8h_html_accc9b29475416586b0638a396218eca1aa752f3b755bc1dc7cc284cdff3f377d1"><div class="ttname"><a href="backcor_8h.html#accc9b29475416586b0638a396218eca1aa752f3b755bc1dc7cc284cdff3f377d1">sablib::BackcorFunc::AHuber</a></div><div class="ttdeci">@ AHuber</div><div class="ttdef"><b>Definition</b> <a href="#l00028">backcor.h:28</a></div></div>
-<div class="ttc" id="abackcor_8h_html_accc9b29475416586b0638a396218eca1aebb3a0d3cf6426e9216e3f4c253d94b7"><div class="ttname"><a href="backcor_8h.html#accc9b29475416586b0638a396218eca1aebb3a0d3cf6426e9216e3f4c253d94b7">sablib::BackcorFunc::TQuad</a></div><div class="ttdeci">@ TQuad</div><div class="ttdef"><b>Definition</b> <a href="#l00029">backcor.h:29</a></div></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_BACKCOR_H__</span></div>
+<div class="ttc" id="abackcor_8h_html_accc9b29475416586b0638a396218eca1"><div class="ttname"><a href="backcor_8h.html#accc9b29475416586b0638a396218eca1">sablib::BackcorFunc</a></div><div class="ttdeci">BackcorFunc</div><div class="ttdoc">Cost function types for the Backcor algorithm.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">backcor.h:28</a></div></div>
+<div class="ttc" id="abaseline_8h_html_a98397820f9018960a6c6f4fcca2267e6a0d1c8bdfaf5a826913cc4cb2a564f829"><div class="ttname"><a href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6a0d1c8bdfaf5a826913cc4cb2a564f829">AHuber</a></div><div class="ttdeci">@ AHuber</div><div class="ttdef"><b>Definition</b> <a href="baseline_8h_source.html#l00026">baseline.h:26</a></div></div>
+<div class="ttc" id="abaseline_8h_html_a98397820f9018960a6c6f4fcca2267e6a14fd9079cea7900467a1346481b83c75"><div class="ttname"><a href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6a14fd9079cea7900467a1346481b83c75">Huber</a></div><div class="ttdeci">@ Huber</div><div class="ttdef"><b>Definition</b> <a href="baseline_8h_source.html#l00025">baseline.h:25</a></div></div>
+<div class="ttc" id="abaseline_8h_html_a98397820f9018960a6c6f4fcca2267e6a29c754adb0d797ec023a9546a29521a2"><div class="ttname"><a href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6a29c754adb0d797ec023a9546a29521a2">ATQuad</a></div><div class="ttdeci">@ ATQuad</div><div class="ttdef"><b>Definition</b> <a href="baseline_8h_source.html#l00028">baseline.h:28</a></div></div>
+<div class="ttc" id="abaseline_8h_html_a98397820f9018960a6c6f4fcca2267e6a981aa5f4e41d2b63edebf2605921fc98"><div class="ttname"><a href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6a981aa5f4e41d2b63edebf2605921fc98">Indec</a></div><div class="ttdeci">@ Indec</div><div class="ttdef"><b>Definition</b> <a href="baseline_8h_source.html#l00029">baseline.h:29</a></div></div>
+<div class="ttc" id="abaseline_8h_html_a98397820f9018960a6c6f4fcca2267e6aa5b21fc4e2625de7ce35840bbc329e3f"><div class="ttname"><a href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6aa5b21fc4e2625de7ce35840bbc329e3f">TQuad</a></div><div class="ttdeci">@ TQuad</div><div class="ttdef"><b>Definition</b> <a href="baseline_8h_source.html#l00027">baseline.h:27</a></div></div>
+<div class="ttc" id="abaseline_8h_html_a98397820f9018960a6c6f4fcca2267e6ae3f0ac340977ca129ccecdaf875bcc1d"><div class="ttname"><a href="baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6ae3f0ac340977ca129ccecdaf875bcc1d">AIndec</a></div><div class="ttdeci">@ AIndec</div><div class="ttdef"><b>Definition</b> <a href="baseline_8h_source.html#l00030">baseline.h:30</a></div></div>
+<div class="ttc" id="aresult__type_8h_html"><div class="ttname"><a href="result__type_8h.html">result_type.h</a></div><div class="ttdoc">Common definition of return value for baseline estimation functions.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="backcor_8h.html">backcor.h</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="backcor_8h.html">backcor.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

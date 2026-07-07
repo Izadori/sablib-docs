@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/sma.h File Reference</title>
+<title>sablib: baseline/sma.h File Reference</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -96,14 +96,15 @@ $(function(){initNavTree('sma_8h.html','',''); });
 
 <p>Baseline estimation using simple moving average.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="result__type_8h_source.html">result_type.h</a>&quot;</code><br />
+<code>#include &quot;sablib_export.h&quot;</code><br />
 </div>
 <p><a href="sma_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af91f1a1f388db47c3b772349d3e3726b" id="r_af91f1a1f388db47c3b772349d3e3726b"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="sma_8cpp.html#af91f1a1f388db47c3b772349d3e3726b">sablib::BaselineSMA</a> (std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int loop=50)</td></tr>
-<tr class="memdesc:af91f1a1f388db47c3b772349d3e3726b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs background estimation using a simple moving average.  <br /></td></tr>
+<tr class="memitem:a3a65ddb006f0b5989946fc7844665769" id="r_a3a65ddb006f0b5989946fc7844665769"><td class="memItemLeft">const <a class="el" href="structsablib_1_1BaselineResult.html">BaselineResult</a>&#160;</td><td class="memItemRight"><a class="el" href="sma_8cpp.html#a3a65ddb006f0b5989946fc7844665769">sablib::BaselineSMA</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int loop=50)</td></tr>
+<tr class="memdesc:a3a65ddb006f0b5989946fc7844665769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs background estimation using a simple moving average.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Baseline estimation using simple moving average. </p>
@@ -111,16 +112,16 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="sma_8h_source.html">sma.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="af91f1a1f388db47c3b772349d3e3726b" name="af91f1a1f388db47c3b772349d3e3726b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af91f1a1f388db47c3b772349d3e3726b">&#9670;&#160;</a></span>BaselineSMA()</h2>
+<a id="a3a65ddb006f0b5989946fc7844665769" name="a3a65ddb006f0b5989946fc7844665769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a65ddb006f0b5989946fc7844665769">&#9670;&#160;</a></span>BaselineSMA()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::BaselineSMA </td>
+          <td class="memname">SABLIB_EXPORT const BaselineResult sablib::BaselineSMA </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -144,9 +145,11 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The estimated baseline. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="sma_8cpp_source.html#l00016">16</a> of file <a class="el" href="sma_8cpp_source.html">sma.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="result__type_8h_source.html#l00020">sablib::BaselineResult::baseline</a>, and <a class="el" href="result__type_8h_source.html#l00021">sablib::BaselineResult::corrected</a>.</p>
 
 </div>
 </div>
@@ -163,7 +166,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="sma_8h.html">sma.h</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="sma_8h.html">sma.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

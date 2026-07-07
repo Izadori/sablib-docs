@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['prerequisites_0',['1. Prerequisites',['../getting_started.html#autotoc_md7',1,'']]],
-  ['program_3a_20main_20cpp_1',['Sample Program: &lt;span class=&quot;tt&quot;&gt;main.cpp&lt;/span&gt;',['../getting_started.html#autotoc_md13',1,'']]],
-  ['project_20with_20cmake_2',['Building your project with CMake',['../getting_started.html#autotoc_md14',1,'']]]
+  ['option_20a_3a_20using_20vcpkg_0',['Option A: Using vcpkg',['../getting_started.html#autotoc_md10',1,'']]],
+  ['option_20b_3a_20using_20conan_1',['Option B: Using Conan',['../getting_started.html#autotoc_md11',1,'']]],
+  ['option_20c_3a_20cloning_20and_20building_20manually_2',['Option C: Cloning and Building Manually',['../getting_started.html#autotoc_md12',1,'']]]
 ];

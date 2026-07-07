@@ -1,13 +1,5 @@
 var searchData=
 [
-  ['valid_0',['Valid',['../convolve_8h.html#aecfce576d85f82a26ac84490ae24c846a3ac705f2acd51a4613f9188c05c91d0d',1,'sablib']]],
-  ['vandermonde_1',['Vandermonde',['../polyfit_8h.html#aebd70efd6604483a9a1e835230c84ea6',1,'sablib']]],
-  ['vcpkg_2',['vcpkg',['../getting_started.html#autotoc_md9',1,'Option A: Using vcpkg'],['../getting_started.html#autotoc_md15',1,'Via vcpkg']]],
-  ['version_200_201_200_202026_2003_2018_3',['version 0.1.0 (2026/03/18)',['../changelog.html#autotoc_md5',1,'']]],
-  ['version_200_201_201_202026_2003_2022_4',['version 0.1.1 (2026/03/22)',['../changelog.html#autotoc_md4',1,'']]],
-  ['version_200_202_200_202026_2003_2026_5',['version 0.2.0 (2026/03/26)',['../changelog.html#autotoc_md3',1,'']]],
-  ['version_200_203_200_202026_2004_2002_6',['version 0.3.0 (2026/04/02)',['../changelog.html#autotoc_md2',1,'']]],
-  ['version_200_203_202_202026_2004_2005_7',['version 0.3.2 (2026/04/05)',['../changelog.html#autotoc_md1',1,'']]],
-  ['via_20conan_8',['Via Conan',['../getting_started.html#autotoc_md16',1,'']]],
-  ['via_20vcpkg_9',['Via vcpkg',['../getting_started.html#autotoc_md15',1,'']]]
+  ['tquad_0',['TQuad',['../baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6aa5b21fc4e2625de7ce35840bbc329e3f',1,'TQuad:&#160;baseline.h'],['../backcor_8h.html#accc9b29475416586b0638a396218eca1aebb3a0d3cf6426e9216e3f4c253d94b7',1,'TQuadsablib']]],
+  ['trimboundaries_1',['TrimBoundaries',['../expand_8h.html#afa3240f67e1aa5e2ce300ae91b8f3c91',1,'sablib']]]
 ];

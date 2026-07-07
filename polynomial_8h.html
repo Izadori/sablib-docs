@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/polynomial.h File Reference</title>
+<title>sablib: baseline/polynomial.h File Reference</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -97,16 +97,17 @@ $(function(){initNavTree('polynomial_8h.html','',''); });
 <p>Baseline estimation with polynomial line.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="result__type_8h_source.html">result_type.h</a>&quot;</code><br />
+<code>#include &quot;sablib_export.h&quot;</code><br />
 </div>
 <p><a href="polynomial_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a11aad697a81d46a336eca5ab6eb05900" id="r_a11aad697a81d46a336eca5ab6eb05900"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="polynomial_8cpp.html#a11aad697a81d46a336eca5ab6eb05900">sablib::BaselineLinear</a> (std::vector&lt; double &gt; &amp;y, const unsigned int index1, const unsigned int index2)</td></tr>
-<tr class="memdesc:a11aad697a81d46a336eca5ab6eb05900"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation with a linear line between two points.  <br /></td></tr>
-<tr class="memitem:a14a6e2b7e2ef37203ca65e6435faa624" id="r_a14a6e2b7e2ef37203ca65e6435faa624"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="polynomial_8cpp.html#a14a6e2b7e2ef37203ca65e6435faa624">sablib::BaselinePolynomial</a> (std::vector&lt; double &gt; &amp;y, const unsigned int polyorder, const std::vector&lt; unsigned int &gt; &amp;indices)</td></tr>
-<tr class="memdesc:a14a6e2b7e2ef37203ca65e6435faa624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation by fitting a polynomial to specified points.  <br /></td></tr>
+<tr class="memitem:a1fd48a0e070a48bb9d6c81bba6ab9eb0" id="r_a1fd48a0e070a48bb9d6c81bba6ab9eb0"><td class="memItemLeft">const <a class="el" href="structsablib_1_1BaselineResult.html">BaselineResult</a>&#160;</td><td class="memItemRight"><a class="el" href="polynomial_8cpp.html#a1fd48a0e070a48bb9d6c81bba6ab9eb0">sablib::BaselineLinear</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int index1, const unsigned int index2)</td></tr>
+<tr class="memdesc:a1fd48a0e070a48bb9d6c81bba6ab9eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation with a linear line between two points.  <br /></td></tr>
+<tr class="memitem:a56b45989e607438eec87cca6336a0c15" id="r_a56b45989e607438eec87cca6336a0c15"><td class="memItemLeft">const <a class="el" href="structsablib_1_1BaselineResult.html">BaselineResult</a>&#160;</td><td class="memItemRight"><a class="el" href="polynomial_8cpp.html#a56b45989e607438eec87cca6336a0c15">sablib::BaselinePolynomial</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int polyorder, const std::vector&lt; unsigned int &gt; &amp;indices)</td></tr>
+<tr class="memdesc:a56b45989e607438eec87cca6336a0c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation by fitting a polynomial to specified points.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Baseline estimation with polynomial line. </p>
@@ -114,16 +115,16 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="polynomial_8h_source.html">polynomial.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a11aad697a81d46a336eca5ab6eb05900" name="a11aad697a81d46a336eca5ab6eb05900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11aad697a81d46a336eca5ab6eb05900">&#9670;&#160;</a></span>BaselineLinear()</h2>
+<a id="a1fd48a0e070a48bb9d6c81bba6ab9eb0" name="a1fd48a0e070a48bb9d6c81bba6ab9eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd48a0e070a48bb9d6c81bba6ab9eb0">&#9670;&#160;</a></span>BaselineLinear()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; double &gt; sablib::BaselineLinear </td>
+          <td class="memname">SABLIB_EXPORT const BaselineResult sablib::BaselineLinear </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -147,7 +148,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The estimated linear baseline. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
@@ -157,18 +158,20 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="polynomial_8cpp_source.html#l00016">16</a> of file <a class="el" href="polynomial_8cpp_source.html">polynomial.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="result__type_8h_source.html#l00020">sablib::BaselineResult::baseline</a>, and <a class="el" href="result__type_8h_source.html#l00021">sablib::BaselineResult::corrected</a>.</p>
+
 </div>
 </div>
-<a id="a14a6e2b7e2ef37203ca65e6435faa624" name="a14a6e2b7e2ef37203ca65e6435faa624"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14a6e2b7e2ef37203ca65e6435faa624">&#9670;&#160;</a></span>BaselinePolynomial()</h2>
+<a id="a56b45989e607438eec87cca6336a0c15" name="a56b45989e607438eec87cca6336a0c15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56b45989e607438eec87cca6336a0c15">&#9670;&#160;</a></span>BaselinePolynomial()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; double &gt; sablib::BaselinePolynomial </td>
+          <td class="memname">SABLIB_EXPORT const BaselineResult sablib::BaselinePolynomial </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -192,7 +195,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The estimated polynomial baseline. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
@@ -200,7 +203,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="polynomial_8cpp_source.html#l00043">43</a> of file <a class="el" href="polynomial_8cpp_source.html">polynomial.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="polynomial_8cpp_source.html#l00050">50</a> of file <a class="el" href="polynomial_8cpp_source.html">polynomial.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="result__type_8h_source.html#l00020">sablib::BaselineResult::baseline</a>, and <a class="el" href="result__type_8h_source.html#l00021">sablib::BaselineResult::corrected</a>.</p>
 
 </div>
 </div>
@@ -217,7 +222,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="polynomial_8h.html">polynomial.h</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="polynomial_8h.html">polynomial.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

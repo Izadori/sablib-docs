@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/beads.cpp File Reference</title>
+<title>sablib: baseline/beads.cpp File Reference</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -99,6 +99,7 @@ $(function(){initNavTree('beads_8cpp.html','',''); });
 <div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
 <code>#include &quot;<a class="el" href="convolve_8h_source.html">../misc/convolve.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="diff_8h_source.html">../misc/diff.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="spdiags_8h_source.html">../misc/spdiags.h</a>&quot;</code><br />
@@ -108,12 +109,12 @@ $(function(){initNavTree('beads_8cpp.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8cb3ccebdff176e5e9bb2e143f3188d9" id="r_a8cb3ccebdff176e5e9bb2e143f3188d9"><td class="memItemLeft">const std::tuple&lt; std::vector&lt; double &gt;, std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8cb3ccebdff176e5e9bb2e143f3188d9">sablib::BaselineBeads</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int s, const double frequency, const double r, const double lambda0, const double lambda1, const double lambda2, const unsigned int loop=30, const double eps=1e-3, const <a class="el" href="beads_8h.html#aaa339033c3a975d37fc6e342adeee334">BeadsPenalty</a> penalty=<a class="el" href="beads_8h.html#aaa339033c3a975d37fc6e342adeee334ac26c30edb634d206dfbecc01225ce4d8">BeadsPenalty::L1_v2</a>)</td></tr>
-<tr class="memdesc:a8cb3ccebdff176e5e9bb2e143f3188d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation and denoising using Sparsity (BEADS).  <br /></td></tr>
-<tr class="memitem:ac0d2e9189827778dcd0071659be8639a" id="r_ac0d2e9189827778dcd0071659be8639a"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac0d2e9189827778dcd0071659be8639a">sablib::BeadsExpandBoundaries</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int n=400)</td></tr>
-<tr class="memdesc:ac0d2e9189827778dcd0071659be8639a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands the signal boundaries by padding with a tapered sequence.  <br /></td></tr>
-<tr class="memitem:a97f519aa47e56590f22f421ee8b5726a" id="r_a97f519aa47e56590f22f421ee8b5726a"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a97f519aa47e56590f22f421ee8b5726a">sablib::BeadsTrimBoundaries</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int n=400)</td></tr>
-<tr class="memdesc:a97f519aa47e56590f22f421ee8b5726a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trims the expanded signal boundaries.  <br /></td></tr>
+<tr class="memitem:aa6690fb3286c2aa74fd07ba853f1c1e2" id="r_aa6690fb3286c2aa74fd07ba853f1c1e2"><td class="memItemLeft">const <a class="el" href="structsablib_1_1BaselineResult.html">BaselineResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa6690fb3286c2aa74fd07ba853f1c1e2">sablib::BaselineBeads</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int s, const double frequency, const double r, const double lambda0, const double lambda1, const double lambda2, const unsigned int loop=30, const double eps=1e-3, const <a class="el" href="beads_8h.html#aaa339033c3a975d37fc6e342adeee334">BeadsPenalty</a> penalty=<a class="el" href="beads_8h.html#aaa339033c3a975d37fc6e342adeee334ac26c30edb634d206dfbecc01225ce4d8">BeadsPenalty::L1_v2</a>)</td></tr>
+<tr class="memdesc:aa6690fb3286c2aa74fd07ba853f1c1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation and denoising using Sparsity (BEADS).  <br /></td></tr>
+<tr class="memitem:ae35b45897c6b6c7357af98ab54578263" id="r_ae35b45897c6b6c7357af98ab54578263"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae35b45897c6b6c7357af98ab54578263">sablib::BeadsExpandBoundaries</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int n=400)</td></tr>
+<tr class="memdesc:ae35b45897c6b6c7357af98ab54578263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands the signal boundaries by padding with a tapered sequence.  <br /></td></tr>
+<tr class="memitem:a3c3ade0dc7018123559f8a449afe11c3" id="r_a3c3ade0dc7018123559f8a449afe11c3"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3c3ade0dc7018123559f8a449afe11c3">sablib::BeadsTrimBoundaries</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int n=400)</td></tr>
+<tr class="memdesc:a3c3ade0dc7018123559f8a449afe11c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trims the expanded signal boundaries.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Baseline estimation and subtraction using Baseline Estimation And Denoising using Sparsity(BEADS)(implementation). </p>
@@ -139,14 +140,14 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a8cb3ccebdff176e5e9bb2e143f3188d9" name="a8cb3ccebdff176e5e9bb2e143f3188d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cb3ccebdff176e5e9bb2e143f3188d9">&#9670;&#160;</a></span>BaselineBeads()</h2>
+<a id="aa6690fb3286c2aa74fd07ba853f1c1e2" name="aa6690fb3286c2aa74fd07ba853f1c1e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6690fb3286c2aa74fd07ba853f1c1e2">&#9670;&#160;</a></span>BaselineBeads()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::tuple&lt; std::vector&lt; double &gt;, std::vector&lt; double &gt; &gt; sablib::BaselineBeads </td>
+          <td class="memname">SABLIB_EXPORT const BaselineResult sablib::BaselineBeads </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
@@ -214,7 +215,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A tuple containing (baseline, denoised signal). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and denoised baseline-corrected data. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
@@ -222,18 +223,20 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00101">101</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00102">102</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="result__type_8h_source.html#l00020">sablib::BaselineResult::baseline</a>, and <a class="el" href="result__type_8h_source.html#l00021">sablib::BaselineResult::corrected</a>.</p>
 
 </div>
 </div>
-<a id="ac0d2e9189827778dcd0071659be8639a" name="ac0d2e9189827778dcd0071659be8639a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0d2e9189827778dcd0071659be8639a">&#9670;&#160;</a></span>BeadsExpandBoundaries()</h2>
+<a id="ae35b45897c6b6c7357af98ab54578263" name="ae35b45897c6b6c7357af98ab54578263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae35b45897c6b6c7357af98ab54578263">&#9670;&#160;</a></span>BeadsExpandBoundaries()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::BeadsExpandBoundaries </td>
+          <td class="memname">SABLIB_EXPORT const std::vector&lt; double &gt; sablib::BeadsExpandBoundaries </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
@@ -261,18 +264,18 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00257">257</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00260">260</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a97f519aa47e56590f22f421ee8b5726a" name="a97f519aa47e56590f22f421ee8b5726a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97f519aa47e56590f22f421ee8b5726a">&#9670;&#160;</a></span>BeadsTrimBoundaries()</h2>
+<a id="a3c3ade0dc7018123559f8a449afe11c3" name="a3c3ade0dc7018123559f8a449afe11c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3ade0dc7018123559f8a449afe11c3">&#9670;&#160;</a></span>BeadsTrimBoundaries()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::BeadsTrimBoundaries </td>
+          <td class="memname">SABLIB_EXPORT const std::vector&lt; double &gt; sablib::BeadsTrimBoundaries </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
@@ -300,7 +303,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00282">282</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="beads_8cpp_source.html#l00285">285</a> of file <a class="el" href="beads_8cpp_source.html">beads.cpp</a>.</p>
 
 </div>
 </div>
@@ -317,7 +320,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="beads_8cpp.html">beads.cpp</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="beads_8cpp.html">beads.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/psalsa.cpp File Reference</title>
+<title>sablib: baseline/psalsa.cpp File Reference</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -103,8 +103,8 @@ $(function(){initNavTree('psalsa_8cpp.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad9927b2f74f8e6e606a3ddab290365bc" id="r_ad9927b2f74f8e6e606a3ddab290365bc"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad9927b2f74f8e6e606a3ddab290365bc">sablib::BaselinePsalsa</a> (std::vector&lt; double &gt; &amp;y, const double lambda, const double p, const double k, const unsigned int s=2, const unsigned int loop=10, const double eps=1e-3)</td></tr>
-<tr class="memdesc:ad9927b2f74f8e6e606a3ddab290365bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using Peaked Signal’s Asymmetric Least Squares Algorithm (psalsa).  <br /></td></tr>
+<tr class="memitem:a40c0fb70372518544fa8109df50e7bc7" id="r_a40c0fb70372518544fa8109df50e7bc7"><td class="memItemLeft">const <a class="el" href="structsablib_1_1BaselineResult.html">BaselineResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#a40c0fb70372518544fa8109df50e7bc7">sablib::BaselinePsalsa</a> (const std::vector&lt; double &gt; &amp;y, const double lambda, const double p, const double k, const unsigned int s=2, const unsigned int loop=10, const double eps=1e-3)</td></tr>
+<tr class="memdesc:a40c0fb70372518544fa8109df50e7bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using Peaked Signal’s Asymmetric Least Squares Algorithm (psalsa).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Baseline estimation using Peaked Signal’s Asymmetric Least Squares Algorithm(psalsa)(implementation). </p>
@@ -112,16 +112,16 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="psalsa_8cpp_source.html">psalsa.cpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ad9927b2f74f8e6e606a3ddab290365bc" name="ad9927b2f74f8e6e606a3ddab290365bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9927b2f74f8e6e606a3ddab290365bc">&#9670;&#160;</a></span>BaselinePsalsa()</h2>
+<a id="a40c0fb70372518544fa8109df50e7bc7" name="a40c0fb70372518544fa8109df50e7bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c0fb70372518544fa8109df50e7bc7">&#9670;&#160;</a></span>BaselinePsalsa()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::BaselinePsalsa </td>
+          <td class="memname">SABLIB_EXPORT const BaselineResult sablib::BaselinePsalsa </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -169,7 +169,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The estimated baseline. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
@@ -178,6 +178,8 @@ Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="psalsa_8cpp_source.html#l00016">16</a> of file <a class="el" href="psalsa_8cpp_source.html">psalsa.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="result__type_8h_source.html#l00020">sablib::BaselineResult::baseline</a>, and <a class="el" href="result__type_8h_source.html#l00021">sablib::BaselineResult::corrected</a>.</p>
 
 </div>
 </div>
@@ -194,7 +196,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="psalsa_8cpp.html">psalsa.cpp</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="psalsa_8cpp.html">psalsa.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>
