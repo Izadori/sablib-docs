@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/smoothing/savitzky_golay.cpp Source File</title>
+<title>sablib: smoothing/savitzky_golay.cpp Source File</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -107,7 +107,7 @@ $(function(){initNavTree('savitzky__golay_8cpp_source.html','',''); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// Implementation of SavitzkyGolayCoefficients() function</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="savitzky__golay_8cpp.html#af55ec5e766ea6409080d61b59f31560c">   18</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="savitzky__golay_8cpp.html#af55ec5e766ea6409080d61b59f31560c">SavitzkyGolayCoefficients</a>(</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="savitzky__golay_8cpp.html#a8afb07e4561452da014233b0661752bc">   18</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="savitzky__golay_8cpp.html#a8afb07e4561452da014233b0661752bc">SavitzkyGolayCoefficients</a>(</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> polyorder, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> derive, <span class="keyword">const</span> <span class="keywordtype">double</span> delta</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
@@ -163,7 +163,7 @@ $(function(){initNavTree('savitzky__golay_8cpp_source.html','',''); });
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">// Implementation of SavitzkyGolay() function</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="savitzky__golay_8cpp.html#a5334c934ec8679150a1329b4b30daf83">   72</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="savitzky__golay_8cpp.html#a5334c934ec8679150a1329b4b30daf83">SavitzkyGolay</a>(</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="savitzky__golay_8cpp.html#a3ea3d49abe06c0808d8297ddc6ab918c">   72</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="savitzky__golay_8cpp.html#a3ea3d49abe06c0808d8297ddc6ab918c">SavitzkyGolay</a>(</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">const</span> std::vector&lt;double&gt; &amp; y,</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> polyorder, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> derive, <span class="keyword">const</span> <span class="keywordtype">double</span> delta</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>)</div>
@@ -172,7 +172,7 @@ $(function(){initNavTree('savitzky__golay_8cpp_source.html','',''); });
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;SavitzkyGolay(): the length of y is zero.&quot;</span>);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::vector&lt;double&gt; coeff = <a class="code hl_function" href="savitzky__golay_8cpp.html#af55ec5e766ea6409080d61b59f31560c">SavitzkyGolayCoefficients</a>(n, polyorder, derive, delta);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::vector&lt;double&gt; coeff = <a class="code hl_function" href="savitzky__golay_8cpp.html#a8afb07e4561452da014233b0661752bc">SavitzkyGolayCoefficients</a>(n, polyorder, derive, delta);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    Eigen::VectorXd w = Eigen::VectorXd::Map(coeff.data(), coeff.size());</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    Eigen::VectorXd yy = Eigen::VectorXd::Map(y.data(), y.size());</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
@@ -190,8 +190,8 @@ $(function(){initNavTree('savitzky__golay_8cpp_source.html','',''); });
 <div class="ttc" id="aconvolve_8h_html"><div class="ttname"><a href="convolve_8h.html">convolve.h</a></div><div class="ttdoc">Python&#39;s NumPy-like convolve() function.</div></div>
 <div class="ttc" id="aconvolve_8h_html_ae5982b97bd82519140c164f12c44e789"><div class="ttname"><a href="convolve_8h.html#ae5982b97bd82519140c164f12c44e789">sablib::Convolve</a></div><div class="ttdeci">const Derived1::PlainObject Convolve(const Eigen::MatrixBase&lt; Derived1 &gt; &amp;v1, const Eigen::MatrixBase&lt; Derived2 &gt; &amp;v2, const ConvolveMode mode=ConvolveMode::Full)</div><div class="ttdoc">Returns the discrete, linear convolution of two one-dimensional sequences.</div><div class="ttdef"><b>Definition</b> <a href="convolve_8h_source.html#l00035">convolve.h:35</a></div></div>
 <div class="ttc" id="aconvolve_8h_html_aecfce576d85f82a26ac84490ae24c846ac90a13d8ec8fe53c6bb33fe10af6f2fe"><div class="ttname"><a href="convolve_8h.html#aecfce576d85f82a26ac84490ae24c846ac90a13d8ec8fe53c6bb33fe10af6f2fe">sablib::ConvolveMode::Same</a></div><div class="ttdeci">@ Same</div><div class="ttdef"><b>Definition</b> <a href="convolve_8h_source.html#l00021">convolve.h:21</a></div></div>
-<div class="ttc" id="asavitzky__golay_8cpp_html_a5334c934ec8679150a1329b4b30daf83"><div class="ttname"><a href="savitzky__golay_8cpp.html#a5334c934ec8679150a1329b4b30daf83">sablib::SavitzkyGolay</a></div><div class="ttdeci">const std::vector&lt; double &gt; SavitzkyGolay(const std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int polyorder, const unsigned derive, const double delta)</div><div class="ttdoc">Performs smoothing (and differentiation) using a Savitzky-Golay filter.</div><div class="ttdef"><b>Definition</b> <a href="#l00072">savitzky_golay.cpp:72</a></div></div>
-<div class="ttc" id="asavitzky__golay_8cpp_html_af55ec5e766ea6409080d61b59f31560c"><div class="ttname"><a href="savitzky__golay_8cpp.html#af55ec5e766ea6409080d61b59f31560c">sablib::SavitzkyGolayCoefficients</a></div><div class="ttdeci">const std::vector&lt; double &gt; SavitzkyGolayCoefficients(const unsigned int n, const unsigned int polyorder, const unsigned derive, const double delta)</div><div class="ttdoc">Calculates the coefficients for a Savitzky-Golay filter.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">savitzky_golay.cpp:18</a></div></div>
+<div class="ttc" id="asavitzky__golay_8cpp_html_a3ea3d49abe06c0808d8297ddc6ab918c"><div class="ttname"><a href="savitzky__golay_8cpp.html#a3ea3d49abe06c0808d8297ddc6ab918c">sablib::SavitzkyGolay</a></div><div class="ttdeci">const std::vector&lt; double &gt; SavitzkyGolay(const std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int polyorder, const unsigned derive, const double delta)</div><div class="ttdoc">Performs smoothing (and differentiation) using a Savitzky-Golay filter.</div><div class="ttdef"><b>Definition</b> <a href="#l00072">savitzky_golay.cpp:72</a></div></div>
+<div class="ttc" id="asavitzky__golay_8cpp_html_a8afb07e4561452da014233b0661752bc"><div class="ttname"><a href="savitzky__golay_8cpp.html#a8afb07e4561452da014233b0661752bc">sablib::SavitzkyGolayCoefficients</a></div><div class="ttdeci">const std::vector&lt; double &gt; SavitzkyGolayCoefficients(const unsigned int n, const unsigned int polyorder, const unsigned derive, const double delta)</div><div class="ttdoc">Calculates the coefficients for a Savitzky-Golay filter.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">savitzky_golay.cpp:18</a></div></div>
 <div class="ttc" id="asavitzky__golay_8h_html"><div class="ttname"><a href="savitzky__golay_8h.html">savitzky_golay.h</a></div><div class="ttdoc">Smoothing using Savitzky-Golay filter.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -199,7 +199,7 @@ $(function(){initNavTree('savitzky__golay_8cpp_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="savitzky__golay_8cpp.html">savitzky_golay.cpp</a></li>
+    <li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="savitzky__golay_8cpp.html">savitzky_golay.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

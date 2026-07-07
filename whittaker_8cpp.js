@@ -1,5 +1,5 @@
 var whittaker_8cpp =
 [
-    [ "sablib::Whittaker", "whittaker_8cpp.html#ad2871c522bd7f380b66aaea420e727fd", null ],
-    [ "sablib::Whittaker", "whittaker_8cpp.html#abbae899cda008775ee16595faafa5208", null ]
+    [ "sablib::Whittaker", "whittaker_8cpp.html#a5cd52422e931bdd42fad99569e50ae14", null ],
+    [ "sablib::Whittaker", "whittaker_8cpp.html#aed1d98eb42c051be3ccdca1a9b965d60", null ]
 ];

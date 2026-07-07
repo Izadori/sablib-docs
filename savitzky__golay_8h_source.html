@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/smoothing/savitzky_golay.h Source File</title>
+<title>sablib: smoothing/savitzky_golay.h Source File</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -100,30 +100,31 @@ $(function(){initNavTree('savitzky__golay_8h_source.html','',''); });
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>sablib {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="savitzky__golay_8cpp.html#af55ec5e766ea6409080d61b59f31560c">SavitzkyGolayCoefficients</a>(</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> polyorder, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> derive = 0, <span class="keyword">const</span> <span class="keywordtype">double</span> delta = 1</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="savitzky__golay_8cpp.html#a5334c934ec8679150a1329b4b30daf83">SavitzkyGolay</a>(</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> std::vector&lt;double&gt; &amp; y,</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> polyorder, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> derive = 0, <span class="keyword">const</span> <span class="keywordtype">double</span> delta = 1</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}; <span class="comment">// namespace sablib</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_SAVITZKY_GOLAY_H__</span></div>
-<div class="ttc" id="asavitzky__golay_8cpp_html_a5334c934ec8679150a1329b4b30daf83"><div class="ttname"><a href="savitzky__golay_8cpp.html#a5334c934ec8679150a1329b4b30daf83">sablib::SavitzkyGolay</a></div><div class="ttdeci">const std::vector&lt; double &gt; SavitzkyGolay(const std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int polyorder, const unsigned derive, const double delta)</div><div class="ttdoc">Performs smoothing (and differentiation) using a Savitzky-Golay filter.</div><div class="ttdef"><b>Definition</b> <a href="savitzky__golay_8cpp_source.html#l00072">savitzky_golay.cpp:72</a></div></div>
-<div class="ttc" id="asavitzky__golay_8cpp_html_af55ec5e766ea6409080d61b59f31560c"><div class="ttname"><a href="savitzky__golay_8cpp.html#af55ec5e766ea6409080d61b59f31560c">sablib::SavitzkyGolayCoefficients</a></div><div class="ttdeci">const std::vector&lt; double &gt; SavitzkyGolayCoefficients(const unsigned int n, const unsigned int polyorder, const unsigned derive, const double delta)</div><div class="ttdoc">Calculates the coefficients for a Savitzky-Golay filter.</div><div class="ttdef"><b>Definition</b> <a href="savitzky__golay_8cpp_source.html#l00018">savitzky_golay.cpp:18</a></div></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;sablib_export.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span>sablib {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>SABLIB_EXPORT <span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="savitzky__golay_8cpp.html#a8afb07e4561452da014233b0661752bc">SavitzkyGolayCoefficients</a>(</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> polyorder, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> derive = 0, <span class="keyword">const</span> <span class="keywordtype">double</span> delta = 1</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>SABLIB_EXPORT <span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="savitzky__golay_8cpp.html#a3ea3d49abe06c0808d8297ddc6ab918c">SavitzkyGolay</a>(</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> std::vector&lt;double&gt; &amp; y,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> polyorder, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> derive = 0, <span class="keyword">const</span> <span class="keywordtype">double</span> delta = 1</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_SAVITZKY_GOLAY_H__</span></div>
+<div class="ttc" id="asavitzky__golay_8cpp_html_a3ea3d49abe06c0808d8297ddc6ab918c"><div class="ttname"><a href="savitzky__golay_8cpp.html#a3ea3d49abe06c0808d8297ddc6ab918c">sablib::SavitzkyGolay</a></div><div class="ttdeci">const std::vector&lt; double &gt; SavitzkyGolay(const std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int polyorder, const unsigned derive, const double delta)</div><div class="ttdoc">Performs smoothing (and differentiation) using a Savitzky-Golay filter.</div><div class="ttdef"><b>Definition</b> <a href="savitzky__golay_8cpp_source.html#l00072">savitzky_golay.cpp:72</a></div></div>
+<div class="ttc" id="asavitzky__golay_8cpp_html_a8afb07e4561452da014233b0661752bc"><div class="ttname"><a href="savitzky__golay_8cpp.html#a8afb07e4561452da014233b0661752bc">sablib::SavitzkyGolayCoefficients</a></div><div class="ttdeci">const std::vector&lt; double &gt; SavitzkyGolayCoefficients(const unsigned int n, const unsigned int polyorder, const unsigned derive, const double delta)</div><div class="ttdoc">Calculates the coefficients for a Savitzky-Golay filter.</div><div class="ttdef"><b>Definition</b> <a href="savitzky__golay_8cpp_source.html#l00018">savitzky_golay.cpp:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="savitzky__golay_8h.html">savitzky_golay.h</a></li>
+    <li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="savitzky__golay_8h.html">savitzky_golay.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

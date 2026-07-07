@@ -20,6 +20,7 @@ var dir_2494c18f39365607c2cc63f09fae0344 =
     [ "polynomial.h", "polynomial_8h.html", "polynomial_8h" ],
     [ "psalsa.cpp", "psalsa_8cpp.html", "psalsa_8cpp" ],
     [ "psalsa.h", "psalsa_8h.html", "psalsa_8h" ],
+    [ "result_type.h", "result__type_8h.html", "result__type_8h" ],
     [ "sma.cpp", "sma_8cpp.html", "sma_8cpp" ],
     [ "sma.h", "sma_8h.html", "sma_8h" ],
     [ "snip.cpp", "snip_8cpp.html", "snip_8cpp" ],

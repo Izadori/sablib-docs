@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['g_20mingw_20linux_0',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md19',1,'']]],
-  ['gaussianfilter_1',['GaussianFilter',['../moving__average_8h.html#afd8aa345d51b7733b95b5e6c79316c87',1,'sablib']]],
-  ['gaussiankernel_2',['GaussianKernel',['../moving__average_8cpp.html#a10a2483f46cb7625264a7985cb86b12a',1,'sablib']]],
-  ['getting_20started_3',['Getting Started',['../getting_started.html',1,'Getting Started'],['../getting_started.html#autotoc_md6',1,'Getting Started']]],
-  ['goldindec_2ecpp_4',['goldindec.cpp',['../goldindec_8cpp.html',1,'']]],
-  ['goldindec_2eh_5',['goldindec.h',['../goldindec_8h.html',1,'']]]
+  ['estimation_0',['Estimation',['../introduction.html#autotoc_md27',1,'Baseline Estimation'],['../index.html#autotoc_md23',1,'sablib - A C++ Library for Smoothing and Baseline Estimation']]],
+  ['example_1',['3. Usage Example',['../getting_started.html#autotoc_md14',1,'']]],
+  ['exe_20msvc_2',['Using cl.exe (MSVC)',['../getting_started.html#autotoc_md22',1,'']]],
+  ['expand_2eh_3',['expand.h',['../expand_8h.html',1,'']]],
+  ['expandboundaries_4',['ExpandBoundaries',['../expand_8h.html#a6a8c53622acd39e60eef033607eacd94',1,'sablib']]]
 ];

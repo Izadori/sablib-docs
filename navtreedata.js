@@ -25,44 +25,46 @@
 var NAVTREE =
 [
   [ "sablib", "index.html", [
-    [ "sablib - A C++ Library for Smoothing and Baseline Estimation", "index.html#autotoc_md21", null ],
+    [ "sablib - A C++ Library for Smoothing and Baseline Estimation", "index.html#autotoc_md23", null ],
     [ "Introduction", "introduction.html", [
-      [ "Introduction", "introduction.html#autotoc_md22", [
-        [ "Algorithms", "introduction.html#autotoc_md23", [
-          [ "Smoothing", "introduction.html#autotoc_md24", null ],
-          [ "Baseline Estimation", "introduction.html#autotoc_md25", null ]
+      [ "Introduction", "introduction.html#autotoc_md24", [
+        [ "Algorithms", "introduction.html#autotoc_md25", [
+          [ "Smoothing", "introduction.html#autotoc_md26", null ],
+          [ "Baseline Estimation", "introduction.html#autotoc_md27", null ]
         ] ]
       ] ]
     ] ],
     [ "Getting Started", "getting_started.html", [
-      [ "Getting Started", "getting_started.html#autotoc_md6", [
-        [ "1. Prerequisites", "getting_started.html#autotoc_md7", null ],
-        [ "2. Installation", "getting_started.html#autotoc_md8", [
-          [ "Option A: Using vcpkg", "getting_started.html#autotoc_md9", null ],
-          [ "Option B: Using Conan", "getting_started.html#autotoc_md10", null ],
-          [ "Option C: Cloning and Building Manually", "getting_started.html#autotoc_md11", null ]
+      [ "Getting Started", "getting_started.html#autotoc_md7", [
+        [ "1. Prerequisites", "getting_started.html#autotoc_md8", null ],
+        [ "2. Installation", "getting_started.html#autotoc_md9", [
+          [ "Option A: Using vcpkg", "getting_started.html#autotoc_md10", null ],
+          [ "Option B: Using Conan", "getting_started.html#autotoc_md11", null ],
+          [ "Option C: Cloning and Building Manually", "getting_started.html#autotoc_md12", null ],
+          [ "2.1 Installation", "getting_started.html#autotoc_md13", null ]
         ] ],
-        [ "3. Usage Example", "getting_started.html#autotoc_md12", [
-          [ "Sample Program: <span class=\"tt\">main.cpp</span>", "getting_started.html#autotoc_md13", null ],
-          [ "Building your project with CMake", "getting_started.html#autotoc_md14", [
-            [ "Via vcpkg", "getting_started.html#autotoc_md15", null ],
-            [ "Via Conan", "getting_started.html#autotoc_md16", null ],
-            [ "Manually", "getting_started.html#autotoc_md17", null ]
+        [ "3. Usage Example", "getting_started.html#autotoc_md14", [
+          [ "Sample Program: <span class=\"tt\">main.cpp</span>", "getting_started.html#autotoc_md15", null ],
+          [ "Building your project with CMake", "getting_started.html#autotoc_md16", [
+            [ "Via vcpkg", "getting_started.html#autotoc_md17", null ],
+            [ "Via Conan", "getting_started.html#autotoc_md18", null ],
+            [ "Manually", "getting_started.html#autotoc_md19", null ]
           ] ],
-          [ "Manual Compilation (Command Line)", "getting_started.html#autotoc_md18", [
-            [ "Using g++ (MinGW / Linux)", "getting_started.html#autotoc_md19", null ],
-            [ "Using cl.exe (MSVC)", "getting_started.html#autotoc_md20", null ]
+          [ "Manual Compilation (Command Line)", "getting_started.html#autotoc_md20", [
+            [ "Using g++ (MinGW / Linux)", "getting_started.html#autotoc_md21", null ],
+            [ "Using cl.exe (MSVC)", "getting_started.html#autotoc_md22", null ]
           ] ]
         ] ]
       ] ]
     ] ],
     [ "Changelog", "changelog.html", [
       [ "Changelog", "changelog.html#autotoc_md0", [
-        [ "version 0.3.2 (2026/04/05)", "changelog.html#autotoc_md1", null ],
-        [ "version 0.3.0 (2026/04/02)", "changelog.html#autotoc_md2", null ],
-        [ "version 0.2.0 (2026/03/26)", "changelog.html#autotoc_md3", null ],
-        [ "version 0.1.1 (2026/03/22)", "changelog.html#autotoc_md4", null ],
-        [ "version 0.1.0 (2026/03/18)", "changelog.html#autotoc_md5", null ]
+        [ "version 0.4.0 (2026/07/07)", "changelog.html#autotoc_md1", null ],
+        [ "version 0.3.2 (2026/04/05)", "changelog.html#autotoc_md2", null ],
+        [ "version 0.3.0 (2026/04/02)", "changelog.html#autotoc_md3", null ],
+        [ "version 0.2.0 (2026/03/26)", "changelog.html#autotoc_md4", null ],
+        [ "version 0.1.1 (2026/03/22)", "changelog.html#autotoc_md5", null ],
+        [ "version 0.1.0 (2026/03/18)", "changelog.html#autotoc_md6", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -70,18 +72,27 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"airpls_8cpp.html"
+"airpls_8cpp.html",
+"snip_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

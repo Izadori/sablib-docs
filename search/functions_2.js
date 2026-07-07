@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['designmatrix_0',['DesignMatrix',['../classsablib_1_1_b_spline.html#a0c0276581df250801097401908615d24',1,'sablib::BSpline']]],
-  ['diff_1',['Diff',['../diff_8h.html#aa678c8e91bd73334fcd50bd5b497c968',1,'sablib::Diff(const Eigen::MatrixBase&lt; Derived &gt; &amp;m0, const int n=1, const Dir dir=Dir::RowWise)'],['../diff_8h.html#a37ac5692f88a694f298d8872e9f91a9f',1,'sablib::Diff(const Eigen::SparseMatrixBase&lt; Derived &gt; &amp;m0, const int n=1, const Dir dir=Dir::RowWise)']]]
+  ['coefficients_0',['Coefficients',['../classsablib_1_1BSpline.html#a9c9afca74c55974573f54afd27f47ed0',1,'sablib::BSpline']]],
+  ['convolve_1',['Convolve',['../convolve_8h.html#ae5982b97bd82519140c164f12c44e789',1,'sablib']]],
+  ['cubicspline_2',['CubicSpline',['../classsablib_1_1CubicSpline.html#a6830eb25c7150c958df62d5fdf4f34c3',1,'sablib::CubicSpline::CubicSpline()=default'],['../classsablib_1_1CubicSpline.html#a1b915b11fd95f2321b280128dd5c378d',1,'sablib::CubicSpline::CubicSpline(const Eigen::VectorX&lt; Scalar &gt; &amp;x, const Eigen::VectorX&lt; Scalar &gt; &amp;y)']]]
 ];

@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['rowwise_0',['RowWise',['../diff_8h.html#a2d7c9a75f61446a03661f5906ad6ccb9ae7968e8fd57987542f4a09aafaf672c7',1,'sablib']]]
+  ['operator_28_29_0',['operator()',['../classsablib_1_1CubicSpline.html#aae47b991a4480c803a4e27409e086a35',1,'sablib::CubicSpline']]],
+  ['option_20a_3a_20using_20vcpkg_1',['Option A: Using vcpkg',['../getting_started.html#autotoc_md10',1,'']]],
+  ['option_20b_3a_20using_20conan_2',['Option B: Using Conan',['../getting_started.html#autotoc_md11',1,'']]],
+  ['option_20c_3a_20cloning_20and_20building_20manually_3',['Option C: Cloning and Building Manually',['../getting_started.html#autotoc_md12',1,'']]]
 ];

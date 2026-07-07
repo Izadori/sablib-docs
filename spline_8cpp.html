@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/spline.cpp File Reference</title>
+<title>sablib: baseline/spline.cpp File Reference</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -103,8 +103,8 @@ $(function(){initNavTree('spline_8cpp.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a978ab1e22abc9b9157e6bf6b2a5d0a5e" id="r_a978ab1e22abc9b9157e6bf6b2a5d0a5e"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a978ab1e22abc9b9157e6bf6b2a5d0a5e">sablib::BaselineSpline</a> (const std::vector&lt; double &gt; &amp;y, const std::vector&lt; unsigned int &gt; &amp;indices)</td></tr>
-<tr class="memdesc:a978ab1e22abc9b9157e6bf6b2a5d0a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using cubic spline interpolation.  <br /></td></tr>
+<tr class="memitem:a1f17d31d943d5267ccffd41481e0069b" id="r_a1f17d31d943d5267ccffd41481e0069b"><td class="memItemLeft">const <a class="el" href="structsablib_1_1BaselineResult.html">BaselineResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1f17d31d943d5267ccffd41481e0069b">sablib::BaselineSpline</a> (const std::vector&lt; double &gt; &amp;y, const std::vector&lt; unsigned int &gt; &amp;indices)</td></tr>
+<tr class="memdesc:a1f17d31d943d5267ccffd41481e0069b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using cubic spline interpolation.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Baseline estimation from cubic spline(implementation). </p>
@@ -112,14 +112,14 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="spline_8cpp_source.html">spline.cpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a978ab1e22abc9b9157e6bf6b2a5d0a5e" name="a978ab1e22abc9b9157e6bf6b2a5d0a5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a978ab1e22abc9b9157e6bf6b2a5d0a5e">&#9670;&#160;</a></span>BaselineSpline()</h2>
+<a id="a1f17d31d943d5267ccffd41481e0069b" name="a1f17d31d943d5267ccffd41481e0069b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f17d31d943d5267ccffd41481e0069b">&#9670;&#160;</a></span>BaselineSpline()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::BaselineSpline </td>
+          <td class="memname">SABLIB_EXPORT const BaselineResult sablib::BaselineSpline </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
@@ -139,7 +139,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The estimated baseline. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
@@ -149,7 +149,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="spline_8cpp_source.html#l00016">16</a> of file <a class="el" href="spline_8cpp_source.html">spline.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="cubic__spline_8h_source.html#l00188">sablib::CubicSpline&lt; Scalar &gt;::Interpolate()</a>.</p>
+<p class="reference">References <a class="el" href="result__type_8h_source.html#l00020">sablib::BaselineResult::baseline</a>, <a class="el" href="result__type_8h_source.html#l00021">sablib::BaselineResult::corrected</a>, and <a class="el" href="cubic__spline_8h_source.html#l00188">sablib::CubicSpline&lt; Scalar &gt;::Interpolate()</a>.</p>
 
 </div>
 </div>
@@ -166,7 +166,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="spline_8cpp.html">spline.cpp</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="spline_8cpp.html">spline.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

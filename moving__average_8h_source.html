@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/smoothing/moving_average.h Source File</title>
+<title>sablib: smoothing/moving_average.h Source File</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -103,91 +103,92 @@ $(function(){initNavTree('moving__average_8h_source.html','',''); });
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="expand_8h.html">../misc/expand.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>sablib {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">WeightedMovingAverage</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> std::vector&lt;double&gt; &amp; w);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="moving__average_8h.html#a71a425c7e2f014e6d648502b7f86e112">   36</a></span><span class="keyword">const</span> <span class="keyword">typename</span> Derived::PlainObject <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">WeightedMovingAverage</a>(</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">const</span> Eigen::MatrixBase&lt;Derived&gt; &amp; y, <span class="keyword">const</span> Eigen::MatrixBase&lt;Derived&gt; &amp; w</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// Although parameters are received as MatrixBase&lt;Derived&gt;, only vector classes are allowed.</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Others will be rejected at compile time.</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">static_assert</span>(Derived::IsVectorAtCompileTime, <span class="stringliteral">&quot;Error: y and w are not vector.&quot;</span>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">if</span>(y.size() == 0 || w.size() == 0) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;WeightedMovingAverage(): the length of y or w is zero.&quot;</span>);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">using </span>PlainObject = <span class="keyword">typename</span> Derived::PlainObject;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">int</span> points = w.size();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">int</span> n = points / 2;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    PlainObject yy = <a class="code hl_function" href="expand_8h.html#a6a8c53622acd39e60eef033607eacd94">ExpandBoundaries</a>(y, n);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    PlainObject result = PlainObject::Zero(y.size());</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span>(y.cols() == 1) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; y.size(); i++) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            result(i) = (yy.block(i, 0, points, 1).array() * w.array()).matrix().sum();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(y.rows() == 1) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; y.size(); i++) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            result(i) = (yy.block(0, i, 1, points).array() * w.array()).matrix().sum();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;sablib_export.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span>sablib {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>SABLIB_EXPORT <span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="moving__average_8cpp.html#ab6cb4063804d6a2fbf061f5d2c2c263c">WeightedMovingAverage</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> std::vector&lt;double&gt; &amp; w);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="moving__average_8h.html#a71a425c7e2f014e6d648502b7f86e112">   37</a></span><span class="keyword">const</span> <span class="keyword">typename</span> Derived::PlainObject <a class="code hl_function" href="moving__average_8cpp.html#ab6cb4063804d6a2fbf061f5d2c2c263c">WeightedMovingAverage</a>(</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">const</span> Eigen::MatrixBase&lt;Derived&gt; &amp; y, <span class="keyword">const</span> Eigen::MatrixBase&lt;Derived&gt; &amp; w</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Although parameters are received as MatrixBase&lt;Derived&gt;, only vector classes are allowed.</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// Others will be rejected at compile time.</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">static_assert</span>(Derived::IsVectorAtCompileTime, <span class="stringliteral">&quot;Error: y and w are not vector.&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span>(y.size() == 0 || w.size() == 0) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;WeightedMovingAverage(): the length of y or w is zero.&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">using </span>PlainObject = <span class="keyword">typename</span> Derived::PlainObject;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">int</span> points = w.size();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">int</span> n = points / 2;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    PlainObject yy = <a class="code hl_function" href="expand_8h.html#a6a8c53622acd39e60eef033607eacd94">ExpandBoundaries</a>(y, n);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    PlainObject result = PlainObject::Zero(y.size());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span>(y.cols() == 1) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; y.size(); i++) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            result(i) = (yy.block(i, 0, points, 1).array() * w.array()).matrix().sum();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(y.rows() == 1) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; y.size(); i++) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            result(i) = (yy.block(0, i, 1, points).array() * w.array()).matrix().sum();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
 </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">const</span> std::vector&lt;double&gt; MovingAverage(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
-<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="moving__average_8h.html#afbc027fac0a8bd40a3994d02b6275770">   87</a></span><span class="keyword">const</span> <span class="keyword">typename</span> Derived::PlainObject <a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">MovingAverage</a>(<span class="keyword">const</span> Eigen::MatrixBase&lt;Derived&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n)</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">using </span>PlainObject = <span class="keyword">typename</span> Derived::PlainObject;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span>(n == 0) {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;MovingAverage(): n is zero.&quot;</span>);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">int</span> points = 2 * n + 1;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    PlainObject w = PlainObject::Ones(points) / points;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">WeightedMovingAverage</a>(y, w);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>SABLIB_EXPORT <span class="keyword">const</span> std::vector&lt;double&gt; MovingAverage(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="moving__average_8h.html#afbc027fac0a8bd40a3994d02b6275770">   88</a></span><span class="keyword">const</span> <span class="keyword">typename</span> Derived::PlainObject <a class="code hl_function" href="moving__average_8cpp.html#aa2ba74ad8582ed1f69b267624d60f857">MovingAverage</a>(<span class="keyword">const</span> Eigen::MatrixBase&lt;Derived&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>{</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">using </span>PlainObject = <span class="keyword">typename</span> Derived::PlainObject;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span>(n == 0) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;MovingAverage(): n is zero.&quot;</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">int</span> points = 2 * n + 1;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    PlainObject w = PlainObject::Ones(points) / points;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="moving__average_8cpp.html#ab6cb4063804d6a2fbf061f5d2c2c263c">WeightedMovingAverage</a>(y, w);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
 </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">const</span> std::vector&lt;double&gt; GaussianKernel(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">double</span> sigma);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
-<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="moving__average_8h.html#afd8aa345d51b7733b95b5e6c79316c87">  122</a></span><span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="moving__average_8h.html#afd8aa345d51b7733b95b5e6c79316c87">GaussianFilter</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">double</span> sigma)</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>{</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">WeightedMovingAverage</a>(y, <a class="code hl_function" href="moving__average_8cpp.html#a10a2483f46cb7625264a7985cb86b12a">GaussianKernel</a>(n, sigma));</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>SABLIB_EXPORT <span class="keyword">const</span> std::vector&lt;double&gt; GaussianKernel(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">double</span> sigma);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="moving__average_8h.html#afd8aa345d51b7733b95b5e6c79316c87">  123</a></span><span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="moving__average_8h.html#afd8aa345d51b7733b95b5e6c79316c87">GaussianFilter</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">double</span> sigma)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>{</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="moving__average_8cpp.html#ab6cb4063804d6a2fbf061f5d2c2c263c">WeightedMovingAverage</a>(y, <a class="code hl_function" href="moving__average_8cpp.html#a6cde4b42db1d23d632e3d3943963690d">GaussianKernel</a>(n, sigma));</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
 </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}; <span class="comment">// namespace sablib</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_MOVING_AVERAGE_H__</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif </span><span class="comment">// __SABLIB_MOVING_AVERAGE_H__</span></div>
 <div class="ttc" id="aexpand_8h_html"><div class="ttname"><a href="expand_8h.html">expand.h</a></div><div class="ttdoc">Expands and Trim the boundaries of the data.</div></div>
 <div class="ttc" id="aexpand_8h_html_a6a8c53622acd39e60eef033607eacd94"><div class="ttname"><a href="expand_8h.html#a6a8c53622acd39e60eef033607eacd94">sablib::ExpandBoundaries</a></div><div class="ttdeci">const Derived::PlainObject ExpandBoundaries(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Expands the boundaries of a vector by padding with the first and last elements.</div><div class="ttdef"><b>Definition</b> <a href="expand_8h_source.html#l00023">expand.h:23</a></div></div>
-<div class="ttc" id="amoving__average_8cpp_html_a10a2483f46cb7625264a7985cb86b12a"><div class="ttname"><a href="moving__average_8cpp.html#a10a2483f46cb7625264a7985cb86b12a">sablib::GaussianKernel</a></div><div class="ttdeci">const std::vector&lt; double &gt; GaussianKernel(const unsigned int n, const double sigma)</div><div class="ttdoc">Generates a Gaussian kernel.</div><div class="ttdef"><b>Definition</b> <a href="moving__average_8cpp_source.html#l00046">moving_average.cpp:46</a></div></div>
-<div class="ttc" id="amoving__average_8cpp_html_ab6ca749353a234b563a603e0f2236ebe"><div class="ttname"><a href="moving__average_8cpp.html#ab6ca749353a234b563a603e0f2236ebe">sablib::WeightedMovingAverage</a></div><div class="ttdeci">const std::vector&lt; double &gt; WeightedMovingAverage(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w)</div><div class="ttdoc">Calculates the weighted moving average of the input signal (std::vector&lt;double&gt; version).</div><div class="ttdef"><b>Definition</b> <a href="moving__average_8cpp_source.html#l00030">moving_average.cpp:30</a></div></div>
-<div class="ttc" id="amoving__average_8cpp_html_add602b00e5536fb02c55775cd31a3b09"><div class="ttname"><a href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">sablib::MovingAverage</a></div><div class="ttdeci">const std::vector&lt; double &gt; MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Calculates the simple moving average of the input signal (std::vector&lt;double&gt; version).</div><div class="ttdef"><b>Definition</b> <a href="moving__average_8cpp_source.html#l00015">moving_average.cpp:15</a></div></div>
-<div class="ttc" id="amoving__average_8h_html_afd8aa345d51b7733b95b5e6c79316c87"><div class="ttname"><a href="moving__average_8h.html#afd8aa345d51b7733b95b5e6c79316c87">sablib::GaussianFilter</a></div><div class="ttdeci">const std::vector&lt; double &gt; GaussianFilter(const std::vector&lt; double &gt; &amp;y, const unsigned int n, const double sigma)</div><div class="ttdoc">Performs Gaussian smoothing on the input signal.</div><div class="ttdef"><b>Definition</b> <a href="#l00122">moving_average.h:122</a></div></div>
+<div class="ttc" id="amoving__average_8cpp_html_a6cde4b42db1d23d632e3d3943963690d"><div class="ttname"><a href="moving__average_8cpp.html#a6cde4b42db1d23d632e3d3943963690d">sablib::GaussianKernel</a></div><div class="ttdeci">const std::vector&lt; double &gt; GaussianKernel(const unsigned int n, const double sigma)</div><div class="ttdoc">Generates a Gaussian kernel.</div><div class="ttdef"><b>Definition</b> <a href="moving__average_8cpp_source.html#l00046">moving_average.cpp:46</a></div></div>
+<div class="ttc" id="amoving__average_8cpp_html_aa2ba74ad8582ed1f69b267624d60f857"><div class="ttname"><a href="moving__average_8cpp.html#aa2ba74ad8582ed1f69b267624d60f857">sablib::MovingAverage</a></div><div class="ttdeci">const std::vector&lt; double &gt; MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Calculates the simple moving average of the input signal (std::vector&lt;double&gt; version).</div><div class="ttdef"><b>Definition</b> <a href="moving__average_8cpp_source.html#l00015">moving_average.cpp:15</a></div></div>
+<div class="ttc" id="amoving__average_8cpp_html_ab6cb4063804d6a2fbf061f5d2c2c263c"><div class="ttname"><a href="moving__average_8cpp.html#ab6cb4063804d6a2fbf061f5d2c2c263c">sablib::WeightedMovingAverage</a></div><div class="ttdeci">const std::vector&lt; double &gt; WeightedMovingAverage(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w)</div><div class="ttdoc">Calculates the weighted moving average of the input signal (std::vector&lt;double&gt; version).</div><div class="ttdef"><b>Definition</b> <a href="moving__average_8cpp_source.html#l00030">moving_average.cpp:30</a></div></div>
+<div class="ttc" id="amoving__average_8h_html_afd8aa345d51b7733b95b5e6c79316c87"><div class="ttname"><a href="moving__average_8h.html#afd8aa345d51b7733b95b5e6c79316c87">sablib::GaussianFilter</a></div><div class="ttdeci">const std::vector&lt; double &gt; GaussianFilter(const std::vector&lt; double &gt; &amp;y, const unsigned int n, const double sigma)</div><div class="ttdoc">Performs Gaussian smoothing on the input signal.</div><div class="ttdef"><b>Definition</b> <a href="#l00123">moving_average.h:123</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="moving__average_8h.html">moving_average.h</a></li>
+    <li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="moving__average_8h.html">moving_average.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/snip.cpp File Reference</title>
+<title>sablib: baseline/snip.cpp File Reference</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -105,8 +105,8 @@ $(function(){initNavTree('snip_8cpp.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6e74c4e4e4e90202864d4f8dd1165ead" id="r_a6e74c4e4e4e90202864d4f8dd1165ead"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6e74c4e4e4e90202864d4f8dd1165ead">sablib::BaselineSnip</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int m, const bool decreasing=true, const <a class="el" href="snip_8h.html#a86882b004aa1fcf538f0d5fc5f28007a">SnipPreprocess</a> preprocess=<a class="el" href="snip_8h.html#a86882b004aa1fcf538f0d5fc5f28007aa6adf97f83acf6453d4a6a4b1070f3754">SnipPreprocess::None</a>, const unsigned int loop=1)</td></tr>
-<tr class="memdesc:a6e74c4e4e4e90202864d4f8dd1165ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using the Statistics-sensitive Non-linear Iterative Peak-clipping (SNIP) algorithm.  <br /></td></tr>
+<tr class="memitem:a60fbe047aab2a82fa49f4888cdfd0437" id="r_a60fbe047aab2a82fa49f4888cdfd0437"><td class="memItemLeft">const <a class="el" href="structsablib_1_1BaselineResult.html">BaselineResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#a60fbe047aab2a82fa49f4888cdfd0437">sablib::BaselineSnip</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int m, const bool decreasing=true, const <a class="el" href="snip_8h.html#a86882b004aa1fcf538f0d5fc5f28007a">SnipPreprocess</a> preprocess=<a class="el" href="snip_8h.html#a86882b004aa1fcf538f0d5fc5f28007aa6adf97f83acf6453d4a6a4b1070f3754">SnipPreprocess::None</a>, const unsigned int loop=1)</td></tr>
+<tr class="memdesc:a60fbe047aab2a82fa49f4888cdfd0437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using the Statistics-sensitive Non-linear Iterative Peak-clipping (SNIP) algorithm.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Baseline estimation using Statistics-sensitive Non-linear Iterative Peak-clipping(SNIP)(implementation). </p>
@@ -114,14 +114,14 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="snip_8cpp_source.html">snip.cpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a6e74c4e4e4e90202864d4f8dd1165ead" name="a6e74c4e4e4e90202864d4f8dd1165ead"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e74c4e4e4e90202864d4f8dd1165ead">&#9670;&#160;</a></span>BaselineSnip()</h2>
+<a id="a60fbe047aab2a82fa49f4888cdfd0437" name="a60fbe047aab2a82fa49f4888cdfd0437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60fbe047aab2a82fa49f4888cdfd0437">&#9670;&#160;</a></span>BaselineSnip()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::BaselineSnip </td>
+          <td class="memname">SABLIB_EXPORT const BaselineResult sablib::BaselineSnip </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
@@ -159,7 +159,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A vector of the estimated baseline. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
@@ -168,6 +168,8 @@ Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="snip_8cpp_source.html#l00017">17</a> of file <a class="el" href="snip_8cpp_source.html">snip.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="result__type_8h_source.html#l00020">sablib::BaselineResult::baseline</a>, and <a class="el" href="result__type_8h_source.html#l00021">sablib::BaselineResult::corrected</a>.</p>
 
 </div>
 </div>
@@ -184,7 +186,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="snip_8cpp.html">snip.cpp</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="snip_8cpp.html">snip.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

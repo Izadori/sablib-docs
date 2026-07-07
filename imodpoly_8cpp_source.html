@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/imodpoly.cpp Source File</title>
+<title>sablib: baseline/imodpoly.cpp Source File</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -108,7 +108,7 @@ $(function(){initNavTree('imodpoly_8cpp_source.html','',''); });
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// Implementation of BaselineIModPoly() function</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="imodpoly_8cpp.html#aeeb763a603d15b777dced7b0d5f9b6b5">   19</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="imodpoly_8cpp.html#aeeb763a603d15b777dced7b0d5f9b6b5">BaselineIModPoly</a>(</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="imodpoly_8cpp.html#ade5a6d19c7c14e05f16b7c2641111c1d">   19</a></span><span class="keyword">const</span> <a class="code hl_struct" href="structsablib_1_1BaselineResult.html">BaselineResult</a> <a class="code hl_function" href="imodpoly_8cpp.html#ade5a6d19c7c14e05f16b7c2641111c1d">BaselineIModPoly</a>(</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> polyorder, <span class="keyword">const</span> <span class="keywordtype">double</span> k, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loop, <span class="keyword">const</span> <span class="keywordtype">double</span> eps</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>)</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
@@ -154,26 +154,33 @@ $(function(){initNavTree('imodpoly_8cpp_source.html','',''); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        sd_old = sd;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::vector&lt;double&gt; result(y.size());</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    Eigen::VectorXd::Map(result.data(), result.size()) = y_new;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_struct" href="structsablib_1_1BaselineResult.html">BaselineResult</a> result;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    result.<a class="code hl_variable" href="structsablib_1_1BaselineResult.html#a55b55aeebea75afe78438c047469695a">baseline</a>.resize(y_new.size());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    result.<a class="code hl_variable" href="structsablib_1_1BaselineResult.html#ab600338343c2a0972aa96a7737335ddb">corrected</a>.resize(y_new.size());</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    Eigen::VectorXd::Map(result.<a class="code hl_variable" href="structsablib_1_1BaselineResult.html#a55b55aeebea75afe78438c047469695a">baseline</a>.data(), y_new.size()) = y_new;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    Eigen::VectorXd::Map(result.<a class="code hl_variable" href="structsablib_1_1BaselineResult.html#ab600338343c2a0972aa96a7737335ddb">corrected</a>.data(), y_new.size()) = yy - y_new;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}; <span class="comment">// namespace sablib</span></div>
-<div class="ttc" id="aimodpoly_8cpp_html_aeeb763a603d15b777dced7b0d5f9b6b5"><div class="ttname"><a href="imodpoly_8cpp.html#aeeb763a603d15b777dced7b0d5f9b6b5">sablib::BaselineIModPoly</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineIModPoly(const std::vector&lt; double &gt; &amp;y, const unsigned int polyorder, const double k, const unsigned int loop, const double eps)</div><div class="ttdoc">Estimates the baseline using the Improved Modified Polynomial (IModPoly) method.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">imodpoly.cpp:19</a></div></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="ttc" id="aimodpoly_8cpp_html_ade5a6d19c7c14e05f16b7c2641111c1d"><div class="ttname"><a href="imodpoly_8cpp.html#ade5a6d19c7c14e05f16b7c2641111c1d">sablib::BaselineIModPoly</a></div><div class="ttdeci">const BaselineResult BaselineIModPoly(const std::vector&lt; double &gt; &amp;y, const unsigned int polyorder, const double k, const unsigned int loop, const double eps)</div><div class="ttdoc">Estimates the baseline using the Improved Modified Polynomial (IModPoly) method.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">imodpoly.cpp:19</a></div></div>
 <div class="ttc" id="aimodpoly_8h_html"><div class="ttname"><a href="imodpoly_8h.html">imodpoly.h</a></div><div class="ttdoc">Baseline estimation using Improved Modified Polynomial(IModPoly) method.</div></div>
 <div class="ttc" id="apolyfit_8h_html"><div class="ttname"><a href="polyfit_8h.html">polyfit.h</a></div><div class="ttdoc">Polynomial fitting using the least squares method (Gauss-Newton for linear models) and evaluating pol...</div></div>
 <div class="ttc" id="apolyfit_8h_html_acc9e36f184cd6713a8cb6364e9e6ae8f"><div class="ttname"><a href="polyfit_8h.html#acc9e36f184cd6713a8cb6364e9e6ae8f">sablib::PolyVal</a></div><div class="ttdeci">const Derived::PlainObject PolyVal(const Eigen::MatrixBase&lt; Derived &gt; &amp;coeff, const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt; &amp;V)</div><div class="ttdoc">Evaluates the polynomial at specified points using a pre-calculated Vandermonde matrix.</div><div class="ttdef"><b>Definition</b> <a href="polyfit_8h_source.html#l00122">polyfit.h:122</a></div></div>
 <div class="ttc" id="apolyfit_8h_html_aebd70efd6604483a9a1e835230c84ea6"><div class="ttname"><a href="polyfit_8h.html#aebd70efd6604483a9a1e835230c84ea6">sablib::Vandermonde</a></div><div class="ttdeci">const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt; Vandermonde(const Eigen::MatrixBase&lt; Derived &gt; &amp;x, const unsigned int polyorder)</div><div class="ttdoc">Generates a Vandermonde matrix for a given vector and polynomial order.</div><div class="ttdef"><b>Definition</b> <a href="polyfit_8h_source.html#l00025">polyfit.h:25</a></div></div>
+<div class="ttc" id="astructsablib_1_1BaselineResult_html"><div class="ttname"><a href="structsablib_1_1BaselineResult.html">sablib::BaselineResult</a></div><div class="ttdoc">Return value structure for baseline estimation functions.</div><div class="ttdef"><b>Definition</b> <a href="result__type_8h_source.html#l00018">result_type.h:19</a></div></div>
+<div class="ttc" id="astructsablib_1_1BaselineResult_html_a55b55aeebea75afe78438c047469695a"><div class="ttname"><a href="structsablib_1_1BaselineResult.html#a55b55aeebea75afe78438c047469695a">sablib::BaselineResult::baseline</a></div><div class="ttdeci">std::vector&lt; double &gt; baseline</div><div class="ttdef"><b>Definition</b> <a href="result__type_8h_source.html#l00020">result_type.h:20</a></div></div>
+<div class="ttc" id="astructsablib_1_1BaselineResult_html_ab600338343c2a0972aa96a7737335ddb"><div class="ttname"><a href="structsablib_1_1BaselineResult.html#ab600338343c2a0972aa96a7737335ddb">sablib::BaselineResult::corrected</a></div><div class="ttdeci">std::vector&lt; double &gt; corrected</div><div class="ttdef"><b>Definition</b> <a href="result__type_8h_source.html#l00021">result_type.h:21</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="imodpoly_8cpp.html">imodpoly.cpp</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="imodpoly_8cpp.html">imodpoly.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

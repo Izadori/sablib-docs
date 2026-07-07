@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/asls.h File Reference</title>
+<title>sablib: baseline/asls.h File Reference</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -97,14 +97,15 @@ $(function(){initNavTree('asls_8h.html','',''); });
 <p>Baseline estimation using Asymmetric Least Squares Smoothing(AsLS).  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="result__type_8h_source.html">result_type.h</a>&quot;</code><br />
+<code>#include &quot;sablib_export.h&quot;</code><br />
 </div>
 <p><a href="asls_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7ef9369d0ad59ba84981811895e3cad0" id="r_a7ef9369d0ad59ba84981811895e3cad0"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="asls_8cpp.html#a7ef9369d0ad59ba84981811895e3cad0">sablib::BaselineAsLS</a> (std::vector&lt; double &gt; &amp;y, const double lambda, const double p, const unsigned int s=2, const unsigned int loop=10, const double eps=1e-3)</td></tr>
-<tr class="memdesc:a7ef9369d0ad59ba84981811895e3cad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using Asymmetric Least Squares Smoothing (AsLS).  <br /></td></tr>
+<tr class="memitem:ad7a013cc4dbf6c0581d3581b79435007" id="r_ad7a013cc4dbf6c0581d3581b79435007"><td class="memItemLeft">const <a class="el" href="structsablib_1_1BaselineResult.html">BaselineResult</a>&#160;</td><td class="memItemRight"><a class="el" href="asls_8cpp.html#ad7a013cc4dbf6c0581d3581b79435007">sablib::BaselineAsLS</a> (const std::vector&lt; double &gt; &amp;y, const double lambda, const double p, const unsigned int s=2, const unsigned int loop=10, const double eps=1e-3)</td></tr>
+<tr class="memdesc:ad7a013cc4dbf6c0581d3581b79435007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using Asymmetric Least Squares Smoothing (AsLS).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Baseline estimation using Asymmetric Least Squares Smoothing(AsLS). </p>
@@ -116,16 +117,16 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="asls_8h_source.html">asls.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a7ef9369d0ad59ba84981811895e3cad0" name="a7ef9369d0ad59ba84981811895e3cad0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ef9369d0ad59ba84981811895e3cad0">&#9670;&#160;</a></span>BaselineAsLS()</h2>
+<a id="ad7a013cc4dbf6c0581d3581b79435007" name="ad7a013cc4dbf6c0581d3581b79435007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7a013cc4dbf6c0581d3581b79435007">&#9670;&#160;</a></span>BaselineAsLS()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::BaselineAsLS </td>
+          <td class="memname">SABLIB_EXPORT const BaselineResult sablib::BaselineAsLS </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -167,7 +168,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The estimated baseline. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td>One or more parameters are wrong. </td></tr>
@@ -176,6 +177,8 @@ Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="asls_8cpp_source.html#l00016">16</a> of file <a class="el" href="asls_8cpp_source.html">asls.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="result__type_8h_source.html#l00020">sablib::BaselineResult::baseline</a>, and <a class="el" href="result__type_8h_source.html#l00021">sablib::BaselineResult::corrected</a>.</p>
 
 </div>
 </div>
@@ -192,7 +195,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="asls_8h.html">asls.h</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="asls_8h.html">asls.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

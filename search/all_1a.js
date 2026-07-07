@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['your_20project_20with_20cmake_0',['Building your project with CMake',['../getting_started.html#autotoc_md11',1,'']]]
+  ['weightedmovingaverage_0',['WeightedMovingAverage',['../moving__average_8cpp.html#ab6cb4063804d6a2fbf061f5d2c2c263c',1,'sablib::WeightedMovingAverage(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w)'],['../moving__average_8h.html#a71a425c7e2f014e6d648502b7f86e112',1,'sablib::WeightedMovingAverage(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const Eigen::MatrixBase&lt; Derived &gt; &amp;w)']]],
+  ['whittaker_1',['Whittaker',['../whittaker_8cpp.html#aed1d98eb42c051be3ccdca1a9b965d60',1,'sablib::Whittaker(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w, const double lambda, const unsigned int s=2)'],['../whittaker_8cpp.html#a5cd52422e931bdd42fad99569e50ae14',1,'sablib::Whittaker(const std::vector&lt; double &gt; &amp;y, const double lambda, const unsigned int s=2)'],['../whittaker_8h.html#adcb179aa3ae7e715386f4b238c7c6fae',1,'sablib::Whittaker(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const Eigen::MatrixBase&lt; Derived &gt; &amp;w, const Eigen::SparseMatrix&lt; typename Derived::PlainObject::Scalar &gt; &amp;lambdaDTD)']]],
+  ['whittaker_2ecpp_2',['whittaker.cpp',['../whittaker_8cpp.html',1,'']]],
+  ['whittaker_2eh_3',['whittaker.h',['../whittaker_8h.html',1,'']]],
+  ['with_20cmake_4',['Building your project with CMake',['../getting_started.html#autotoc_md16',1,'']]]
 ];

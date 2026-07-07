@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/smoothing/savitzky_golay.h File Reference</title>
+<title>sablib: smoothing/savitzky_golay.h File Reference</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -98,15 +98,16 @@ $(function(){initNavTree('savitzky__golay_8h.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;sablib_export.h&quot;</code><br />
 </div>
 <p><a href="savitzky__golay_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af55ec5e766ea6409080d61b59f31560c" id="r_af55ec5e766ea6409080d61b59f31560c"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="savitzky__golay_8cpp.html#af55ec5e766ea6409080d61b59f31560c">sablib::SavitzkyGolayCoefficients</a> (const unsigned int n, const unsigned int polyorder, const unsigned derive=0, const double delta=1)</td></tr>
-<tr class="memdesc:af55ec5e766ea6409080d61b59f31560c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the coefficients for a Savitzky-Golay filter.  <br /></td></tr>
-<tr class="memitem:a5334c934ec8679150a1329b4b30daf83" id="r_a5334c934ec8679150a1329b4b30daf83"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="savitzky__golay_8cpp.html#a5334c934ec8679150a1329b4b30daf83">sablib::SavitzkyGolay</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int polyorder, const unsigned derive=0, const double delta=1)</td></tr>
-<tr class="memdesc:a5334c934ec8679150a1329b4b30daf83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs smoothing (and differentiation) using a Savitzky-Golay filter.  <br /></td></tr>
+<tr class="memitem:a8afb07e4561452da014233b0661752bc" id="r_a8afb07e4561452da014233b0661752bc"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="savitzky__golay_8cpp.html#a8afb07e4561452da014233b0661752bc">sablib::SavitzkyGolayCoefficients</a> (const unsigned int n, const unsigned int polyorder, const unsigned derive=0, const double delta=1)</td></tr>
+<tr class="memdesc:a8afb07e4561452da014233b0661752bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the coefficients for a Savitzky-Golay filter.  <br /></td></tr>
+<tr class="memitem:a3ea3d49abe06c0808d8297ddc6ab918c" id="r_a3ea3d49abe06c0808d8297ddc6ab918c"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="savitzky__golay_8cpp.html#a3ea3d49abe06c0808d8297ddc6ab918c">sablib::SavitzkyGolay</a> (const std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int polyorder, const unsigned derive=0, const double delta=1)</td></tr>
+<tr class="memdesc:a3ea3d49abe06c0808d8297ddc6ab918c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs smoothing (and differentiation) using a Savitzky-Golay filter.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Smoothing using Savitzky-Golay filter. </p>
@@ -117,14 +118,14 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="savitzky__golay_8h_source.html">savitzky_golay.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a5334c934ec8679150a1329b4b30daf83" name="a5334c934ec8679150a1329b4b30daf83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5334c934ec8679150a1329b4b30daf83">&#9670;&#160;</a></span>SavitzkyGolay()</h2>
+<a id="a3ea3d49abe06c0808d8297ddc6ab918c" name="a3ea3d49abe06c0808d8297ddc6ab918c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ea3d49abe06c0808d8297ddc6ab918c">&#9670;&#160;</a></span>SavitzkyGolay()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::SavitzkyGolay </td>
+          <td class="memname">SABLIB_EXPORT const std::vector&lt; double &gt; sablib::SavitzkyGolay </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
@@ -174,14 +175,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af55ec5e766ea6409080d61b59f31560c" name="af55ec5e766ea6409080d61b59f31560c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af55ec5e766ea6409080d61b59f31560c">&#9670;&#160;</a></span>SavitzkyGolayCoefficients()</h2>
+<a id="a8afb07e4561452da014233b0661752bc" name="a8afb07e4561452da014233b0661752bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8afb07e4561452da014233b0661752bc">&#9670;&#160;</a></span>SavitzkyGolayCoefficients()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; double &gt; sablib::SavitzkyGolayCoefficients </td>
+          <td class="memname">SABLIB_EXPORT const std::vector&lt; double &gt; sablib::SavitzkyGolayCoefficients </td>
           <td>(</td>
           <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
         </tr>
@@ -238,7 +239,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="savitzky__golay_8h.html">savitzky_golay.h</a></li>
+    <li class="navelem"><b>smoothing</b></li><li class="navelem"><a href="savitzky__golay_8h.html">savitzky_golay.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

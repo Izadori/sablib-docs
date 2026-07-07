@@ -1,7 +1,16 @@
 var searchData=
 [
-  ['operator_28_29_0',['operator()',['../classsablib_1_1_cubic_spline.html#aae47b991a4480c803a4e27409e086a35',1,'sablib::CubicSpline']]],
-  ['option_20a_3a_20using_20vcpkg_1',['Option A: Using vcpkg',['../getting_started.html#autotoc_md9',1,'']]],
-  ['option_20b_3a_20using_20conan_2',['Option B: Using Conan',['../getting_started.html#autotoc_md10',1,'']]],
-  ['option_20c_3a_20cloning_20and_20building_20manually_3',['Option C: Cloning and Building Manually',['../getting_started.html#autotoc_md11',1,'']]]
+  ['main_20cpp_0',['Sample Program: &lt;span class=&quot;tt&quot;&gt;main.cpp&lt;/span&gt;',['../getting_started.html#autotoc_md15',1,'']]],
+  ['manual_20compilation_20command_20line_1',['Manual Compilation (Command Line)',['../getting_started.html#autotoc_md20',1,'']]],
+  ['manually_2',['Manually',['../getting_started.html#autotoc_md19',1,'Manually'],['../getting_started.html#autotoc_md12',1,'Option C: Cloning and Building Manually']]],
+  ['mingw_20linux_3',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md21',1,'']]],
+  ['modpoly_2ecpp_4',['modpoly.cpp',['../modpoly_8cpp.html',1,'']]],
+  ['modpoly_2eh_5',['modpoly.h',['../modpoly_8h.html',1,'']]],
+  ['moving_5faverage_2ecpp_6',['moving_average.cpp',['../moving__average_8cpp.html',1,'']]],
+  ['moving_5faverage_2eh_7',['moving_average.h',['../moving__average_8h.html',1,'']]],
+  ['moving_5fmedian_2ecpp_8',['moving_median.cpp',['../moving__median_8cpp.html',1,'']]],
+  ['moving_5fmedian_2eh_9',['moving_median.h',['../moving__median_8h.html',1,'']]],
+  ['movingaverage_10',['MovingAverage',['../moving__average_8cpp.html#aa2ba74ad8582ed1f69b267624d60f857',1,'sablib::MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)'],['../moving__average_8h.html#afbc027fac0a8bd40a3994d02b6275770',1,'sablib::MovingAverage(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)']]],
+  ['movingmedian_11',['MovingMedian',['../moving__median_8cpp.html#ae6df4feb2dca8015ea2584b72023c241',1,'sablib']]],
+  ['msvc_12',['Using cl.exe (MSVC)',['../getting_started.html#autotoc_md22',1,'']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sablib: D:/source/GitHub/sablib/sablib/baseline/sma.cpp Source File</title>
+<title>sablib: baseline/sma.cpp Source File</title>
 <link rel="icon" href="sablib_cat_small.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -105,36 +105,43 @@ $(function(){initNavTree('sma_8cpp_source.html','',''); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Implementation of BaselineSMA() function</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="sma_8cpp.html#af91f1a1f388db47c3b772349d3e3726b">   16</a></span><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code hl_function" href="sma_8cpp.html#af91f1a1f388db47c3b772349d3e3726b">BaselineSMA</a>(std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loop)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="sma_8cpp.html#a3a65ddb006f0b5989946fc7844665769">   16</a></span><span class="keyword">const</span> <a class="code hl_struct" href="structsablib_1_1BaselineResult.html">BaselineResult</a> <a class="code hl_function" href="sma_8cpp.html#a3a65ddb006f0b5989946fc7844665769">BaselineSMA</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loop)</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    Eigen::VectorXd yy = Eigen::VectorXd::Map(y.data(), y.size());</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    Eigen::VectorXd result = yy;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; loop; i++){</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        Eigen::VectorXd result_old = result;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        result = <a class="code hl_function" href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">MovingAverage</a>(result, n);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        result = <a class="code hl_function" href="moving__average_8cpp.html#aa2ba74ad8582ed1f69b267624d60f857">MovingAverage</a>(result, n);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        result = (result.array() &gt; result_old.array()).select(result_old, result);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;double&gt; result_y(result.size());</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    Eigen::VectorXd::Map(result_y.data(), result_y.size()) = result;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">return</span> result_y;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_struct" href="structsablib_1_1BaselineResult.html">BaselineResult</a> result_y;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    result_y.<a class="code hl_variable" href="structsablib_1_1BaselineResult.html#a55b55aeebea75afe78438c047469695a">baseline</a>.resize(yy.size());</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    result_y.<a class="code hl_variable" href="structsablib_1_1BaselineResult.html#ab600338343c2a0972aa96a7737335ddb">corrected</a>.resize(yy.size());</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    Eigen::VectorXd::Map(result_y.<a class="code hl_variable" href="structsablib_1_1BaselineResult.html#a55b55aeebea75afe78438c047469695a">baseline</a>.data(), yy.size()) = result;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    Eigen::VectorXd::Map(result_y.<a class="code hl_variable" href="structsablib_1_1BaselineResult.html#ab600338343c2a0972aa96a7737335ddb">corrected</a>.data(), yy.size()) = yy - result;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">return</span> result_y;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}; <span class="comment">// namespace sablib</span></div>
-<div class="ttc" id="amoving__average_8cpp_html_add602b00e5536fb02c55775cd31a3b09"><div class="ttname"><a href="moving__average_8cpp.html#add602b00e5536fb02c55775cd31a3b09">sablib::MovingAverage</a></div><div class="ttdeci">const std::vector&lt; double &gt; MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Calculates the simple moving average of the input signal (std::vector&lt;double&gt; version).</div><div class="ttdef"><b>Definition</b> <a href="moving__average_8cpp_source.html#l00015">moving_average.cpp:15</a></div></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}; <span class="comment">// namespace sablib</span></div>
+<div class="ttc" id="amoving__average_8cpp_html_aa2ba74ad8582ed1f69b267624d60f857"><div class="ttname"><a href="moving__average_8cpp.html#aa2ba74ad8582ed1f69b267624d60f857">sablib::MovingAverage</a></div><div class="ttdeci">const std::vector&lt; double &gt; MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)</div><div class="ttdoc">Calculates the simple moving average of the input signal (std::vector&lt;double&gt; version).</div><div class="ttdef"><b>Definition</b> <a href="moving__average_8cpp_source.html#l00015">moving_average.cpp:15</a></div></div>
 <div class="ttc" id="amoving__average_8h_html"><div class="ttname"><a href="moving__average_8h.html">moving_average.h</a></div><div class="ttdoc">Smoothing using simple/weighted moving average.</div></div>
-<div class="ttc" id="asma_8cpp_html_af91f1a1f388db47c3b772349d3e3726b"><div class="ttname"><a href="sma_8cpp.html#af91f1a1f388db47c3b772349d3e3726b">sablib::BaselineSMA</a></div><div class="ttdeci">const std::vector&lt; double &gt; BaselineSMA(std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int loop)</div><div class="ttdoc">Performs background estimation using a simple moving average.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">sma.cpp:16</a></div></div>
+<div class="ttc" id="asma_8cpp_html_a3a65ddb006f0b5989946fc7844665769"><div class="ttname"><a href="sma_8cpp.html#a3a65ddb006f0b5989946fc7844665769">sablib::BaselineSMA</a></div><div class="ttdeci">const BaselineResult BaselineSMA(const std::vector&lt; double &gt; &amp;y, const unsigned int n, const unsigned int loop)</div><div class="ttdoc">Performs background estimation using a simple moving average.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">sma.cpp:16</a></div></div>
 <div class="ttc" id="asma_8h_html"><div class="ttname"><a href="sma_8h.html">sma.h</a></div><div class="ttdoc">Baseline estimation using simple moving average.</div></div>
+<div class="ttc" id="astructsablib_1_1BaselineResult_html"><div class="ttname"><a href="structsablib_1_1BaselineResult.html">sablib::BaselineResult</a></div><div class="ttdoc">Return value structure for baseline estimation functions.</div><div class="ttdef"><b>Definition</b> <a href="result__type_8h_source.html#l00018">result_type.h:19</a></div></div>
+<div class="ttc" id="astructsablib_1_1BaselineResult_html_a55b55aeebea75afe78438c047469695a"><div class="ttname"><a href="structsablib_1_1BaselineResult.html#a55b55aeebea75afe78438c047469695a">sablib::BaselineResult::baseline</a></div><div class="ttdeci">std::vector&lt; double &gt; baseline</div><div class="ttdef"><b>Definition</b> <a href="result__type_8h_source.html#l00020">result_type.h:20</a></div></div>
+<div class="ttc" id="astructsablib_1_1BaselineResult_html_ab600338343c2a0972aa96a7737335ddb"><div class="ttname"><a href="structsablib_1_1BaselineResult.html#ab600338343c2a0972aa96a7737335ddb">sablib::BaselineResult::corrected</a></div><div class="ttdeci">std::vector&lt; double &gt; corrected</div><div class="ttdef"><b>Definition</b> <a href="result__type_8h_source.html#l00021">result_type.h:21</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GitHub</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>sablib</b></li><li class="navelem"><b>baseline</b></li><li class="navelem"><a href="sma_8cpp.html">sma.cpp</a></li>
+    <li class="navelem"><b>baseline</b></li><li class="navelem"><a href="sma_8cpp.html">sma.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>
