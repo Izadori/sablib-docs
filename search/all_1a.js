@@ -1,8 +1,15 @@
 var searchData=
 [
-  ['weightedmovingaverage_0',['WeightedMovingAverage',['../moving__average_8cpp.html#ab6cb4063804d6a2fbf061f5d2c2c263c',1,'sablib::WeightedMovingAverage(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w)'],['../moving__average_8h.html#a71a425c7e2f014e6d648502b7f86e112',1,'sablib::WeightedMovingAverage(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const Eigen::MatrixBase&lt; Derived &gt; &amp;w)']]],
-  ['whittaker_1',['Whittaker',['../whittaker_8cpp.html#aed1d98eb42c051be3ccdca1a9b965d60',1,'sablib::Whittaker(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;w, const double lambda, const unsigned int s=2)'],['../whittaker_8cpp.html#a5cd52422e931bdd42fad99569e50ae14',1,'sablib::Whittaker(const std::vector&lt; double &gt; &amp;y, const double lambda, const unsigned int s=2)'],['../whittaker_8h.html#adcb179aa3ae7e715386f4b238c7c6fae',1,'sablib::Whittaker(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const Eigen::MatrixBase&lt; Derived &gt; &amp;w, const Eigen::SparseMatrix&lt; typename Derived::PlainObject::Scalar &gt; &amp;lambdaDTD)']]],
-  ['whittaker_2ecpp_2',['whittaker.cpp',['../whittaker_8cpp.html',1,'']]],
-  ['whittaker_2eh_3',['whittaker.h',['../whittaker_8h.html',1,'']]],
-  ['with_20cmake_4',['Building your project with CMake',['../getting_started.html#autotoc_md16',1,'']]]
+  ['valid_0',['Valid',['../convolve_8h.html#aecfce576d85f82a26ac84490ae24c846a3ac705f2acd51a4613f9188c05c91d0d',1,'sablib']]],
+  ['vandermonde_1',['Vandermonde',['../polyfit_8h.html#aebd70efd6604483a9a1e835230c84ea6',1,'sablib']]],
+  ['vcpkg_2',['vcpkg',['../getting_started.html#autotoc_md11',1,'Option A: Using vcpkg'],['../getting_started.html#autotoc_md18',1,'Via vcpkg']]],
+  ['version_200_201_200_202026_2003_2018_3',['version 0.1.0 (2026/03/18)',['../changelog.html#autotoc_md7',1,'']]],
+  ['version_200_201_201_202026_2003_2022_4',['version 0.1.1 (2026/03/22)',['../changelog.html#autotoc_md6',1,'']]],
+  ['version_200_202_200_202026_2003_2026_5',['version 0.2.0 (2026/03/26)',['../changelog.html#autotoc_md5',1,'']]],
+  ['version_200_203_200_202026_2004_2002_6',['version 0.3.0 (2026/04/02)',['../changelog.html#autotoc_md4',1,'']]],
+  ['version_200_203_202_202026_2004_2005_7',['version 0.3.2 (2026/04/05)',['../changelog.html#autotoc_md3',1,'']]],
+  ['version_200_204_200_202026_2007_2007_8',['version 0.4.0 (2026/07/07)',['../changelog.html#autotoc_md2',1,'']]],
+  ['version_200_205_200_202026_2008_2007_9',['version 0.5.0 (2026/08/07)',['../changelog.html#autotoc_md1',1,'']]],
+  ['via_20conan_10',['Via Conan',['../getting_started.html#autotoc_md19',1,'']]],
+  ['via_20vcpkg_11',['Via vcpkg',['../getting_started.html#autotoc_md18',1,'']]]
 ];

@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['huber_0',['Huber',['../baseline_8h.html#a98397820f9018960a6c6f4fcca2267e6a14fd9079cea7900467a1346481b83c75',1,'Huber:&#160;baseline.h'],['../backcor_8h.html#accc9b29475416586b0638a396218eca1a71b7c7b0a11fc3ad70f3874318e99d18',1,'Hubersablib']]]
+  ['g_20mingw_20linux_0',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md22',1,'']]],
+  ['gaussianfilter_1',['GaussianFilter',['../moving__average_8h.html#afd8aa345d51b7733b95b5e6c79316c87',1,'sablib']]],
+  ['gaussiankernel_2',['GaussianKernel',['../moving__average_8cpp.html#a6cde4b42db1d23d632e3d3943963690d',1,'sablib']]],
+  ['getting_20started_3',['Getting Started',['../getting_started.html',1,'Getting Started'],['../getting_started.html#autotoc_md8',1,'Getting Started']]],
+  ['goldindec_2ecpp_4',['goldindec.cpp',['../goldindec_8cpp.html',1,'']]],
+  ['goldindec_2eh_5',['goldindec.h',['../goldindec_8h.html',1,'']]]
 ];

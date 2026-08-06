@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['c_20library_20for_20smoothing_20and_20baseline_20estimation_0',['sablib - A C++ Library for Smoothing and Baseline Estimation',['../index.html#autotoc_md23',1,'']]],
-  ['c_3a_20cloning_20and_20building_20manually_1',['Option C: Cloning and Building Manually',['../getting_started.html#autotoc_md12',1,'']]],
-  ['changelog_2',['Changelog',['../changelog.html',1,'Changelog'],['../changelog.html#autotoc_md0',1,'Changelog']]],
-  ['cl_20exe_20msvc_3',['Using cl.exe (MSVC)',['../getting_started.html#autotoc_md22',1,'']]],
-  ['cloning_20and_20building_20manually_4',['Option C: Cloning and Building Manually',['../getting_started.html#autotoc_md12',1,'']]],
-  ['cmake_5',['Building your project with CMake',['../getting_started.html#autotoc_md16',1,'']]],
-  ['command_20line_6',['Manual Compilation (Command Line)',['../getting_started.html#autotoc_md20',1,'']]],
-  ['compilation_20command_20line_7',['Manual Compilation (Command Line)',['../getting_started.html#autotoc_md20',1,'']]],
-  ['conan_8',['Conan',['../getting_started.html#autotoc_md11',1,'Option B: Using Conan'],['../getting_started.html#autotoc_md18',1,'Via Conan']]],
-  ['cpp_9',['Sample Program: &lt;span class=&quot;tt&quot;&gt;main.cpp&lt;/span&gt;',['../getting_started.html#autotoc_md15',1,'']]]
+  ['b_3a_20using_20conan_0',['Option B: Using Conan',['../getting_started.html#autotoc_md12',1,'']]],
+  ['baseline_20estimation_1',['Baseline Estimation',['../introduction.html#autotoc_md28',1,'Baseline Estimation'],['../index.html#autotoc_md24',1,'sablib - A C++ Library for Smoothing and Baseline Estimation']]],
+  ['building_20manually_2',['Option C: Cloning and Building Manually',['../getting_started.html#autotoc_md13',1,'']]],
+  ['building_20your_20project_20with_20cmake_3',['Building your project with CMake',['../getting_started.html#autotoc_md17',1,'']]]
 ];

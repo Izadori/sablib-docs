@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_5fstsablibbaselinedata_0',['_stSablibBaselineData',['../struct__stSablibBaselineData.html',1,'']]],
-  ['_5fstsablibdata_1',['_stSablibData',['../struct__stSablibData.html',1,'']]]
+  ['5_200_202026_2008_2007_0',['version 0.5.0 (2026/08/07)',['../changelog.html#autotoc_md1',1,'']]]
 ];

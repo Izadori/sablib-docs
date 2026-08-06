@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['sablib_0',['sablib',['../index.html',1,'']]],
-  ['sablib_20a_20c_20library_20for_20smoothing_20and_20baseline_20estimation_1',['sablib - A C++ Library for Smoothing and Baseline Estimation',['../index.html#autotoc_md23',1,'']]],
-  ['sample_20program_3a_20main_20cpp_2',['Sample Program: &lt;span class=&quot;tt&quot;&gt;main.cpp&lt;/span&gt;',['../getting_started.html#autotoc_md15',1,'']]],
-  ['smoothing_3',['Smoothing',['../introduction.html#autotoc_md26',1,'']]],
-  ['smoothing_20and_20baseline_20estimation_4',['sablib - A C++ Library for Smoothing and Baseline Estimation',['../index.html#autotoc_md23',1,'']]],
-  ['started_5',['Started',['../getting_started.html',1,'Getting Started'],['../getting_started.html#autotoc_md7',1,'Getting Started']]]
+  ['prerequisites_0',['1. Prerequisites',['../getting_started.html#autotoc_md9',1,'']]],
+  ['program_3a_20main_20cpp_1',['Sample Program: &lt;span class=&quot;tt&quot;&gt;main.cpp&lt;/span&gt;',['../getting_started.html#autotoc_md16',1,'']]],
+  ['project_20with_20cmake_2',['Building your project with CMake',['../getting_started.html#autotoc_md17',1,'']]]
 ];

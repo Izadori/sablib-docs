@@ -1,16 +1,11 @@
 var searchData=
 [
-  ['main_20cpp_0',['Sample Program: &lt;span class=&quot;tt&quot;&gt;main.cpp&lt;/span&gt;',['../getting_started.html#autotoc_md15',1,'']]],
-  ['manual_20compilation_20command_20line_1',['Manual Compilation (Command Line)',['../getting_started.html#autotoc_md20',1,'']]],
-  ['manually_2',['Manually',['../getting_started.html#autotoc_md19',1,'Manually'],['../getting_started.html#autotoc_md12',1,'Option C: Cloning and Building Manually']]],
-  ['mingw_20linux_3',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md21',1,'']]],
-  ['modpoly_2ecpp_4',['modpoly.cpp',['../modpoly_8cpp.html',1,'']]],
-  ['modpoly_2eh_5',['modpoly.h',['../modpoly_8h.html',1,'']]],
-  ['moving_5faverage_2ecpp_6',['moving_average.cpp',['../moving__average_8cpp.html',1,'']]],
-  ['moving_5faverage_2eh_7',['moving_average.h',['../moving__average_8h.html',1,'']]],
-  ['moving_5fmedian_2ecpp_8',['moving_median.cpp',['../moving__median_8cpp.html',1,'']]],
-  ['moving_5fmedian_2eh_9',['moving_median.h',['../moving__median_8h.html',1,'']]],
-  ['movingaverage_10',['MovingAverage',['../moving__average_8cpp.html#aa2ba74ad8582ed1f69b267624d60f857',1,'sablib::MovingAverage(const std::vector&lt; double &gt; &amp;y, const unsigned int n)'],['../moving__average_8h.html#afbc027fac0a8bd40a3994d02b6275770',1,'sablib::MovingAverage(const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int n)']]],
-  ['movingmedian_11',['MovingMedian',['../moving__median_8cpp.html#ae6df4feb2dca8015ea2584b72023c241',1,'sablib']]],
-  ['msvc_12',['Using cl.exe (MSVC)',['../getting_started.html#autotoc_md22',1,'']]]
+  ['l1_5fv1_0',['L1_v1',['../baseline_8h.html#aa05d8f6d9543e54f33f705ac9a8f12a6a36e74f423559f585e3a81d88bb1c5b5e',1,'L1_v1:&#160;baseline.h'],['../beads_8h.html#aaa339033c3a975d37fc6e342adeee334af148d8498eacebd59706d67006c5319b',1,'L1_v1sablib']]],
+  ['l1_5fv2_1',['L1_v2',['../baseline_8h.html#aa05d8f6d9543e54f33f705ac9a8f12a6a751240063ffb9f4731d7cab5a134ea97',1,'L1_v2:&#160;baseline.h'],['../beads_8h.html#aaa339033c3a975d37fc6e342adeee334ac26c30edb634d206dfbecc01225ce4d8',1,'L1_v2sablib']]],
+  ['library_20for_20smoothing_20and_20baseline_20estimation_2',['sablib - A C++ Library for Smoothing and Baseline Estimation',['../index.html#autotoc_md24',1,'']]],
+  ['line_3',['Manual Compilation (Command Line)',['../getting_started.html#autotoc_md21',1,'']]],
+  ['linux_4',['Using g++ (MinGW / Linux)',['../getting_started.html#autotoc_md22',1,'']]],
+  ['ll_5',['LL',['../baseline_8h.html#adf0a6f17e9f37405ad5fc692dc54c18ea11ea57bac296f79f8acbaf6fdf6bcc20',1,'LL:&#160;baseline.h'],['../snip_8h.html#a86882b004aa1fcf538f0d5fc5f28007aa67824ecf84f5816f07b74fa956bdbcd2',1,'LLsablib']]],
+  ['lls_6',['LLS',['../baseline_8h.html#adf0a6f17e9f37405ad5fc692dc54c18ea07c7b897e741bab87dd0afe70ac129e5',1,'LLS:&#160;baseline.h'],['../snip_8h.html#a86882b004aa1fcf538f0d5fc5f28007aa090084d1ca90cec9865c7ecf79cca12d',1,'LLSsablib']]],
+  ['logistic_7',['logistic',['../functions_8cpp.html#a0c7f2fb0b543087b6178f404d78f2986',1,'sablib']]]
 ];

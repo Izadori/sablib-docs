@@ -97,19 +97,7 @@ $(function(){initNavTree('baseline_8cpp.html','',''); });
 <p>The C interface of sablib baseline estimation functions.(implementation).  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="baseline_8h_source.html">baseline.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="airpls_8h_source.html">../baseline/airpls.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="arpls_8h_source.html">../baseline/arpls.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="asls_8h_source.html">../baseline/asls.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="backcor_8h_source.html">../baseline/backcor.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="beads_8h_source.html">../baseline/beads.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="goldindec_8h_source.html">../baseline/goldindec.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="imodpoly_8h_source.html">../baseline/imodpoly.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="modpoly_8h_source.html">../baseline/modpoly.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="polynomial_8h_source.html">../baseline/polynomial.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="psalsa_8h_source.html">../baseline/psalsa.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sma_8h_source.html">../baseline/sma.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="snip_8h_source.html">../baseline/snip.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="spline_8h_source.html">../baseline/spline.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sablib_8h_source.html">../sablib.h</a>&quot;</code><br />
 </div>
 <p><a href="baseline_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -135,10 +123,16 @@ Functions</h2></td></tr>
 <tr class="memdesc:afbed1e46eb694dd81c9cbcd30cbdf270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using the Goldindec algorithm.  <br /></td></tr>
 <tr class="memitem:a272dc8aa65103a75190e6f460871df7f" id="r_a272dc8aa65103a75190e6f460871df7f"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#a272dc8aa65103a75190e6f460871df7f">Sablib_BaselineAsLS</a> (const SABLIB_DATA_PTR y, const double lambda, const double p, const unsigned int s, const unsigned int loop, const double eps)</td></tr>
 <tr class="memdesc:a272dc8aa65103a75190e6f460871df7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using Asymmetric Least Squares Smoothing (AsLS).  <br /></td></tr>
+<tr class="memitem:a293ba3f1c13f17d9fa08c7a582804936" id="r_a293ba3f1c13f17d9fa08c7a582804936"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#a293ba3f1c13f17d9fa08c7a582804936">Sablib_BaselineIAsLS</a> (const SABLIB_DATA_PTR y, const double lambda, const double lambda1, const double p, const unsigned int s, const unsigned int loop, const double eps)</td></tr>
+<tr class="memdesc:a293ba3f1c13f17d9fa08c7a582804936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using Improved Asymmetric Least Squares Smoothing (IAsLS).  <br /></td></tr>
 <tr class="memitem:a6f9cc2e57af32139852c1e31e081749b" id="r_a6f9cc2e57af32139852c1e31e081749b"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#a6f9cc2e57af32139852c1e31e081749b">Sablib_BaselineAirPLS</a> (const SABLIB_DATA_PTR y, const double lambda, const unsigned int s, const unsigned int loop, const double eps)</td></tr>
 <tr class="memdesc:a6f9cc2e57af32139852c1e31e081749b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using adaptive iteratively reweighted Penalized Least Squares(airPLS).  <br /></td></tr>
+<tr class="memitem:a280023f90da4fc28bf77ac2fa0255b9e" id="r_a280023f90da4fc28bf77ac2fa0255b9e"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#a280023f90da4fc28bf77ac2fa0255b9e">Sablib_BaselineAisPLS</a> (const SABLIB_DATA_PTR y, const double lambda, const double r, const unsigned int s, const unsigned int loop, const double eps)</td></tr>
+<tr class="memdesc:a280023f90da4fc28bf77ac2fa0255b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using adaptive iterative smoothing parameter Penalized Least Squares(aisPLS).  <br /></td></tr>
 <tr class="memitem:ab672f0e364349ecfc91c7d6fa0b6266c" id="r_ab672f0e364349ecfc91c7d6fa0b6266c"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#ab672f0e364349ecfc91c7d6fa0b6266c">Sablib_BaselineArPLS</a> (const SABLIB_DATA_PTR y, const double lambda, const unsigned int s, const unsigned int loop, const double eps)</td></tr>
 <tr class="memdesc:ab672f0e364349ecfc91c7d6fa0b6266c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using asymmetrically reweighted Penalized Least Squares(arPLS).  <br /></td></tr>
+<tr class="memitem:a580c1704c861e5c4ad5f2c0168dc97a1" id="r_a580c1704c861e5c4ad5f2c0168dc97a1"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#a580c1704c861e5c4ad5f2c0168dc97a1">Sablib_BaselineAsPLS</a> (const SABLIB_DATA_PTR y, const double lambda, const double k, const unsigned int s, const unsigned int loop, const double eps)</td></tr>
+<tr class="memdesc:a580c1704c861e5c4ad5f2c0168dc97a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using adaptive smoothness Penalized Least Squares(asPLS).  <br /></td></tr>
 <tr class="memitem:a1357118dbe202eefc98619c513c949ef" id="r_a1357118dbe202eefc98619c513c949ef"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#a1357118dbe202eefc98619c513c949ef">Sablib_BaselinePsalsa</a> (const SABLIB_DATA_PTR y, const double lambda, const double p, const double k, const unsigned int s, const unsigned int loop, const double eps)</td></tr>
 <tr class="memdesc:a1357118dbe202eefc98619c513c949ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using Peaked Signal’s Asymmetric Least Squares Algorithm (psalsa).  <br /></td></tr>
 <tr class="memitem:abda1e71ca45ec4c1ad681acb5f2e2341" id="r_abda1e71ca45ec4c1ad681acb5f2e2341"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#abda1e71ca45ec4c1ad681acb5f2e2341">Sablib_BaselineBeads</a> (const SABLIB_DATA_PTR y, const unsigned int s, const double frequency, const double r, const double lambda0, const double lambda1, const double lambda2, const unsigned int loop, const double eps, const enum <a class="el" href="baseline_8h.html#aa05d8f6d9543e54f33f705ac9a8f12a6">Sablib_BeadsPenalty</a> penalty)</td></tr>
@@ -147,6 +141,12 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6b5a8abb7c9f4e0d6c4d54e3f5ecd8bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands the signal boundaries by padding with a tapered sequence.  <br /></td></tr>
 <tr class="memitem:a1ce4efabe5a58a6a88e3dd3a99744e77" id="r_a1ce4efabe5a58a6a88e3dd3a99744e77"><td class="memItemLeft">const SABLIB_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#a1ce4efabe5a58a6a88e3dd3a99744e77">Sablib_BeadsTrimBoundaries</a> (const SABLIB_DATA_PTR y, const unsigned int n)</td></tr>
 <tr class="memdesc:a1ce4efabe5a58a6a88e3dd3a99744e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trims the expanded signal boundaries.  <br /></td></tr>
+<tr class="memitem:ab1c49d2a023af063585841ea2d3d1347" id="r_ab1c49d2a023af063585841ea2d3d1347"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#ab1c49d2a023af063585841ea2d3d1347">Sablib_BaselineRubberBand</a> (const SABLIB_DATA_PTR y)</td></tr>
+<tr class="memdesc:ab1c49d2a023af063585841ea2d3d1347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs background estimation using the Rubber Band method.  <br /></td></tr>
+<tr class="memitem:a8c2afcf8765a8009d2dca5f997c03bbd" id="r_a8c2afcf8765a8009d2dca5f997c03bbd"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#a8c2afcf8765a8009d2dca5f997c03bbd">Sablib_BaselineKajfoszKwiatek</a> (const SABLIB_DATA_PTR y, const double width)</td></tr>
+<tr class="memdesc:a8c2afcf8765a8009d2dca5f997c03bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs background estimation using the Kajfosz-Kwiatek method. (parabolic approximation).  <br /></td></tr>
+<tr class="memitem:ab271b7fe0d189205d4c1e3870a500bfd" id="r_ab271b7fe0d189205d4c1e3870a500bfd"><td class="memItemLeft">const SABLIB_BASELINE_DATA_PTR&#160;</td><td class="memItemRight"><a class="el" href="#ab271b7fe0d189205d4c1e3870a500bfd">Sablib_BaselineCornerCutting</a> (const SABLIB_DATA_PTR y, const unsigned int loop)</td></tr>
+<tr class="memdesc:ab271b7fe0d189205d4c1e3870a500bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs baseline estimation using Corner-Cutting method.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The C interface of sablib baseline estimation functions.(implementation). </p>
@@ -202,7 +202,67 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00265">265</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00273">273</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
+
+</div>
+</div>
+<a id="a280023f90da4fc28bf77ac2fa0255b9e" name="a280023f90da4fc28bf77ac2fa0255b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a280023f90da4fc28bf77ac2fa0255b9e">&#9670;&#160;</a></span>Sablib_BaselineAisPLS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const SABLIB_BASELINE_DATA_PTR Sablib_BaselineAisPLS </td>
+          <td>(</td>
+          <td class="paramtype">const SABLIB_DATA_PTR</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>lambda</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>loop</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>eps</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs baseline estimation using adaptive iterative smoothing parameter Penalized Least Squares(aisPLS). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>The input data for baseline estimation. </td></tr>
+    <tr><td class="paramname">lambda</td><td>Smoothing parameter. </td></tr>
+    <tr><td class="paramname">r</td><td>Adaptation rate of smoothing parameter. </td></tr>
+    <tr><td class="paramname">s</td><td>The order of the difference (usually s = 1, 2, or 3). </td></tr>
+    <tr><td class="paramname">loop</td><td>Maximum number of iterations. </td></tr>
+    <tr><td class="paramname">eps</td><td>Convergence threshold. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00293">293</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -256,7 +316,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00285">285</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00313">313</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -316,7 +376,67 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00245">245</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00233">233</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
+
+</div>
+</div>
+<a id="a580c1704c861e5c4ad5f2c0168dc97a1" name="a580c1704c861e5c4ad5f2c0168dc97a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580c1704c861e5c4ad5f2c0168dc97a1">&#9670;&#160;</a></span>Sablib_BaselineAsPLS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const SABLIB_BASELINE_DATA_PTR Sablib_BaselineAsPLS </td>
+          <td>(</td>
+          <td class="paramtype">const SABLIB_DATA_PTR</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>lambda</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>k</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>loop</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>eps</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs baseline estimation using adaptive smoothness Penalized Least Squares(asPLS). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>The input data for baseline estimation. </td></tr>
+    <tr><td class="paramname">lambda</td><td>Smoothing parameter. </td></tr>
+    <tr><td class="paramname">k</td><td>Asymmetric coefficient. </td></tr>
+    <tr><td class="paramname">s</td><td>The order of the difference (usually s = 1, 2, or 3). </td></tr>
+    <tr><td class="paramname">loop</td><td>Maximum number of iterations. </td></tr>
+    <tr><td class="paramname">eps</td><td>Convergence threshold. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00333">333</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -382,7 +502,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00179">179</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00167">167</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="baseline_8h_source.html#l00026">AHuber</a>, <a class="el" href="baseline_8h_source.html#l00030">AIndec</a>, <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, <a class="el" href="baseline_8h_source.html#l00025">Huber</a>, <a class="el" href="baseline_8h_source.html#l00029">Indec</a>, <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>, and <a class="el" href="baseline_8h_source.html#l00027">TQuad</a>.</p>
 
@@ -466,9 +586,45 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and denoised baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00325">325</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00373">373</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, <a class="el" href="baseline_8h_source.html#l00048">L1_v1</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
+
+</div>
+</div>
+<a id="ab271b7fe0d189205d4c1e3870a500bfd" name="ab271b7fe0d189205d4c1e3870a500bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab271b7fe0d189205d4c1e3870a500bfd">&#9670;&#160;</a></span>Sablib_BaselineCornerCutting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const SABLIB_BASELINE_DATA_PTR Sablib_BaselineCornerCutting </td>
+          <td>(</td>
+          <td class="paramtype">const SABLIB_DATA_PTR</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>loop</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs baseline estimation using Corner-Cutting method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>The input data for baseline estimation. </td></tr>
+    <tr><td class="paramname">loop</td><td>Maximum number of iterations. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00471">471</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
 </div>
 </div>
@@ -544,7 +700,73 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00222">222</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00210">210</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
+
+</div>
+</div>
+<a id="a293ba3f1c13f17d9fa08c7a582804936" name="a293ba3f1c13f17d9fa08c7a582804936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a293ba3f1c13f17d9fa08c7a582804936">&#9670;&#160;</a></span>Sablib_BaselineIAsLS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const SABLIB_BASELINE_DATA_PTR Sablib_BaselineIAsLS </td>
+          <td>(</td>
+          <td class="paramtype">const SABLIB_DATA_PTR</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>lambda</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>lambda1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>loop</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>eps</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs baseline estimation using Improved Asymmetric Least Squares Smoothing (IAsLS). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>The input data for baseline estimation. </td></tr>
+    <tr><td class="paramname">lambda</td><td>Smoothing parameter. </td></tr>
+    <tr><td class="paramname">lambda1</td><td>Smoothing parameter for the first derivative. </td></tr>
+    <tr><td class="paramname">p</td><td>Weight (asymmetry parameter, typically 0.001 to 0.1). </td></tr>
+    <tr><td class="paramname">s</td><td>The order of the difference (usually s = 2 or 3). </td></tr>
+    <tr><td class="paramname">loop</td><td>Maximum number of iterations. </td></tr>
+    <tr><td class="paramname">eps</td><td>Convergence threshold. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00253">253</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -598,7 +820,44 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00159">159</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00147">147</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
+
+</div>
+</div>
+<a id="a8c2afcf8765a8009d2dca5f997c03bbd" name="a8c2afcf8765a8009d2dca5f997c03bbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c2afcf8765a8009d2dca5f997c03bbd">&#9670;&#160;</a></span>Sablib_BaselineKajfoszKwiatek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const SABLIB_BASELINE_DATA_PTR Sablib_BaselineKajfoszKwiatek </td>
+          <td>(</td>
+          <td class="paramtype">const SABLIB_DATA_PTR</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>width</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs background estimation using the Kajfosz-Kwiatek method. (parabolic approximation). </p>
+<p>Using the Felzenszwalb-Huttenlocher's lower envelope algorithm.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>The input data for baseline estimation. </td></tr>
+    <tr><td class="paramname">width</td><td>The width of parabola. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00454">454</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -640,7 +899,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00026">26</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00014">14</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -688,7 +947,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00140">140</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00128">128</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -736,7 +995,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00045">45</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00033">33</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -802,7 +1061,38 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00305">305</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00353">353</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
+
+</div>
+</div>
+<a id="ab1c49d2a023af063585841ea2d3d1347" name="ab1c49d2a023af063585841ea2d3d1347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c49d2a023af063585841ea2d3d1347">&#9670;&#160;</a></span>Sablib_BaselineRubberBand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const SABLIB_BASELINE_DATA_PTR Sablib_BaselineRubberBand </td>
+          <td>(</td>
+          <td class="paramtype">const SABLIB_DATA_PTR</td>          <td class="paramname"><span class="paramname"><em>y</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs background estimation using the Rubber Band method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>The input data for baseline estimation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00437">437</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -844,7 +1134,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00087">87</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00075">75</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -898,7 +1188,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00106">106</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00094">94</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, <a class="el" href="baseline_8h_source.html#l00039">LL</a>, <a class="el" href="baseline_8h_source.html#l00040">LLS</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -940,7 +1230,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The estimated baseline and baseline-corrected data. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#ab65c48b579db26ec3c4ccb7caa992adf" title="Frees a SABLIB_BASELINE_DATA structure and its members.">FreeSablibBaselineData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00066">66</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00054">54</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00037">AllocSablibBaselineData()</a>, <a class="el" href="data_8h_source.html#l00030">_stSablibBaselineData::baseline</a>, <a class="el" href="data_8h_source.html#l00031">_stSablibBaselineData::corrected</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -976,7 +1266,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A expanded vector. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#a1f63901f45ca84419a55ae6278edfcae" title="Frees a SABLIB_DATA structure and its data body.">FreeSablibData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00357">357</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00405">405</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00012">AllocSablibData()</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 
@@ -1012,7 +1302,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A trimmed vector. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The returned pointer must be freed with <a class="el" href="data_8cpp.html#a1f63901f45ca84419a55ae6278edfcae" title="Frees a SABLIB_DATA structure and its data body.">FreeSablibData()</a> to avoid memory leaks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00373">373</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="baseline_8cpp_source.html#l00421">421</a> of file <a class="el" href="baseline_8cpp_source.html">baseline.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="data_8cpp_source.html#l00012">AllocSablibData()</a>, <a class="el" href="data_8h_source.html#l00022">_stSablibData::data</a>, and <a class="el" href="data_8h_source.html#l00021">_stSablibData::size</a>.</p>
 

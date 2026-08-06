@@ -5,6 +5,8 @@ var dir_db33d3b36fc59b1a53c9321d4192766a =
     [ "cubic_spline.h", "cubic__spline_8h.html", "cubic__spline_8h" ],
     [ "diff.h", "diff_8h.html", "diff_8h" ],
     [ "expand.h", "expand_8h.html", "expand_8h" ],
+    [ "functions.cpp", "functions_8cpp.html", "functions_8cpp" ],
+    [ "functions.h", "functions_8h.html", "functions_8h" ],
     [ "polyfit.h", "polyfit_8h.html", "polyfit_8h" ],
     [ "spdiags.h", "spdiags_8h.html", "spdiags_8h" ]
 ];

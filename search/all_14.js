@@ -1,16 +1,7 @@
 var searchData=
 [
-  ['polyfit_0',['PolyFit',['../polyfit_8h.html#ab5b3b87767b0f294fbeba98a763ced07',1,'sablib::PolyFit(const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt; &amp;V, const Eigen::MatrixBase&lt; Derived &gt; &amp;y)'],['../polyfit_8h.html#a67b09b178fc82401568bacaebf8bcdb1',1,'sablib::PolyFit(const Eigen::MatrixBase&lt; Derived &gt; &amp;x, const Eigen::MatrixBase&lt; Derived &gt; &amp;y, const unsigned int polyorder)']]],
-  ['polyfit_2eh_1',['polyfit.h',['../polyfit_8h.html',1,'']]],
-  ['polynomial_2ecpp_2',['polynomial.cpp',['../polynomial_8cpp.html',1,'']]],
-  ['polynomial_2eh_3',['polynomial.h',['../polynomial_8h.html',1,'']]],
-  ['polyval_4',['PolyVal',['../polyfit_8h.html#acc9e36f184cd6713a8cb6364e9e6ae8f',1,'sablib::PolyVal(const Eigen::MatrixBase&lt; Derived &gt; &amp;coeff, const Eigen::MatrixX&lt; typename Derived::PlainObject::Scalar &gt; &amp;V)'],['../polyfit_8h.html#aea9152ff299409c8f5892d6228337a4a',1,'sablib::PolyVal(const Eigen::MatrixBase&lt; Derived &gt; &amp;coeff, const Eigen::MatrixBase&lt; Derived &gt; &amp;x)'],['../polyfit_8h.html#a1aa07c2218df86fa81d09bdf0302f81a',1,'sablib::PolyVal(const Eigen::MatrixBase&lt; Derived &gt; &amp;coeff, const typename Derived::PlainObject::Scalar x)']]],
-  ['prerequisites_5',['1. Prerequisites',['../getting_started.html#autotoc_md8',1,'']]],
-  ['program_3a_20main_20cpp_6',['Sample Program: &lt;span class=&quot;tt&quot;&gt;main.cpp&lt;/span&gt;',['../getting_started.html#autotoc_md15',1,'']]],
-  ['project_20with_20cmake_7',['Building your project with CMake',['../getting_started.html#autotoc_md16',1,'']]],
-  ['psalsa_2ecpp_8',['psalsa.cpp',['../psalsa_8cpp.html',1,'']]],
-  ['psalsa_2eh_9',['psalsa.h',['../psalsa_8h.html',1,'']]],
-  ['pspline_10',['PSpline',['../pspline_8cpp.html#a2e579b5ce3ede2b79a829e099887030c',1,'sablib']]],
-  ['pspline_2ecpp_11',['pspline.cpp',['../pspline_8cpp.html',1,'']]],
-  ['pspline_2eh_12',['pspline.h',['../pspline_8h.html',1,'']]]
+  ['operator_28_29_0',['operator()',['../classsablib_1_1CubicSpline.html#aae47b991a4480c803a4e27409e086a35',1,'sablib::CubicSpline']]],
+  ['option_20a_3a_20using_20vcpkg_1',['Option A: Using vcpkg',['../getting_started.html#autotoc_md11',1,'']]],
+  ['option_20b_3a_20using_20conan_2',['Option B: Using Conan',['../getting_started.html#autotoc_md12',1,'']]],
+  ['option_20c_3a_20cloning_20and_20building_20manually_3',['Option C: Cloning and Building Manually',['../getting_started.html#autotoc_md13',1,'']]]
 ];
